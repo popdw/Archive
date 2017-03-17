@@ -1,0 +1,396 @@
+// /wam/cost_of_care/_search?pretty
+//{
+//  "query": {
+//    "bool": {
+//      "must": [
+//        { "match": { "facility.name": "Shania's Hospital" }},
+//        { "match": { "practitioner.display_name": "Torrance" }}
+//      ]
+//    }
+//  }
+//}
+
+{
+  "took": 25,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 287,
+    "max_score": 6.6136923,
+    "hits": [
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiOQaODF8R_u54x",
+        "_score": 6.6136923,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Shania's Hospital",
+            "address": "09637 Bernhard Mews, West Eliseofurt 16238",
+            "phone": "1-994-105-7786 x855",
+            "latitude": "45.8899",
+            "longitude": "37.5734"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "cost_meta": [
+            {
+              "Dr. Torrance Kunde Charge": {
+                  "total":  "$40.00",
+                  "meta": []
+              },
+              "Anesthesia": "$33.00"
+            }
+          ],
+          "total_cost": "73.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiPQaODF8R_u6Rx",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Cory's Hospital",
+            "address": "478 Mark Mountain, South Audreanne 44993-9209",
+            "phone": "(538) 392-2587 x640",
+            "latitude": "-32.0015",
+            "longitude": "-174.3827"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "356.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiQQaODF8R_u6qx",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Keely's Hospital",
+            "address": "574 Mueller Unions, Erdmanberg 19239-8930",
+            "phone": "(666) 431-5860 x9292",
+            "latitude": "-76.3333",
+            "longitude": "-145.7462"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "717.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiRQaODF8R_u66Z",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Lucius's Hospital",
+            "address": "7793 Cleo Curve, Port Euna 72998",
+            "phone": "1-551-992-9657",
+            "latitude": "-8.9535",
+            "longitude": "-84.4078"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "564.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiSQaODF8R_u7TZ",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Tiara's Hospital",
+            "address": "198 Alysha Lock, Port Titus 03272-9851",
+            "phone": "772.732.9758 x5581",
+            "latitude": "-65.1599",
+            "longitude": "26.5207"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "853.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiSQaODF8R_u7Zp",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Jeramie's Hospital",
+            "address": "15602 Treutel Lakes, North Arnulfoville 48333",
+            "phone": "1-708-685-3587 x840",
+            "latitude": "-57.7112",
+            "longitude": "-32.1068"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "725.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiSQaODF8R_u7cx",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Bailee's Hospital",
+            "address": "66831 Emil Squares, Wittingbury 51592",
+            "phone": "1-951-448-5614",
+            "latitude": "8.8332",
+            "longitude": "161.9042"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "997.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiTQaODF8R_u7sZ",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Guadalupe's Hospital",
+            "address": "7269 Delilah Fork, Port Enrico 77917-1193",
+            "phone": "790.101.3635 x3087",
+            "latitude": "-44.4706",
+            "longitude": "-66.5472"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "980.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiTQaODF8R_u7yp",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Mona's Hospital",
+            "address": "57068 Natalia Manor, Langworthland 45606-9946",
+            "phone": "(080) 881-9114 x4311",
+            "latitude": "-49.5398",
+            "longitude": "-8.9262"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "420.00"
+        }
+      },
+      {
+        "_index": "wam",
+        "_type": "cost_of_care",
+        "_id": "AVYS6KiUQaODF8R_u8R5",
+        "_score": 3.073197,
+        "_source": {
+          "eoc": {
+            "code": 7306,
+            "title": "Realigned",
+            "description": "Expedita earum pariatur neque vel qui dolor corporis explicabo minima. Modi deserunt cum fugit aut. Quo suscipit consequatur velit est natus sit.",
+            "keywords": "optical,primary,multi-byte,optical,primary",
+            "questions_to_ask": [
+              "Try to transmit the RAM array, maybe it will hack the digital hard drive!?",
+              "If we connect the microchip, we can get to the TCP matrix through the open-source SMTP system!?",
+              "I'll reboot the primary RAM firewall, that should protocol the USB transmitter!?"
+            ]
+          },
+          "facility": {
+            "name": "Carey's Hospital",
+            "address": "42420 Jeramy Extensions, Kutchhaven 78163-1910",
+            "phone": "(590) 209-5482",
+            "latitude": "89.5311",
+            "longitude": "-16.0415"
+          },
+          "practitioner": {
+            "first_name": "Kaylie",
+            "last_name": "Cartwright",
+            "display_name": "Dr. Torrance Kunde",
+            "practice": "Surgeon",
+            "address": "56744 Langworth Plaza, Port Agustin 56742",
+            "phone": "1-512-954-7770",
+            "rating": 0
+          },
+          "total_cost": "527.00"
+        }
+      }
+    ]
+  }
+}

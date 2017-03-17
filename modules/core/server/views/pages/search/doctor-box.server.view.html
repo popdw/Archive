@@ -1,0 +1,13 @@
+<div class="title">
+  <strong class="doctor">~{doctor.name}~</strong>
+  <span class="position">~{doctor.practice}~</span>
+</div>
+<ul class="offices">
+  <li ng-repeat="facility in doctor.facilities" ng-click="selectDoctor(doctor);selectFacility(facility);" ng-class="{'active': isFacilitySelected(facility.id)}">
+    <a href="#" class="office" ng-class="{'healthcost': facility.inNetwork, 'selected': facility.isPreferred}">
+      <span class="name">~{facility.name}~</span>
+      <span class="number">~{facility.typeLabel}~ - ~{facility.city}~, ~{facility.state}~. ~{facility.distance}~ MI.</span>
+      <span class="cost"><sup>$</sup>~{facility.cost | currency: ""}~</span>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,2026 @@
+2017-03-08T20:03:56.560Z - info: [0mGET / [36m304 [0m94.158 ms - -[0m
+
+2017-03-08T20:03:56.602Z - info: [0mGET /modules/core/client/css/core.css [32m200 [0m14.046 ms - 715[0m
+
+2017-03-08T20:03:56.607Z - info: [0mGET /modules/users/client/css/users.css [32m200 [0m18.501 ms - 600[0m
+
+2017-03-08T20:03:56.610Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [32m200 [0m13.056 ms - -[0m
+
+2017-03-08T20:03:56.610Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [32m200 [0m13.432 ms - -[0m
+
+2017-03-08T20:03:56.615Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [32m200 [0m9.119 ms - -[0m
+
+2017-03-08T20:03:56.625Z - info: [0mGET /modules/core/client/css/main.css [32m200 [0m19.021 ms - -[0m
+
+2017-03-08T20:03:56.649Z - info: [0mGET /lib/angular-resource/angular-resource.js [32m200 [0m5.309 ms - -[0m
+
+2017-03-08T20:03:56.651Z - info: [0mGET /lib/angular-messages/angular-messages.js [32m200 [0m3.825 ms - -[0m
+
+2017-03-08T20:03:56.653Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [32m200 [0m4.978 ms - -[0m
+
+2017-03-08T20:03:56.678Z - info: [0mGET /lib/angular-animate/angular-animate.js [32m200 [0m4.830 ms - -[0m
+
+2017-03-08T20:03:56.683Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [32m200 [0m7.391 ms - -[0m
+
+2017-03-08T20:03:56.696Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [32m200 [0m5.299 ms - -[0m
+
+2017-03-08T20:03:56.698Z - info: [0mGET /lib/jquery/dist/jquery.js [32m200 [0m5.487 ms - -[0m
+
+2017-03-08T20:03:56.710Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [32m200 [0m7.083 ms - -[0m
+
+2017-03-08T20:03:56.716Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [32m200 [0m7.355 ms - -[0m
+
+2017-03-08T20:03:56.724Z - info: [0mGET /lib/angular-route/angular-route.min.js [32m200 [0m4.539 ms - -[0m
+
+2017-03-08T20:03:56.725Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [32m200 [0m5.152 ms - -[0m
+
+2017-03-08T20:03:56.726Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [32m200 [0m6.694 ms - -[0m
+
+2017-03-08T20:03:56.736Z - info: [0mGET /modules/core/client/app/config.js [32m200 [0m15.354 ms - 687[0m
+
+2017-03-08T20:03:56.751Z - info: [0mGET /modules/users/client/users.client.module.js [32m200 [0m14.038 ms - 385[0m
+
+2017-03-08T20:03:56.754Z - info: [0mGET /modules/core/client/core.client.module.js [32m200 [0m16.805 ms - 251[0m
+
+2017-03-08T20:03:56.756Z - info: [0mGET /modules/core/client/app/init.js [32m200 [0m10.410 ms - -[0m
+
+2017-03-08T20:03:56.762Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [32m200 [0m18.198 ms - 318[0m
+
+2017-03-08T20:03:56.774Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [32m200 [0m13.713 ms - 383[0m
+
+2017-03-08T20:03:56.776Z - info: [0mGET /modules/core/client/config/core.client.menus.js [32m200 [0m12.181 ms - 905[0m
+
+2017-03-08T20:03:56.783Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [32m200 [0m12.313 ms - -[0m
+
+2017-03-08T20:03:56.785Z - info: [0mGET /modules/core/client/config/core.client.routes.js [32m200 [0m9.231 ms - -[0m
+
+2017-03-08T20:03:56.798Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [32m200 [0m17.169 ms - 881[0m
+
+2017-03-08T20:03:56.799Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css.map [32m200 [0m9.348 ms - -[0m
+
+2017-03-08T20:03:56.804Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [32m200 [0m18.093 ms - -[0m
+
+2017-03-08T20:03:56.804Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [32m200 [0m9.013 ms - 375[0m
+
+2017-03-08T20:03:56.808Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [32m200 [0m14.171 ms - -[0m
+
+2017-03-08T20:03:56.818Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [32m200 [0m7.551 ms - 632[0m
+
+2017-03-08T20:03:56.824Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [32m200 [0m8.385 ms - -[0m
+
+2017-03-08T20:03:56.825Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [32m200 [0m12.953 ms - 538[0m
+
+2017-03-08T20:03:56.829Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [32m200 [0m11.955 ms - -[0m
+
+2017-03-08T20:03:56.830Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [32m200 [0m11.424 ms - -[0m
+
+2017-03-08T20:03:56.838Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [32m200 [0m11.741 ms - -[0m
+
+2017-03-08T20:03:56.839Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [32m200 [0m11.592 ms - 844[0m
+
+2017-03-08T20:03:56.843Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [32m200 [0m8.364 ms - 411[0m
+
+2017-03-08T20:03:56.845Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [32m200 [0m8.438 ms - 945[0m
+
+2017-03-08T20:03:56.850Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [32m200 [0m8.596 ms - -[0m
+
+2017-03-08T20:03:56.851Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [32m200 [0m7.484 ms - 225[0m
+
+2017-03-08T20:03:56.853Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [32m200 [0m8.302 ms - -[0m
+
+2017-03-08T20:03:56.854Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [32m200 [0m6.701 ms - 375[0m
+
+2017-03-08T20:03:56.855Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [32m200 [0m5.616 ms - 211[0m
+
+2017-03-08T20:03:56.865Z - info: [0mGET /modules/core/client/services/api.client.service.js [32m200 [0m5.257 ms - 777[0m
+
+2017-03-08T20:03:56.869Z - info: [0mGET /modules/core/client/services/config.client.service.js [32m200 [0m12.599 ms - 200[0m
+
+2017-03-08T20:03:56.873Z - info: [0mGET /modules/core/client/services/events.client.service.js [32m200 [0m6.105 ms - 712[0m
+
+2017-03-08T20:03:56.875Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [32m200 [0m13.721 ms - -[0m
+
+2017-03-08T20:03:56.875Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [32m200 [0m6.867 ms - 1004[0m
+
+2017-03-08T20:03:56.876Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [32m200 [0m6.270 ms - -[0m
+
+2017-03-08T20:03:56.879Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [32m200 [0m4.602 ms - 858[0m
+
+2017-03-08T20:03:56.885Z - info: [0mGET /modules/core/client/services/log.client.service.js [32m200 [0m6.953 ms - 228[0m
+
+2017-03-08T20:03:56.888Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [32m200 [0m6.406 ms - 533[0m
+
+2017-03-08T20:03:56.889Z - info: [0mGET /modules/core/client/services/menu.client.service.js [32m200 [0m7.070 ms - -[0m
+
+2017-03-08T20:03:56.893Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [32m200 [0m6.421 ms - -[0m
+
+2017-03-08T20:03:56.895Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [32m200 [0m7.112 ms - -[0m
+
+2017-03-08T20:03:56.900Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [32m200 [0m5.811 ms - -[0m
+
+2017-03-08T20:03:56.902Z - info: [0mGET /modules/core/client/services/string.client.service.js [32m200 [0m7.853 ms - 632[0m
+
+2017-03-08T20:03:56.906Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [32m200 [0m8.158 ms - -[0m
+
+2017-03-08T20:03:56.907Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [32m200 [0m9.924 ms - 330[0m
+
+2017-03-08T20:03:56.911Z - info: [0mGET /lib/angular/angular.js [32m200 [0m5.260 ms - -[0m
+
+2017-03-08T20:03:56.913Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [32m200 [0m10.810 ms - -[0m
+
+2017-03-08T20:03:56.920Z - info: [0mGET /modules/users/client/config/users.client.routes.js [32m200 [0m10.498 ms - -[0m
+
+2017-03-08T20:03:56.922Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [32m200 [0m8.907 ms - -[0m
+
+2017-03-08T20:03:56.923Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [32m200 [0m8.985 ms - -[0m
+
+2017-03-08T20:03:56.926Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [32m200 [0m9.263 ms - -[0m
+
+2017-03-08T20:03:56.931Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [32m200 [0m7.858 ms - -[0m
+
+2017-03-08T20:03:56.932Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [32m200 [0m7.494 ms - -[0m
+
+2017-03-08T20:03:56.934Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [32m200 [0m9.950 ms - 975[0m
+
+2017-03-08T20:03:56.937Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [32m200 [0m9.344 ms - -[0m
+
+2017-03-08T20:03:56.939Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [32m200 [0m10.598 ms - 306[0m
+
+2017-03-08T20:03:56.941Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [32m200 [0m10.397 ms - -[0m
+
+2017-03-08T20:03:56.943Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [32m200 [0m6.366 ms - 821[0m
+
+2017-03-08T20:03:56.944Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [32m200 [0m5.924 ms - 507[0m
+
+2017-03-08T20:03:56.946Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [32m200 [0m6.610 ms - -[0m
+
+2017-03-08T20:03:56.947Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [32m200 [0m6.274 ms - 324[0m
+
+2017-03-08T20:03:56.948Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [32m200 [0m6.279 ms - 810[0m
+
+2017-03-08T20:03:56.950Z - info: [0mGET /modules/users/client/services/users.client.service.js [32m200 [0m5.966 ms - 711[0m
+
+2017-03-08T20:03:56.953Z - info: [0mGET /images/iphone-2x.png [32m200 [0m3.784 ms - 11534[0m
+
+2017-03-08T20:03:56.954Z - info: [0mGET /images/logo-google.png [32m200 [0m3.108 ms - 1529[0m
+
+2017-03-08T20:03:56.954Z - info: [0mGET /images/logo.svg [32m200 [0m5.813 ms - -[0m
+
+2017-03-08T20:03:56.955Z - info: [0mGET /images/loading-icon.svg [32m200 [0m3.946 ms - -[0m
+
+2017-03-08T20:03:57.177Z - info: [0mGET /lib/angular-route/angular-route.min.js.map [32m200 [0m2.098 ms - -[0m
+
+2017-03-08T20:03:57.183Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js.map [32m200 [0m3.049 ms - -[0m
+
+2017-03-08T20:03:57.368Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [32m200 [0m3.794 ms - -[0m
+
+2017-03-08T20:03:57.373Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [32m200 [0m3.365 ms - -[0m
+
+2017-03-08T20:03:57.375Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [32m200 [0m4.162 ms - -[0m
+
+2017-03-08T20:03:57.380Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [32m200 [0m7.650 ms - -[0m
+
+2017-03-08T20:03:57.381Z - info: [0mGET /modules/core/client/images/img-01-small-2x.png [32m200 [0m5.385 ms - 60400[0m
+
+2017-03-08T20:03:57.382Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [32m200 [0m4.205 ms - -[0m
+
+2017-03-08T20:03:57.383Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [32m200 [0m4.036 ms - -[0m
+
+2017-03-08T20:03:57.384Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [32m200 [0m5.002 ms - 3804[0m
+
+2017-03-08T20:03:57.386Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [32m200 [0m2.579 ms - 4472[0m
+
+2017-03-08T20:03:57.692Z - info: [0mGET /images/website-icon.png [32m200 [0m0.896 ms - 9199[0m
+
+2017-03-08T20:03:57.961Z - info: [0mGET /api/categories/list? [32m200 [0m410.381 ms - 683[0m
+
+2017-03-08T20:04:46.316Z - info: [0mGET / [36m304 [0m108.032 ms - -[0m
+
+2017-03-08T20:04:46.370Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m11.552 ms - -[0m
+
+2017-03-08T20:04:46.371Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m11.485 ms - -[0m
+
+2017-03-08T20:04:46.372Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m11.338 ms - -[0m
+
+2017-03-08T20:04:46.375Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m12.544 ms - -[0m
+
+2017-03-08T20:04:46.378Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m13.084 ms - -[0m
+
+2017-03-08T20:04:46.379Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m12.364 ms - -[0m
+
+2017-03-08T20:04:46.390Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m7.340 ms - -[0m
+
+2017-03-08T20:04:46.391Z - info: [0mGET /lib/angular/angular.js [36m304 [0m6.876 ms - -[0m
+
+2017-03-08T20:04:46.392Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m7.176 ms - -[0m
+
+2017-03-08T20:04:46.394Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m7.877 ms - -[0m
+
+2017-03-08T20:04:46.395Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m5.682 ms - -[0m
+
+2017-03-08T20:04:46.397Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m0.850 ms - -[0m
+
+2017-03-08T20:04:46.407Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m2.174 ms - -[0m
+
+2017-03-08T20:04:46.407Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m2.276 ms - -[0m
+
+2017-03-08T20:04:46.409Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m3.103 ms - -[0m
+
+2017-03-08T20:04:46.412Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m1.603 ms - -[0m
+
+2017-03-08T20:04:46.412Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m1.942 ms - -[0m
+
+2017-03-08T20:04:46.421Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m4.081 ms - -[0m
+
+2017-03-08T20:04:46.422Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m2.764 ms - -[0m
+
+2017-03-08T20:04:46.423Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m2.683 ms - -[0m
+
+2017-03-08T20:04:46.435Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m10.505 ms - -[0m
+
+2017-03-08T20:04:46.439Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m10.036 ms - -[0m
+
+2017-03-08T20:04:46.444Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m13.986 ms - -[0m
+
+2017-03-08T20:04:46.446Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m15.127 ms - -[0m
+
+2017-03-08T20:04:46.448Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m15.195 ms - -[0m
+
+2017-03-08T20:04:46.453Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m1.699 ms - -[0m
+
+2017-03-08T20:04:46.457Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m2.734 ms - -[0m
+
+2017-03-08T20:04:46.462Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m6.332 ms - -[0m
+
+2017-03-08T20:04:46.465Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m6.410 ms - -[0m
+
+2017-03-08T20:04:46.470Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m9.121 ms - -[0m
+
+2017-03-08T20:04:46.471Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m7.854 ms - -[0m
+
+2017-03-08T20:04:46.474Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m7.901 ms - -[0m
+
+2017-03-08T20:04:46.478Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m9.463 ms - -[0m
+
+2017-03-08T20:04:46.481Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m3.159 ms - -[0m
+
+2017-03-08T20:04:46.486Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m6.694 ms - -[0m
+
+2017-03-08T20:04:46.487Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m6.657 ms - -[0m
+
+2017-03-08T20:04:46.500Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m13.083 ms - -[0m
+
+2017-03-08T20:04:46.509Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css.map [36m304 [0m7.496 ms - -[0m
+
+2017-03-08T20:04:46.523Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m23.489 ms - -[0m
+
+2017-03-08T20:04:46.524Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m34.698 ms - -[0m
+
+2017-03-08T20:04:46.531Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [36m304 [0m14.969 ms - -[0m
+
+2017-03-08T20:04:46.536Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m25.415 ms - -[0m
+
+2017-03-08T20:04:46.553Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m17.150 ms - -[0m
+
+2017-03-08T20:04:46.556Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m20.437 ms - -[0m
+
+2017-03-08T20:04:46.558Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m9.134 ms - -[0m
+
+2017-03-08T20:04:46.559Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m9.663 ms - -[0m
+
+2017-03-08T20:04:46.562Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m4.583 ms - -[0m
+
+2017-03-08T20:04:46.564Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m4.089 ms - -[0m
+
+2017-03-08T20:04:46.565Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m4.294 ms - -[0m
+
+2017-03-08T20:04:46.569Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m6.295 ms - -[0m
+
+2017-03-08T20:04:46.571Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m6.784 ms - -[0m
+
+2017-03-08T20:04:46.580Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m8.415 ms - -[0m
+
+2017-03-08T20:04:46.591Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m19.849 ms - -[0m
+
+2017-03-08T20:04:46.593Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m17.331 ms - -[0m
+
+2017-03-08T20:04:46.596Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m7.136 ms - -[0m
+
+2017-03-08T20:04:46.596Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m5.404 ms - -[0m
+
+2017-03-08T20:04:46.609Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m13.989 ms - -[0m
+
+2017-03-08T20:04:46.667Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m60.131 ms - -[0m
+
+2017-03-08T20:04:46.671Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m60.492 ms - -[0m
+
+2017-03-08T20:04:46.672Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m13.628 ms - -[0m
+
+2017-03-08T20:04:46.672Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m8.780 ms - -[0m
+
+2017-03-08T20:04:46.674Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m4.313 ms - -[0m
+
+2017-03-08T20:04:46.675Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m4.287 ms - -[0m
+
+2017-03-08T20:04:46.677Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m3.940 ms - -[0m
+
+2017-03-08T20:04:46.680Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m2.856 ms - -[0m
+
+2017-03-08T20:04:46.683Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m4.166 ms - -[0m
+
+2017-03-08T20:04:46.687Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m5.775 ms - -[0m
+
+2017-03-08T20:04:46.688Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m5.839 ms - -[0m
+
+2017-03-08T20:04:46.688Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m6.281 ms - -[0m
+
+2017-03-08T20:04:46.691Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m6.462 ms - -[0m
+
+2017-03-08T20:04:46.692Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m6.091 ms - -[0m
+
+2017-03-08T20:04:46.693Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m2.927 ms - -[0m
+
+2017-03-08T20:04:46.697Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m3.108 ms - -[0m
+
+2017-03-08T20:04:46.697Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m3.044 ms - -[0m
+
+2017-03-08T20:04:46.701Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m4.283 ms - -[0m
+
+2017-03-08T20:04:46.703Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m4.176 ms - -[0m
+
+2017-03-08T20:04:46.705Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m5.978 ms - -[0m
+
+2017-03-08T20:04:46.771Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m71.563 ms - -[0m
+
+2017-03-08T20:04:46.774Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m72.377 ms - -[0m
+
+2017-03-08T20:04:46.776Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m72.359 ms - -[0m
+
+2017-03-08T20:04:46.777Z - info: [0mGET /images/logo.svg [36m304 [0m4.066 ms - -[0m
+
+2017-03-08T20:04:46.779Z - info: [0mGET /images/loading-icon.svg [36m304 [0m1.224 ms - -[0m
+
+2017-03-08T20:04:46.780Z - info: [0mGET /images/iphone-2x.png [36m304 [0m1.048 ms - -[0m
+
+2017-03-08T20:04:46.782Z - info: [0mGET /images/logo-google.png [36m304 [0m0.787 ms - -[0m
+
+2017-03-08T20:04:47.131Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js.map [36m304 [0m1.341 ms - -[0m
+
+2017-03-08T20:04:47.132Z - info: [0mGET /lib/angular-route/angular-route.min.js.map [36m304 [0m1.635 ms - -[0m
+
+2017-03-08T20:04:47.500Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m1.631 ms - -[0m
+
+2017-03-08T20:04:47.502Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m2.098 ms - -[0m
+
+2017-03-08T20:04:47.504Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m2.669 ms - -[0m
+
+2017-03-08T20:04:47.524Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m0.965 ms - -[0m
+
+2017-03-08T20:04:47.531Z - info: [0mGET /modules/core/client/images/img-01-small-2x.png [36m304 [0m0.661 ms - -[0m
+
+2017-03-08T20:04:47.547Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m0.841 ms - -[0m
+
+2017-03-08T20:04:47.559Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.509 ms - -[0m
+
+2017-03-08T20:04:47.576Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m1.216 ms - -[0m
+
+2017-03-08T20:04:47.577Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m1.167 ms - -[0m
+
+2017-03-08T20:04:48.209Z - info: [0mGET /api/categories/list? [32m200 [0m308.504 ms - 271[0m
+
+2017-03-08T20:04:48.271Z - info: [0mGET /images/website-icon.png [36m304 [0m1.313 ms - -[0m
+
+2017-03-08T20:04:50.833Z - info: [0mGET /api/specialties/list? [32m200 [0m605.961 ms - -[0m
+
+2017-03-08T20:05:03.225Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-OPHTHALMOLOGY [36m304 [0m733.791 ms - -[0m
+
+2017-03-08T20:05:09.484Z - info: [0mGET /api/place_of_care/search?lat=47.6062095&lng=-122.3320708&eocCode=NPV-OPHTHALMOLOGY [32m200 [0m642.389 ms - 84[0m
+
+2017-03-08T20:05:50.056Z - info: [0mGET /api/place_of_care/search?lat=47.6062095&lng=-122.3320708&eocCode=NPV-OPHTHALMOLOGY [36m304 [0m449.955 ms - -[0m
+
+2017-03-08T20:07:47.097Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Colonosc [32m200 [0m490.237 ms - -[0m
+
+2017-03-08T20:07:50.349Z - info: [0mGET /api/place_of_care/search?lat=47.6062095&lng=-122.3320708&eocCode=45378 [32m200 [0m722.165 ms - -[0m
+
+2017-03-08T20:07:51.211Z - info: [0mGET /api/practitioner_of_care/search?lat=47.6062095&lng=-122.3320708&eocCode=45378&radius=25.485290678610543&page=1&count=10 [32m200 [0m852.440 ms - -[0m
+
+2017-03-08T20:34:33.327Z - info: [0mGET / [36m304 [0m128.908 ms - -[0m
+
+2017-03-08T20:34:33.347Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m1.705 ms - -[0m
+
+2017-03-08T20:34:33.354Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m4.250 ms - -[0m
+
+2017-03-08T20:34:33.356Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m4.358 ms - -[0m
+
+2017-03-08T20:34:33.359Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m6.539 ms - -[0m
+
+2017-03-08T20:34:33.359Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m6.396 ms - -[0m
+
+2017-03-08T20:34:33.360Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m6.779 ms - -[0m
+
+2017-03-08T20:34:33.361Z - info: [0mGET /images/loading-icon.svg [36m304 [0m3.845 ms - -[0m
+
+2017-03-08T20:34:33.365Z - info: [0mGET /images/logo.svg [36m304 [0m2.233 ms - -[0m
+
+2017-03-08T20:34:33.367Z - info: [0mGET /images/iphone-2x.png [36m304 [0m4.511 ms - -[0m
+
+2017-03-08T20:34:33.369Z - info: [0mGET /images/logo-google.png [36m304 [0m2.839 ms - -[0m
+
+2017-03-08T20:34:33.372Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m0.798 ms - -[0m
+
+2017-03-08T20:34:33.378Z - info: [0mGET /lib/angular/angular.js [36m304 [0m3.589 ms - -[0m
+
+2017-03-08T20:34:33.381Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m4.332 ms - -[0m
+
+2017-03-08T20:34:33.381Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m5.024 ms - -[0m
+
+2017-03-08T20:34:33.384Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m7.205 ms - -[0m
+
+2017-03-08T20:34:33.384Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m2.382 ms - -[0m
+
+2017-03-08T20:34:33.385Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m1.775 ms - -[0m
+
+2017-03-08T20:34:33.388Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m0.714 ms - -[0m
+
+2017-03-08T20:34:33.390Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m0.655 ms - -[0m
+
+2017-03-08T20:34:33.391Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m0.518 ms - -[0m
+
+2017-03-08T20:34:33.394Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m0.534 ms - -[0m
+
+2017-03-08T20:34:33.397Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m0.571 ms - -[0m
+
+2017-03-08T20:34:33.402Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m4.136 ms - -[0m
+
+2017-03-08T20:34:33.403Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m4.266 ms - -[0m
+
+2017-03-08T20:34:33.405Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m5.534 ms - -[0m
+
+2017-03-08T20:34:33.406Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m5.500 ms - -[0m
+
+2017-03-08T20:34:33.408Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m4.140 ms - -[0m
+
+2017-03-08T20:34:33.411Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m4.298 ms - -[0m
+
+2017-03-08T20:34:33.413Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m5.384 ms - -[0m
+
+2017-03-08T20:34:33.415Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m5.269 ms - -[0m
+
+2017-03-08T20:34:33.418Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m4.671 ms - -[0m
+
+2017-03-08T20:34:33.420Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m3.942 ms - -[0m
+
+2017-03-08T20:34:33.421Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m3.363 ms - -[0m
+
+2017-03-08T20:34:33.424Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m3.444 ms - -[0m
+
+2017-03-08T20:34:33.427Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m4.935 ms - -[0m
+
+2017-03-08T20:34:33.428Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m4.748 ms - -[0m
+
+2017-03-08T20:34:33.430Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m4.864 ms - -[0m
+
+2017-03-08T20:34:33.430Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m4.699 ms - -[0m
+
+2017-03-08T20:34:33.431Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m4.773 ms - -[0m
+
+2017-03-08T20:34:33.433Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m3.444 ms - -[0m
+
+2017-03-08T20:34:33.434Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m2.191 ms - -[0m
+
+2017-03-08T20:34:33.437Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m3.551 ms - -[0m
+
+2017-03-08T20:34:33.440Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m3.670 ms - -[0m
+
+2017-03-08T20:34:33.446Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m6.549 ms - -[0m
+
+2017-03-08T20:34:33.446Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m6.392 ms - -[0m
+
+2017-03-08T20:34:33.448Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m5.890 ms - -[0m
+
+2017-03-08T20:34:33.449Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m5.205 ms - -[0m
+
+2017-03-08T20:34:33.450Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m5.238 ms - -[0m
+
+2017-03-08T20:34:33.451Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m3.364 ms - -[0m
+
+2017-03-08T20:34:33.455Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m3.634 ms - -[0m
+
+2017-03-08T20:34:33.456Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m3.356 ms - -[0m
+
+2017-03-08T20:34:33.459Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m3.938 ms - -[0m
+
+2017-03-08T20:34:33.459Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m4.872 ms - -[0m
+
+2017-03-08T20:34:33.460Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m4.842 ms - -[0m
+
+2017-03-08T20:34:33.462Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m4.786 ms - -[0m
+
+2017-03-08T20:34:33.464Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m2.765 ms - -[0m
+
+2017-03-08T20:34:33.466Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m3.963 ms - -[0m
+
+2017-03-08T20:34:33.466Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m2.809 ms - -[0m
+
+2017-03-08T20:34:33.469Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m1.662 ms - -[0m
+
+2017-03-08T20:34:33.472Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m3.697 ms - -[0m
+
+2017-03-08T20:34:33.475Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m3.689 ms - -[0m
+
+2017-03-08T20:34:33.477Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m3.701 ms - -[0m
+
+2017-03-08T20:34:33.477Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m3.713 ms - -[0m
+
+2017-03-08T20:34:33.478Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m3.800 ms - -[0m
+
+2017-03-08T20:34:33.482Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m4.412 ms - -[0m
+
+2017-03-08T20:34:33.483Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m5.899 ms - -[0m
+
+2017-03-08T20:34:33.485Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m5.624 ms - -[0m
+
+2017-03-08T20:34:33.488Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m3.917 ms - -[0m
+
+2017-03-08T20:34:33.491Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m4.495 ms - -[0m
+
+2017-03-08T20:34:33.491Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m4.362 ms - -[0m
+
+2017-03-08T20:34:33.492Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m3.748 ms - -[0m
+
+2017-03-08T20:34:33.492Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m4.080 ms - -[0m
+
+2017-03-08T20:34:33.494Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m4.254 ms - -[0m
+
+2017-03-08T20:34:33.496Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m2.545 ms - -[0m
+
+2017-03-08T20:34:33.497Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m1.606 ms - -[0m
+
+2017-03-08T20:34:33.499Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m2.278 ms - -[0m
+
+2017-03-08T20:34:33.501Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m3.149 ms - -[0m
+
+2017-03-08T20:34:33.502Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m2.913 ms - -[0m
+
+2017-03-08T20:34:33.505Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m4.935 ms - -[0m
+
+2017-03-08T20:34:33.505Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m4.795 ms - -[0m
+
+2017-03-08T20:34:33.506Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m4.942 ms - -[0m
+
+2017-03-08T20:34:33.506Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m2.551 ms - -[0m
+
+2017-03-08T20:34:33.918Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m1.744 ms - -[0m
+
+2017-03-08T20:34:33.918Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m1.941 ms - -[0m
+
+2017-03-08T20:34:33.920Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m3.028 ms - -[0m
+
+2017-03-08T20:34:33.937Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m1.728 ms - -[0m
+
+2017-03-08T20:34:33.940Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m3.544 ms - -[0m
+
+2017-03-08T20:34:33.941Z - info: [0mGET /modules/core/client/images/img-01-2x.png [32m200 [0m5.193 ms - -[0m
+
+2017-03-08T20:34:33.946Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.408 ms - -[0m
+
+2017-03-08T20:34:33.954Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m1.865 ms - -[0m
+
+2017-03-08T20:34:33.957Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m6.310 ms - -[0m
+
+2017-03-08T20:34:34.439Z - info: [0mGET /images/website-icon.png [36m304 [0m0.555 ms - -[0m
+
+2017-03-08T20:34:34.806Z - info: [0mGET /api/categories/list? [36m304 [0m506.041 ms - -[0m
+
+2017-03-08T20:34:38.384Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=colon [32m200 [0m274.168 ms - -[0m
+
+2017-03-08T20:34:41.399Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378 [32m200 [0m1130.940 ms - -[0m
+
+2017-03-08T20:34:42.043Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378&radius=81.24664580073996&page=1&count=10 [32m200 [0m634.850 ms - -[0m
+
+2017-03-08T20:54:37.597Z - info: [0mGET /api/specialties/list? [36m304 [0m337.555 ms - -[0m
+
+2017-03-08T20:54:42.649Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY) [32m200 [0m418.727 ms - 84[0m
+
+2017-03-08T20:56:55.908Z - info: [0mGET /api/place_of_care/search?lat=33.56041679999999&lng=-81.71955330000003&eocCode=NPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY) [32m200 [0m428.905 ms - 84[0m
+
+2017-03-08T21:31:32.988Z - info: [0mGET /api/place_of_care/search?lat=33.56041679999999&lng=-81.71955330000003&eocCode=NPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY) [32m200 [0m287.091 ms - 84[0m
+
+2017-03-08T21:32:54.935Z - info: [0mGET /api/place_of_care/search?lat=33.56041679999999&lng=-81.71955330000003&eocCode=NPV-GENERAL%20PRACTICE [32m200 [0m389.505 ms - 84[0m
+
+2017-03-08T21:34:06.328Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=colon [32m200 [0m349.149 ms - -[0m
+
+2017-03-08T21:34:07.709Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=colonoscopy [32m200 [0m363.468 ms - -[0m
+
+2017-03-08T21:34:10.706Z - info: [0mGET /api/place_of_care/search?lat=33.56041679999999&lng=-81.71955330000003&eocCode=45378 [32m200 [0m1039.330 ms - -[0m
+
+2017-03-08T21:34:11.294Z - info: [0mGET /api/practitioner_of_care/search?lat=33.56041679999999&lng=-81.71955330000003&eocCode=45378&radius=62.52022283312711&page=1&count=10 [32m200 [0m581.325 ms - -[0m
+
+2017-03-08T21:36:17.473Z - info: [0mGET /api/place_of_care/search?lat=47.6062095&lng=-122.3320708&eocCode=NPV-OPHTHALMOLOGY [36m304 [0m763.505 ms - -[0m
+
+2017-03-08T21:48:09.980Z - info: [0mGET /api/place_of_care/search?lat=32.2371465&lng=-80.86038680000001&eocCode=NPV-ORTHOPEDIC%20SURGERY [32m200 [0m1005.605 ms - 84[0m
+
+2017-03-08T21:48:43.529Z - info: [0mGET /api/place_of_care/search?lat=32.2371465&lng=-80.86038680000001&eocCode=NPV-DERMATOLOGY [32m200 [0m973.518 ms - 84[0m
+
+2017-03-09T03:03:48.741Z - info: [0mGET / [32m200 [0m141.224 ms - -[0m
+
+2017-03-09T03:03:48.762Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m1.109 ms - -[0m
+
+2017-03-09T03:03:48.770Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m4.031 ms - -[0m
+
+2017-03-09T03:03:48.770Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m2.548 ms - -[0m
+
+2017-03-09T03:03:48.771Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m5.053 ms - -[0m
+
+2017-03-09T03:03:48.772Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m3.504 ms - -[0m
+
+2017-03-09T03:03:48.772Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m3.334 ms - -[0m
+
+2017-03-09T03:03:48.776Z - info: [0mGET /images/loading-icon.svg [36m304 [0m1.392 ms - -[0m
+
+2017-03-09T03:03:48.777Z - info: [0mGET /images/logo.svg [36m304 [0m1.272 ms - -[0m
+
+2017-03-09T03:03:48.780Z - info: [0mGET /images/iphone-2x.png [36m304 [0m2.566 ms - -[0m
+
+2017-03-09T03:03:48.783Z - info: [0mGET /images/logo-google.png [36m304 [0m4.999 ms - -[0m
+
+2017-03-09T03:03:48.785Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m0.933 ms - -[0m
+
+2017-03-09T03:03:48.792Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m5.499 ms - -[0m
+
+2017-03-09T03:03:48.792Z - info: [0mGET /lib/angular/angular.js [36m304 [0m5.012 ms - -[0m
+
+2017-03-09T03:03:48.792Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m4.827 ms - -[0m
+
+2017-03-09T03:03:48.793Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m2.743 ms - -[0m
+
+2017-03-09T03:03:48.799Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m2.798 ms - -[0m
+
+2017-03-09T03:03:48.800Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m4.886 ms - -[0m
+
+2017-03-09T03:03:48.824Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m3.264 ms - -[0m
+
+2017-03-09T03:03:48.831Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m2.464 ms - -[0m
+
+2017-03-09T03:03:48.832Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m4.513 ms - -[0m
+
+2017-03-09T03:03:48.833Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m4.151 ms - -[0m
+
+2017-03-09T03:03:48.833Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m5.815 ms - -[0m
+
+2017-03-09T03:03:48.834Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m2.058 ms - -[0m
+
+2017-03-09T03:03:48.837Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m1.948 ms - -[0m
+
+2017-03-09T03:03:48.842Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m1.008 ms - -[0m
+
+2017-03-09T03:03:48.845Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m4.074 ms - -[0m
+
+2017-03-09T03:03:48.848Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m5.176 ms - -[0m
+
+2017-03-09T03:03:48.849Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m4.871 ms - -[0m
+
+2017-03-09T03:03:48.849Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m3.974 ms - -[0m
+
+2017-03-09T03:03:48.851Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m4.344 ms - -[0m
+
+2017-03-09T03:03:48.853Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m5.084 ms - -[0m
+
+2017-03-09T03:03:48.855Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m4.302 ms - -[0m
+
+2017-03-09T03:03:48.856Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m1.263 ms - -[0m
+
+2017-03-09T03:03:48.857Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m1.491 ms - -[0m
+
+2017-03-09T03:03:48.857Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m1.454 ms - -[0m
+
+2017-03-09T03:03:48.859Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m0.908 ms - -[0m
+
+2017-03-09T03:03:48.861Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m0.962 ms - -[0m
+
+2017-03-09T03:03:48.866Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m2.539 ms - -[0m
+
+2017-03-09T03:03:48.871Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m8.111 ms - -[0m
+
+2017-03-09T03:03:48.875Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m7.386 ms - -[0m
+
+2017-03-09T03:03:48.876Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m5.250 ms - -[0m
+
+2017-03-09T03:03:48.878Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m5.585 ms - -[0m
+
+2017-03-09T03:03:48.879Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m5.838 ms - -[0m
+
+2017-03-09T03:03:48.881Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m3.105 ms - -[0m
+
+2017-03-09T03:03:48.884Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m4.891 ms - -[0m
+
+2017-03-09T03:03:48.885Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m4.810 ms - -[0m
+
+2017-03-09T03:03:48.887Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m4.139 ms - -[0m
+
+2017-03-09T03:03:48.889Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m3.154 ms - -[0m
+
+2017-03-09T03:03:48.890Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m3.341 ms - -[0m
+
+2017-03-09T03:03:48.890Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m3.237 ms - -[0m
+
+2017-03-09T03:03:48.891Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m2.854 ms - -[0m
+
+2017-03-09T03:03:48.894Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m3.385 ms - -[0m
+
+2017-03-09T03:03:48.894Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m3.376 ms - -[0m
+
+2017-03-09T03:03:48.897Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m1.976 ms - -[0m
+
+2017-03-09T03:03:48.900Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m2.521 ms - -[0m
+
+2017-03-09T03:03:48.900Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m4.121 ms - -[0m
+
+2017-03-09T03:03:48.901Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m4.246 ms - -[0m
+
+2017-03-09T03:03:48.904Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m2.738 ms - -[0m
+
+2017-03-09T03:03:48.904Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m2.388 ms - -[0m
+
+2017-03-09T03:03:48.906Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m2.984 ms - -[0m
+
+2017-03-09T03:03:48.907Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m3.475 ms - -[0m
+
+2017-03-09T03:03:48.907Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m2.360 ms - -[0m
+
+2017-03-09T03:03:48.909Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m3.263 ms - -[0m
+
+2017-03-09T03:03:48.910Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m2.394 ms - -[0m
+
+2017-03-09T03:03:48.911Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m2.071 ms - -[0m
+
+2017-03-09T03:03:48.918Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m6.583 ms - -[0m
+
+2017-03-09T03:03:48.919Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m3.077 ms - -[0m
+
+2017-03-09T03:03:48.920Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m3.318 ms - -[0m
+
+2017-03-09T03:03:48.920Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m3.246 ms - -[0m
+
+2017-03-09T03:03:48.921Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m3.312 ms - -[0m
+
+2017-03-09T03:03:48.922Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m3.491 ms - -[0m
+
+2017-03-09T03:03:48.924Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m1.432 ms - -[0m
+
+2017-03-09T03:03:48.928Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m2.375 ms - -[0m
+
+2017-03-09T03:03:48.929Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m2.173 ms - -[0m
+
+2017-03-09T03:03:48.931Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m4.256 ms - -[0m
+
+2017-03-09T03:03:48.933Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m4.027 ms - -[0m
+
+2017-03-09T03:03:48.933Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m3.502 ms - -[0m
+
+2017-03-09T03:03:48.936Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m5.449 ms - -[0m
+
+2017-03-09T03:03:48.937Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m4.399 ms - -[0m
+
+2017-03-09T03:03:48.937Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m4.630 ms - -[0m
+
+2017-03-09T03:03:48.939Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m1.370 ms - -[0m
+
+2017-03-09T03:03:48.941Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m2.143 ms - -[0m
+
+2017-03-09T03:03:49.341Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m2.750 ms - -[0m
+
+2017-03-09T03:03:49.342Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m1.924 ms - -[0m
+
+2017-03-09T03:03:49.343Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m2.490 ms - -[0m
+
+2017-03-09T03:03:49.360Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m1.314 ms - -[0m
+
+2017-03-09T03:03:49.360Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m1.584 ms - -[0m
+
+2017-03-09T03:03:49.362Z - info: [0mGET /modules/core/client/images/img-01-2x.png [32m200 [0m4.659 ms - -[0m
+
+2017-03-09T03:03:49.368Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.347 ms - -[0m
+
+2017-03-09T03:03:49.374Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m1.111 ms - -[0m
+
+2017-03-09T03:03:49.374Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m1.043 ms - -[0m
+
+2017-03-09T03:03:49.819Z - info: [0mGET /images/website-icon.png [36m304 [0m0.650 ms - -[0m
+
+2017-03-09T03:03:50.171Z - info: [0mGET /api/categories/list? [32m200 [0m474.542 ms - 271[0m
+
+2017-03-09T03:03:52.726Z - info: [0mGET /api/specialties/list? [32m200 [0m449.320 ms - -[0m
+
+2017-03-09T03:04:00.980Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY) [32m200 [0m596.499 ms - 84[0m
+
+2017-03-09T13:41:47.108Z - info: [0mGET / [36m304 [0m170.735 ms - -[0m
+
+2017-03-09T13:41:47.131Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m1.375 ms - -[0m
+
+2017-03-09T13:41:47.142Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m7.583 ms - -[0m
+
+2017-03-09T13:41:47.142Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m5.099 ms - -[0m
+
+2017-03-09T13:41:47.143Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m9.166 ms - -[0m
+
+2017-03-09T13:41:47.143Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m10.413 ms - -[0m
+
+2017-03-09T13:41:47.143Z - info: [0mGET /images/logo.svg [36m304 [0m4.484 ms - -[0m
+
+2017-03-09T13:41:47.148Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m10.138 ms - -[0m
+
+2017-03-09T13:41:47.166Z - info: [0mGET /images/loading-icon.svg [36m304 [0m7.653 ms - -[0m
+
+2017-03-09T13:41:47.167Z - info: [0mGET /images/iphone-2x.png [36m304 [0m7.645 ms - -[0m
+
+2017-03-09T13:41:47.167Z - info: [0mGET /images/logo-google.png [36m304 [0m7.687 ms - -[0m
+
+2017-03-09T13:41:47.172Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m6.185 ms - -[0m
+
+2017-03-09T13:41:47.172Z - info: [0mGET /lib/angular/angular.js [36m304 [0m10.002 ms - -[0m
+
+2017-03-09T13:41:47.173Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m0.693 ms - -[0m
+
+2017-03-09T13:41:47.181Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m4.429 ms - -[0m
+
+2017-03-09T13:41:47.184Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m4.929 ms - -[0m
+
+2017-03-09T13:41:47.187Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m4.732 ms - -[0m
+
+2017-03-09T13:41:47.201Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m0.332 ms - -[0m
+
+2017-03-09T13:41:47.203Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m15.518 ms - -[0m
+
+2017-03-09T13:41:47.204Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m1.753 ms - -[0m
+
+2017-03-09T13:41:47.204Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m1.877 ms - -[0m
+
+2017-03-09T13:41:47.204Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m1.687 ms - -[0m
+
+2017-03-09T13:41:47.218Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m0.618 ms - -[0m
+
+2017-03-09T13:41:47.223Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m0.977 ms - -[0m
+
+2017-03-09T13:41:47.225Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m1.281 ms - -[0m
+
+2017-03-09T13:41:47.228Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m0.768 ms - -[0m
+
+2017-03-09T13:41:47.231Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m1.548 ms - -[0m
+
+2017-03-09T13:41:47.232Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m1.186 ms - -[0m
+
+2017-03-09T13:41:47.233Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m0.721 ms - -[0m
+
+2017-03-09T13:41:47.237Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m1.874 ms - -[0m
+
+2017-03-09T13:41:47.238Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m2.294 ms - -[0m
+
+2017-03-09T13:41:47.245Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m6.746 ms - -[0m
+
+2017-03-09T13:41:47.246Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m6.666 ms - -[0m
+
+2017-03-09T13:41:47.247Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m4.424 ms - -[0m
+
+2017-03-09T13:41:47.248Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m4.426 ms - -[0m
+
+2017-03-09T13:41:47.248Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m4.503 ms - -[0m
+
+2017-03-09T13:41:47.249Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m4.477 ms - -[0m
+
+2017-03-09T13:41:47.251Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m1.318 ms - -[0m
+
+2017-03-09T13:41:47.252Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m1.745 ms - -[0m
+
+2017-03-09T13:41:47.260Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m0.871 ms - -[0m
+
+2017-03-09T13:41:47.261Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m0.793 ms - -[0m
+
+2017-03-09T13:41:47.265Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m2.497 ms - -[0m
+
+2017-03-09T13:41:47.265Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m2.178 ms - -[0m
+
+2017-03-09T13:41:47.267Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m2.863 ms - -[0m
+
+2017-03-09T13:41:47.270Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m3.159 ms - -[0m
+
+2017-03-09T13:41:47.275Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m5.942 ms - -[0m
+
+2017-03-09T13:41:47.275Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m5.912 ms - -[0m
+
+2017-03-09T13:41:47.278Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m4.959 ms - -[0m
+
+2017-03-09T13:41:47.279Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m5.326 ms - -[0m
+
+2017-03-09T13:41:47.279Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m5.365 ms - -[0m
+
+2017-03-09T13:41:47.281Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m4.114 ms - -[0m
+
+2017-03-09T13:41:47.287Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m5.709 ms - -[0m
+
+2017-03-09T13:41:47.288Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m4.259 ms - -[0m
+
+2017-03-09T13:41:47.288Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m4.512 ms - -[0m
+
+2017-03-09T13:41:47.292Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m6.539 ms - -[0m
+
+2017-03-09T13:41:47.294Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m6.393 ms - -[0m
+
+2017-03-09T13:41:47.294Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m7.853 ms - -[0m
+
+2017-03-09T13:41:47.297Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m3.314 ms - -[0m
+
+2017-03-09T13:41:47.299Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m4.257 ms - -[0m
+
+2017-03-09T13:41:47.300Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m3.374 ms - -[0m
+
+2017-03-09T13:41:47.300Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m3.365 ms - -[0m
+
+2017-03-09T13:41:47.302Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m3.165 ms - -[0m
+
+2017-03-09T13:41:47.304Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m4.550 ms - -[0m
+
+2017-03-09T13:41:47.307Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m5.074 ms - -[0m
+
+2017-03-09T13:41:47.310Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m5.370 ms - -[0m
+
+2017-03-09T13:41:47.316Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m9.469 ms - -[0m
+
+2017-03-09T13:41:47.319Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m10.690 ms - -[0m
+
+2017-03-09T13:41:47.319Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m9.817 ms - -[0m
+
+2017-03-09T13:41:47.321Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m3.492 ms - -[0m
+
+2017-03-09T13:41:47.322Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m3.342 ms - -[0m
+
+2017-03-09T13:41:47.324Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m3.682 ms - -[0m
+
+2017-03-09T13:41:47.324Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m3.649 ms - -[0m
+
+2017-03-09T13:41:47.326Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m2.543 ms - -[0m
+
+2017-03-09T13:41:47.328Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m2.976 ms - -[0m
+
+2017-03-09T13:41:47.330Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m2.966 ms - -[0m
+
+2017-03-09T13:41:47.330Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m2.451 ms - -[0m
+
+2017-03-09T13:41:47.333Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m3.972 ms - -[0m
+
+2017-03-09T13:41:47.333Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m3.840 ms - -[0m
+
+2017-03-09T13:41:47.336Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m3.882 ms - -[0m
+
+2017-03-09T13:41:47.338Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m3.259 ms - -[0m
+
+2017-03-09T13:41:47.339Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m3.349 ms - -[0m
+
+2017-03-09T13:41:47.339Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m3.376 ms - -[0m
+
+2017-03-09T13:41:47.340Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m2.028 ms - -[0m
+
+2017-03-09T13:41:47.892Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m3.717 ms - -[0m
+
+2017-03-09T13:41:47.893Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m3.192 ms - -[0m
+
+2017-03-09T13:41:47.893Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m2.138 ms - -[0m
+
+2017-03-09T13:41:47.945Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m2.856 ms - -[0m
+
+2017-03-09T13:41:47.946Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m6.128 ms - -[0m
+
+2017-03-09T13:41:47.947Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m4.772 ms - -[0m
+
+2017-03-09T13:41:47.948Z - info: [0mGET /modules/core/client/images/img-01-2x.png [36m304 [0m6.956 ms - -[0m
+
+2017-03-09T13:41:47.948Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m4.759 ms - -[0m
+
+2017-03-09T13:41:47.949Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m4.679 ms - -[0m
+
+2017-03-09T13:41:48.425Z - info: [0mGET /images/website-icon.png [36m304 [0m2.796 ms - -[0m
+
+2017-03-09T13:41:48.637Z - info: [0mGET /api/categories/list? [36m304 [0m393.161 ms - -[0m
+
+2017-03-09T13:41:52.097Z - info: [0mGET /api/specialties/list? [36m304 [0m238.226 ms - -[0m
+
+2017-03-09T13:41:58.627Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-DERMATOLOGY [32m200 [0m542.023 ms - 84[0m
+
+2017-03-09T13:46:46.771Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=EPV-DERMATOLOGY [32m200 [0m795.313 ms - -[0m
+
+2017-03-09T13:46:47.283Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=EPV-DERMATOLOGY&radius=72.47452200016255&page=1&count=10 [32m200 [0m502.424 ms - -[0m
+
+2017-03-09T13:46:53.356Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=EPV-DERMATOLOGY&radius=72.47452200016255&page=2&count=10 [32m200 [0m352.924 ms - -[0m
+
+2017-03-09T13:53:38.845Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-DERMATOLOGY [32m200 [0m907.227 ms - -[0m
+
+2017-03-09T13:53:39.342Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-DERMATOLOGY&radius=89.1006618385886&page=1&count=10 [32m200 [0m491.181 ms - -[0m
+
+2017-03-09T13:53:47.363Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=NPV-DERMATOLOGY&radius=89.1006618385886&page=2&count=10 [32m200 [0m349.187 ms - -[0m
+
+2017-03-09T13:53:56.460Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/8022156934-08746f6c25507d8dda4c3d78276a0833/8022156934-1588841597? [33m404 [0m279.288 ms - 71[0m
+
+2017-03-09T13:53:56.462Z - info: [0mGET /api/provider/place_of_service/8022156934-08746f6c25507d8dda4c3d78276a0833? [33m404 [0m270.603 ms - 127[0m
+
+2017-03-09T13:53:56.462Z - info: [0mGET /api/provider/practitioner/8022156934-1588841597? [33m404 [0m272.846 ms - 104[0m
+
+2017-03-09T13:54:01.622Z - info: [0mGET /details/NPV-DERMATOLOGY/8022156934-08746f6c25507d8dda4c3d78276a0833/8022156934-1588841597 [32m200 [0m24.856 ms - -[0m
+
+2017-03-09T13:54:01.626Z - info: [0mGET /api/cost_of_care/place_of_service/8022156934-08746f6c25507d8dda4c3d78276a0833? [0m- [0m- ms - -[0m
+
+2017-03-09T13:54:01.629Z - info: [0mGET /api/cost_of_care/practitioner/8022156934-1588841597? [0m- [0m- ms - -[0m
+
+2017-03-09T13:54:01.630Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/8022156934-08746f6c25507d8dda4c3d78276a0833/8022156934-1588841597? [0m- [0m- ms - -[0m
+
+2017-03-09T13:54:01.655Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m2.794 ms - -[0m
+
+2017-03-09T13:54:01.655Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m2.459 ms - -[0m
+
+2017-03-09T13:54:01.655Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m2.319 ms - -[0m
+
+2017-03-09T13:54:01.658Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m4.821 ms - -[0m
+
+2017-03-09T13:54:01.659Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m4.721 ms - -[0m
+
+2017-03-09T13:54:01.659Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m4.921 ms - -[0m
+
+2017-03-09T13:54:01.678Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m8.231 ms - -[0m
+
+2017-03-09T13:54:01.678Z - info: [0mGET /lib/angular/angular.js [36m304 [0m8.271 ms - -[0m
+
+2017-03-09T13:54:01.678Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m5.196 ms - -[0m
+
+2017-03-09T13:54:01.680Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m3.812 ms - -[0m
+
+2017-03-09T13:54:01.680Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m3.549 ms - -[0m
+
+2017-03-09T13:54:01.681Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m3.647 ms - -[0m
+
+2017-03-09T13:54:01.690Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m1.948 ms - -[0m
+
+2017-03-09T13:54:01.691Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m2.024 ms - -[0m
+
+2017-03-09T13:54:01.691Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m1.144 ms - -[0m
+
+2017-03-09T13:54:01.693Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m1.590 ms - -[0m
+
+2017-03-09T13:54:01.694Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m0.946 ms - -[0m
+
+2017-03-09T13:54:01.701Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m2.628 ms - -[0m
+
+2017-03-09T13:54:01.702Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m2.177 ms - -[0m
+
+2017-03-09T13:54:01.703Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m2.662 ms - -[0m
+
+2017-03-09T13:54:01.706Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m2.792 ms - -[0m
+
+2017-03-09T13:54:01.707Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m2.743 ms - -[0m
+
+2017-03-09T13:54:01.709Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m4.402 ms - -[0m
+
+2017-03-09T13:54:01.711Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m3.449 ms - -[0m
+
+2017-03-09T13:54:01.711Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m2.661 ms - -[0m
+
+2017-03-09T13:54:01.712Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m2.279 ms - -[0m
+
+2017-03-09T13:54:01.714Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m1.599 ms - -[0m
+
+2017-03-09T13:54:01.714Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m1.094 ms - -[0m
+
+2017-03-09T13:54:01.717Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m2.061 ms - -[0m
+
+2017-03-09T13:54:01.719Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m2.205 ms - -[0m
+
+2017-03-09T13:54:01.720Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m1.484 ms - -[0m
+
+2017-03-09T13:54:01.721Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m1.943 ms - -[0m
+
+2017-03-09T13:54:01.722Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m2.140 ms - -[0m
+
+2017-03-09T13:54:01.723Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m2.194 ms - -[0m
+
+2017-03-09T13:54:01.725Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m2.544 ms - -[0m
+
+2017-03-09T13:54:01.726Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m2.489 ms - -[0m
+
+2017-03-09T13:54:01.727Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m1.764 ms - -[0m
+
+2017-03-09T13:54:01.728Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m1.490 ms - -[0m
+
+2017-03-09T13:54:01.729Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m0.928 ms - -[0m
+
+2017-03-09T13:54:01.730Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m0.448 ms - -[0m
+
+2017-03-09T13:54:01.731Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m0.433 ms - -[0m
+
+2017-03-09T13:54:01.736Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m0.569 ms - -[0m
+
+2017-03-09T13:54:01.737Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m0.777 ms - -[0m
+
+2017-03-09T13:54:01.738Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m1.323 ms - -[0m
+
+2017-03-09T13:54:01.739Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m0.980 ms - -[0m
+
+2017-03-09T13:54:01.741Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m0.518 ms - -[0m
+
+2017-03-09T13:54:01.744Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m1.233 ms - -[0m
+
+2017-03-09T13:54:01.744Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m1.313 ms - -[0m
+
+2017-03-09T13:54:01.747Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m2.368 ms - -[0m
+
+2017-03-09T13:54:01.748Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m1.544 ms - -[0m
+
+2017-03-09T13:54:01.749Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m1.843 ms - -[0m
+
+2017-03-09T13:54:01.749Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m2.260 ms - -[0m
+
+2017-03-09T13:54:01.752Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m1.408 ms - -[0m
+
+2017-03-09T13:54:01.754Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m2.239 ms - -[0m
+
+2017-03-09T13:54:01.755Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m2.064 ms - -[0m
+
+2017-03-09T13:54:01.757Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m2.290 ms - -[0m
+
+2017-03-09T13:54:01.757Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m1.925 ms - -[0m
+
+2017-03-09T13:54:01.758Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m1.695 ms - -[0m
+
+2017-03-09T13:54:01.761Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m2.230 ms - -[0m
+
+2017-03-09T13:54:01.762Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m3.278 ms - -[0m
+
+2017-03-09T13:54:01.765Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m3.595 ms - -[0m
+
+2017-03-09T13:54:01.768Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m4.642 ms - -[0m
+
+2017-03-09T13:54:01.768Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m3.971 ms - -[0m
+
+2017-03-09T13:54:01.769Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m2.268 ms - -[0m
+
+2017-03-09T13:54:01.770Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m1.208 ms - -[0m
+
+2017-03-09T13:54:01.771Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m0.846 ms - -[0m
+
+2017-03-09T13:54:01.776Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m2.393 ms - -[0m
+
+2017-03-09T13:54:01.779Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m4.492 ms - -[0m
+
+2017-03-09T13:54:01.782Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m4.919 ms - -[0m
+
+2017-03-09T13:54:01.783Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m4.816 ms - -[0m
+
+2017-03-09T13:54:01.784Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m4.434 ms - -[0m
+
+2017-03-09T13:54:01.785Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m4.067 ms - -[0m
+
+2017-03-09T13:54:01.786Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m2.255 ms - -[0m
+
+2017-03-09T13:54:01.786Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m2.234 ms - -[0m
+
+2017-03-09T13:54:01.791Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m5.759 ms - -[0m
+
+2017-03-09T13:54:01.797Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m7.990 ms - -[0m
+
+2017-03-09T13:54:01.798Z - info: [0mGET /images/logo.svg [36m304 [0m2.866 ms - -[0m
+
+2017-03-09T13:54:01.799Z - info: [0mGET /images/loading-icon.svg [36m304 [0m3.347 ms - -[0m
+
+2017-03-09T13:54:01.800Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m7.909 ms - -[0m
+
+2017-03-09T13:54:01.801Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m7.457 ms - -[0m
+
+2017-03-09T13:54:01.802Z - info: [0mGET /images/iphone-2x.png [36m304 [0m2.356 ms - -[0m
+
+2017-03-09T13:54:01.803Z - info: [0mGET /images/logo-google.png [36m304 [0m0.267 ms - -[0m
+
+2017-03-09T13:54:02.180Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m2.705 ms - -[0m
+
+2017-03-09T13:54:02.180Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m2.813 ms - -[0m
+
+2017-03-09T13:54:02.182Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m3.721 ms - -[0m
+
+2017-03-09T13:54:02.183Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m1.975 ms - -[0m
+
+2017-03-09T13:54:02.183Z - info: [0mGET /modules/core/client/images/img-01-2x.png [36m304 [0m1.866 ms - -[0m
+
+2017-03-09T13:54:02.183Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m1.959 ms - -[0m
+
+2017-03-09T13:54:02.185Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.320 ms - -[0m
+
+2017-03-09T13:54:02.190Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m0.821 ms - -[0m
+
+2017-03-09T13:54:02.191Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m0.909 ms - -[0m
+
+2017-03-09T13:54:02.432Z - info: [0mGET /images/website-icon.png [36m304 [0m0.797 ms - -[0m
+
+2017-03-09T13:54:02.810Z - info: [0mGET /api/provider/place_of_service/8022156934-08746f6c25507d8dda4c3d78276a0833? [33m404 [0m382.232 ms - 127[0m
+
+2017-03-09T13:54:02.811Z - info: [0mGET /api/episode_of_care/show/NPV-DERMATOLOGY? [32m200 [0m382.269 ms - 267[0m
+
+2017-03-09T13:54:02.811Z - info: [0mGET /api/provider/practitioner/8022156934-1588841597? [33m404 [0m386.905 ms - 104[0m
+
+2017-03-09T13:54:03.036Z - info: [0mGET /api/categories/list? [36m304 [0m703.057 ms - -[0m
+
+2017-03-09T14:08:14.657Z - info: [0mGET / [36m304 [0m17.900 ms - -[0m
+
+2017-03-09T14:08:14.686Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m3.042 ms - -[0m
+
+2017-03-09T14:08:14.686Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m2.956 ms - -[0m
+
+2017-03-09T14:08:14.687Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m2.844 ms - -[0m
+
+2017-03-09T14:08:14.687Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m3.185 ms - -[0m
+
+2017-03-09T14:08:14.688Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m3.149 ms - -[0m
+
+2017-03-09T14:08:14.688Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m2.851 ms - -[0m
+
+2017-03-09T14:08:14.695Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m1.578 ms - -[0m
+
+2017-03-09T14:08:14.697Z - info: [0mGET /lib/angular/angular.js [36m304 [0m1.792 ms - -[0m
+
+2017-03-09T14:08:14.698Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m2.990 ms - -[0m
+
+2017-03-09T14:08:14.698Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m3.103 ms - -[0m
+
+2017-03-09T14:08:14.698Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m3.026 ms - -[0m
+
+2017-03-09T14:08:14.700Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m1.025 ms - -[0m
+
+2017-03-09T14:08:14.709Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m1.239 ms - -[0m
+
+2017-03-09T14:08:14.710Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m1.129 ms - -[0m
+
+2017-03-09T14:08:14.710Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m1.161 ms - -[0m
+
+2017-03-09T14:08:14.711Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m0.826 ms - -[0m
+
+2017-03-09T14:08:14.712Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m0.527 ms - -[0m
+
+2017-03-09T14:08:14.719Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m0.904 ms - -[0m
+
+2017-03-09T14:08:14.721Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m2.316 ms - -[0m
+
+2017-03-09T14:08:14.721Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m2.469 ms - -[0m
+
+2017-03-09T14:08:14.723Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m2.058 ms - -[0m
+
+2017-03-09T14:08:14.725Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m3.008 ms - -[0m
+
+2017-03-09T14:08:14.727Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m2.067 ms - -[0m
+
+2017-03-09T14:08:14.727Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m2.299 ms - -[0m
+
+2017-03-09T14:08:14.728Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m1.961 ms - -[0m
+
+2017-03-09T14:08:14.728Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m2.282 ms - -[0m
+
+2017-03-09T14:08:14.729Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m1.322 ms - -[0m
+
+2017-03-09T14:08:14.730Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m0.981 ms - -[0m
+
+2017-03-09T14:08:14.731Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m0.754 ms - -[0m
+
+2017-03-09T14:08:14.733Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m0.725 ms - -[0m
+
+2017-03-09T14:08:14.736Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m1.995 ms - -[0m
+
+2017-03-09T14:08:14.738Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m3.124 ms - -[0m
+
+2017-03-09T14:08:14.738Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m3.137 ms - -[0m
+
+2017-03-09T14:08:14.740Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m2.782 ms - -[0m
+
+2017-03-09T14:08:14.742Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m2.998 ms - -[0m
+
+2017-03-09T14:08:14.743Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m3.875 ms - -[0m
+
+2017-03-09T14:08:14.745Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m2.616 ms - -[0m
+
+2017-03-09T14:08:14.746Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m2.273 ms - -[0m
+
+2017-03-09T14:08:14.747Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m2.215 ms - -[0m
+
+2017-03-09T14:08:14.748Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m1.825 ms - -[0m
+
+2017-03-09T14:08:14.750Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m2.497 ms - -[0m
+
+2017-03-09T14:08:14.752Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m2.516 ms - -[0m
+
+2017-03-09T14:08:14.754Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m2.820 ms - -[0m
+
+2017-03-09T14:08:14.755Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m2.228 ms - -[0m
+
+2017-03-09T14:08:14.755Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m2.207 ms - -[0m
+
+2017-03-09T14:08:14.756Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m1.856 ms - -[0m
+
+2017-03-09T14:08:14.757Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m1.342 ms - -[0m
+
+2017-03-09T14:08:14.758Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m0.974 ms - -[0m
+
+2017-03-09T14:08:14.763Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m4.232 ms - -[0m
+
+2017-03-09T14:08:14.763Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m4.127 ms - -[0m
+
+2017-03-09T14:08:14.766Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m4.094 ms - -[0m
+
+2017-03-09T14:08:14.767Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m5.614 ms - -[0m
+
+2017-03-09T14:08:14.767Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m5.822 ms - -[0m
+
+2017-03-09T14:08:14.769Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m1.852 ms - -[0m
+
+2017-03-09T14:08:14.770Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m1.905 ms - -[0m
+
+2017-03-09T14:08:14.771Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m1.755 ms - -[0m
+
+2017-03-09T14:08:14.772Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m1.550 ms - -[0m
+
+2017-03-09T14:08:14.773Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m1.607 ms - -[0m
+
+2017-03-09T14:08:14.775Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m1.137 ms - -[0m
+
+2017-03-09T14:08:14.776Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m2.328 ms - -[0m
+
+2017-03-09T14:08:14.779Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m1.827 ms - -[0m
+
+2017-03-09T14:08:14.780Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m3.008 ms - -[0m
+
+2017-03-09T14:08:14.780Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m2.928 ms - -[0m
+
+2017-03-09T14:08:14.782Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m2.410 ms - -[0m
+
+2017-03-09T14:08:14.782Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m2.325 ms - -[0m
+
+2017-03-09T14:08:14.783Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m1.419 ms - -[0m
+
+2017-03-09T14:08:14.786Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m0.397 ms - -[0m
+
+2017-03-09T14:08:14.787Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m0.683 ms - -[0m
+
+2017-03-09T14:08:14.790Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m2.299 ms - -[0m
+
+2017-03-09T14:08:14.793Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m4.166 ms - -[0m
+
+2017-03-09T14:08:14.794Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m3.413 ms - -[0m
+
+2017-03-09T14:08:14.795Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m3.512 ms - -[0m
+
+2017-03-09T14:08:14.795Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m3.379 ms - -[0m
+
+2017-03-09T14:08:14.796Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m3.523 ms - -[0m
+
+2017-03-09T14:08:14.799Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m4.530 ms - -[0m
+
+2017-03-09T14:08:14.799Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m2.305 ms - -[0m
+
+2017-03-09T14:08:14.803Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m3.453 ms - -[0m
+
+2017-03-09T14:08:14.804Z - info: [0mGET /images/logo.svg [36m304 [0m1.915 ms - -[0m
+
+2017-03-09T14:08:14.804Z - info: [0mGET /images/loading-icon.svg [36m304 [0m2.004 ms - -[0m
+
+2017-03-09T14:08:14.805Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m4.477 ms - -[0m
+
+2017-03-09T14:08:14.806Z - info: [0mGET /images/iphone-2x.png [36m304 [0m1.155 ms - -[0m
+
+2017-03-09T14:08:14.806Z - info: [0mGET /images/logo-google.png [36m304 [0m1.114 ms - -[0m
+
+2017-03-09T14:08:15.195Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m1.394 ms - -[0m
+
+2017-03-09T14:08:15.197Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m1.618 ms - -[0m
+
+2017-03-09T14:08:15.197Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m2.829 ms - -[0m
+
+2017-03-09T14:08:15.199Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m1.736 ms - -[0m
+
+2017-03-09T14:08:15.200Z - info: [0mGET /modules/core/client/images/img-01-2x.png [36m304 [0m1.713 ms - -[0m
+
+2017-03-09T14:08:15.200Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m1.722 ms - -[0m
+
+2017-03-09T14:08:15.202Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.260 ms - -[0m
+
+2017-03-09T14:08:15.210Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m1.714 ms - -[0m
+
+2017-03-09T14:08:15.210Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m1.764 ms - -[0m
+
+2017-03-09T14:08:15.448Z - info: [0mGET /images/website-icon.png [36m304 [0m0.649 ms - -[0m
+
+2017-03-09T14:08:15.686Z - info: [0mGET /api/categories/list? [36m304 [0m336.317 ms - -[0m
+
+2017-03-09T14:08:18.166Z - info: [0mGET /api/specialties/list? [36m304 [0m373.632 ms - -[0m
+
+2017-03-09T14:08:42.127Z - info: [0mGET /api/place_of_care/search?lat=32.2371465&lng=-80.86038680000001&eocCode=NPV-DERMATOLOGY [32m200 [0m1084.397 ms - -[0m
+
+2017-03-09T14:08:42.794Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2371465&lng=-80.86038680000001&eocCode=NPV-DERMATOLOGY&radius=90.04813553354255&page=1&count=10 [32m200 [0m654.481 ms - -[0m
+
+2017-03-09T14:08:44.085Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/9537353164-3b145abf837c42e1a3d84e1982ffb9f2/9537353164-1578673893? [33m404 [0m239.458 ms - 71[0m
+
+2017-03-09T14:08:44.085Z - info: [0mGET /api/provider/practitioner/9537353164-1578673893? [33m404 [0m231.927 ms - 104[0m
+
+2017-03-09T14:08:44.101Z - info: [0mGET /api/provider/place_of_service/9537353164-3b145abf837c42e1a3d84e1982ffb9f2? [33m404 [0m250.913 ms - 127[0m
+
+2017-03-09T14:08:49.568Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/9537305990-605c65f919cce02314fa018a662ab238/9537305990-1639272040? [33m404 [0m235.299 ms - 71[0m
+
+2017-03-09T14:10:15.195Z - info: [0mGET /api/cost_of_care/place_of_service/9537353164-3b145abf837c42e1a3d84e1982ffb9f2? [0m- [0m- ms - -[0m
+
+2017-03-09T14:10:15.196Z - info: [0mGET /api/cost_of_care/practitioner/9537353164-1578673893? [0m- [0m- ms - -[0m
+
+2017-03-09T14:10:15.448Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9537353164-3b145abf837c42e1a3d84e1982ffb9f2/9537353164-1578673893? [0m- [0m- ms - -[0m
+
+2017-03-09T14:10:15.497Z - info: [0mGET /api/provider/place_of_service/9537305990-605c65f919cce02314fa018a662ab238? [33m404 [0m299.751 ms - 127[0m
+
+2017-03-09T14:10:15.514Z - info: [0mGET /api/provider/practitioner/9537305990-1639272040? [33m404 [0m315.915 ms - 104[0m
+
+2017-03-09T14:10:44.084Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9537305990-605c65f919cce02314fa018a662ab238/9537305990-1639272040? [0m- [0m- ms - -[0m
+
+2017-03-09T14:10:44.084Z - info: [0mGET /api/cost_of_care/place_of_service/9537305990-605c65f919cce02314fa018a662ab238? [0m- [0m- ms - -[0m
+
+2017-03-09T14:10:49.566Z - info: [0mGET /api/cost_of_care/practitioner/9537305990-1639272040? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:15.445Z - info: [0mGET /api/cost_of_care/practitioner/9537353164-1578673893? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:15.497Z - info: [0mGET /api/cost_of_care/place_of_service/9537353164-3b145abf837c42e1a3d84e1982ffb9f2? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:15.509Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9537353164-3b145abf837c42e1a3d84e1982ffb9f2/9537353164-1578673893? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:44.082Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9537305990-605c65f919cce02314fa018a662ab238/9537305990-1639272040? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:44.082Z - info: [0mGET /api/cost_of_care/place_of_service/9537305990-605c65f919cce02314fa018a662ab238? [0m- [0m- ms - -[0m
+
+2017-03-09T14:12:49.566Z - info: [0mGET /api/cost_of_care/practitioner/9537305990-1639272040? [0m- [0m- ms - -[0m
+
+2017-03-09T14:14:15.497Z - info: [0mGET /api/cost_of_care/place_of_service/9537353164-3b145abf837c42e1a3d84e1982ffb9f2? [0m- [0m- ms - -[0m
+
+2017-03-09T14:14:15.505Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9537353164-3b145abf837c42e1a3d84e1982ffb9f2/9537353164-1578673893? [0m- [0m- ms - -[0m
+
+2017-03-09T14:23:13.346Z - info: [0mGET /api/place_of_care/search?lat=37.7749295&lng=-122.41941550000001&eocCode=NPV-DERMATOLOGY [32m200 [0m905.581 ms - -[0m
+
+2017-03-09T14:23:13.991Z - info: [0mGET /api/practitioner_of_care/search?lat=37.7749295&lng=-122.41941550000001&eocCode=NPV-DERMATOLOGY&radius=8.22571968471403&page=1&count=10 [32m200 [0m639.305 ms - -[0m
+
+2017-03-09T14:23:26.343Z - info: [0mGET /api/place_of_care/search?lat=38.084168439080806&lng=-122.57113025546873&eocCode=NPV-DERMATOLOGY [32m200 [0m683.276 ms - -[0m
+
+2017-03-09T14:23:26.948Z - info: [0mGET /api/practitioner_of_care/search?lat=38.084168439080806&lng=-122.57113025546873&eocCode=NPV-DERMATOLOGY&radius=24.625887445574268&page=1&count=10 [32m200 [0m595.942 ms - -[0m
+
+2017-03-09T14:23:35.387Z - info: [0mGET /api/place_of_care/search?lat=37.289604664702985&lng=-121.92202327109374&eocCode=NPV-DERMATOLOGY [32m200 [0m1183.817 ms - -[0m
+
+2017-03-09T14:23:36.390Z - info: [0mGET /api/practitioner_of_care/search?lat=37.289604664702985&lng=-121.92202327109374&eocCode=NPV-DERMATOLOGY&radius=32.840208816080946&page=1&count=10 [32m200 [0m996.662 ms - -[0m
+
+2017-03-09T14:23:56.132Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315/6204088172-1073612867? [33m404 [0m234.083 ms - 71[0m
+
+2017-03-09T14:23:56.145Z - info: [0mGET /api/provider/practitioner/6204088172-1073612867? [33m404 [0m236.881 ms - 104[0m
+
+2017-03-09T14:23:56.182Z - info: [0mGET /api/provider/place_of_service/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315? [33m404 [0m247.999 ms - 127[0m
+
+2017-03-09T14:23:56.182Z - info: [0mGET /api/cost_of_care/practitioner/6204088172-1073612867? [32m200 [0m277.879 ms - 533[0m
+
+2017-03-09T14:23:59.350Z - info: [0mGET /api/practitioner_of_care/search?lat=37.289604664702985&lng=-121.92202327109374&eocCode=NPV-DERMATOLOGY&radius=32.840208816080946&page=2&count=10 [32m200 [0m744.415 ms - -[0m
+
+2017-03-09T14:25:36.536Z - info: [0mGET /api/practitioner_of_care/search?lat=37.289604664702985&lng=-121.92202327109374&eocCode=NPV-DERMATOLOGY&radius=32.840208816080946&page=3&count=10 [32m200 [0m620.577 ms - -[0m
+
+2017-03-09T14:25:38.296Z - info: [0mGET /api/provider/practitioner/6204088172-1073612867? [33m404 [0m215.284 ms - 104[0m
+
+2017-03-09T14:25:38.297Z - info: [0mGET /api/provider/place_of_service/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315? [33m404 [0m218.485 ms - 127[0m
+
+2017-03-09T14:25:38.297Z - info: [0mGET /api/cost_of_care/practitioner/6204088172-1073612867? [36m304 [0m220.720 ms - -[0m
+
+2017-03-09T14:25:38.303Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315/6204088172-1073612867? [33m404 [0m232.132 ms - 71[0m
+
+2017-03-09T14:25:39.741Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/4082658422-7d7c0d940af9be1969001b2621904325/4082658422-1518099977? [33m404 [0m220.933 ms - 71[0m
+
+2017-03-09T14:25:39.760Z - info: [0mGET /api/cost_of_care/practitioner/4082658422-1518099977? [32m200 [0m237.597 ms - 519[0m
+
+2017-03-09T14:25:40.080Z - info: [0mGET /api/provider/place_of_service/4082658422-7d7c0d940af9be1969001b2621904325? [33m404 [0m336.491 ms - 127[0m
+
+2017-03-09T14:25:40.143Z - info: [0mGET /api/provider/practitioner/4082658422-1518099977? [33m404 [0m380.747 ms - 104[0m
+
+2017-03-09T14:25:41.373Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/9032023171-23315e54b54bb78b10cc632024f86330/9032023171-1821180993? [33m404 [0m231.193 ms - 71[0m
+
+2017-03-09T14:25:55.895Z - info: [0mGET /api/cost_of_care/place_of_service/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315? [0m- [0m- ms - -[0m
+
+2017-03-09T14:25:55.896Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/6204088172-01e1bafbbdd7bcaa9b26eea8370b4315/6204088172-1073612867? [0m- [0m- ms - -[0m
+
+2017-03-09T14:25:56.124Z - info: [0mGET /api/provider/place_of_service/9032023171-23315e54b54bb78b10cc632024f86330? [33m404 [0m223.799 ms - 127[0m
+
+2017-03-09T14:25:56.376Z - info: [0mGET /api/provider/practitioner/9032023171-1821180993? [33m404 [0m249.243 ms - 104[0m
+
+2017-03-09T14:25:56.823Z - info: [0mGET /api/cost_of_care/show/DERMATOLOGY/9032023171-0de0d18f12630df2533fec55b4ae3b7b/9032023171-1821180993? [33m404 [0m445.935 ms - 71[0m
+
+2017-03-09T14:27:38.295Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/4082658422-7d7c0d940af9be1969001b2621904325/4082658422-1518099977? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.295Z - info: [0mGET /api/cost_of_care/place_of_service/4082658422-7d7c0d940af9be1969001b2621904325? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.299Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m2.508 ms - -[0m
+
+2017-03-09T14:27:38.302Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m0.404 ms - -[0m
+
+2017-03-09T14:27:38.321Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m1.827 ms - -[0m
+
+2017-03-09T14:27:38.323Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m0.415 ms - -[0m
+
+2017-03-09T14:27:38.325Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m0.494 ms - -[0m
+
+2017-03-09T14:27:38.326Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m0.537 ms - -[0m
+
+2017-03-09T14:27:38.327Z - info: [0mGET / [32m200 [0m22.398 ms - -[0m
+
+2017-03-09T14:27:38.369Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9032023171-23315e54b54bb78b10cc632024f86330/9032023171-1821180993? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.376Z - info: [0mGET /api/cost_of_care/place_of_service/9032023171-23315e54b54bb78b10cc632024f86330? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.382Z - info: [0mGET /api/provider/place_of_service/9032023171-0de0d18f12630df2533fec55b4ae3b7b? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.384Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Colons [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.389Z - info: [0mGET /api/cost_of_care/place_of_service/9032023171-0de0d18f12630df2533fec55b4ae3b7b? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.395Z - info: [0mGET /api/provider/practitioner/9032023171-1821180993? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.395Z - info: [0mGET /api/cost_of_care/episode_of_care/DERMATOLOGY/9032023171-0de0d18f12630df2533fec55b4ae3b7b/9032023171-1821180993? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.397Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=colo [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.403Z - info: [0mGET /api/cost_of_care/practitioner/9032023171-1821180993? [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.404Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Col [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.405Z - info: [0mGET /modules/core/client/images/img-01-small-2x.png [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.405Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Col [0m- [0m- ms - -[0m
+
+2017-03-09T14:27:38.410Z - info: [0mGET /lib/angular-route/angular-route.min.js.map [32m200 [0m3.677 ms - -[0m
+
+2017-03-09T14:27:38.417Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js.map [32m200 [0m9.354 ms - -[0m
+
+2017-03-09T14:27:38.429Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m0.419 ms - -[0m
+
+2017-03-09T14:27:38.434Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m2.310 ms - -[0m
+
+2017-03-09T14:27:38.435Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m1.673 ms - -[0m
+
+2017-03-09T14:27:38.436Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m2.408 ms - -[0m
+
+2017-03-09T14:27:38.437Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m1.520 ms - -[0m
+
+2017-03-09T14:27:38.438Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m1.174 ms - -[0m
+
+2017-03-09T14:27:38.445Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m2.080 ms - -[0m
+
+2017-03-09T14:27:38.445Z - info: [0mGET /lib/angular/angular.js [36m304 [0m1.883 ms - -[0m
+
+2017-03-09T14:27:38.446Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m1.813 ms - -[0m
+
+2017-03-09T14:27:38.446Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m2.043 ms - -[0m
+
+2017-03-09T14:27:38.447Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m2.187 ms - -[0m
+
+2017-03-09T14:27:38.450Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m2.425 ms - -[0m
+
+2017-03-09T14:27:38.459Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [32m200 [0m1.681 ms - -[0m
+
+2017-03-09T14:27:38.460Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m0.425 ms - -[0m
+
+2017-03-09T14:27:38.461Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m0.457 ms - -[0m
+
+2017-03-09T14:27:38.462Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m0.322 ms - -[0m
+
+2017-03-09T14:27:38.463Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m0.473 ms - -[0m
+
+2017-03-09T14:27:38.466Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m0.463 ms - -[0m
+
+2017-03-09T14:27:38.475Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m0.792 ms - -[0m
+
+2017-03-09T14:27:38.475Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m1.098 ms - -[0m
+
+2017-03-09T14:27:38.478Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m1.924 ms - -[0m
+
+2017-03-09T14:27:38.478Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m1.874 ms - -[0m
+
+2017-03-09T14:27:38.480Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m2.467 ms - -[0m
+
+2017-03-09T14:27:38.482Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m3.037 ms - -[0m
+
+2017-03-09T14:27:38.483Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m3.115 ms - -[0m
+
+2017-03-09T14:27:38.484Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m1.309 ms - -[0m
+
+2017-03-09T14:27:38.485Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m1.254 ms - -[0m
+
+2017-03-09T14:27:38.486Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m0.695 ms - -[0m
+
+2017-03-09T14:27:38.491Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m1.331 ms - -[0m
+
+2017-03-09T14:27:38.492Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m1.480 ms - -[0m
+
+2017-03-09T14:27:38.495Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m1.515 ms - -[0m
+
+2017-03-09T14:27:38.495Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m1.124 ms - -[0m
+
+2017-03-09T14:27:38.498Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m0.569 ms - -[0m
+
+2017-03-09T14:27:38.504Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css.map [32m200 [0m1.143 ms - -[0m
+
+2017-03-09T14:27:38.504Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m1.563 ms - -[0m
+
+2017-03-09T14:27:38.505Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m2.033 ms - -[0m
+
+2017-03-09T14:27:38.507Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m1.645 ms - -[0m
+
+2017-03-09T14:27:38.509Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m3.296 ms - -[0m
+
+2017-03-09T14:27:38.510Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m2.613 ms - -[0m
+
+2017-03-09T14:27:38.511Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m0.473 ms - -[0m
+
+2017-03-09T14:27:38.512Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m0.549 ms - -[0m
+
+2017-03-09T14:27:38.514Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m0.472 ms - -[0m
+
+2017-03-09T14:27:38.516Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m0.544 ms - -[0m
+
+2017-03-09T14:27:38.518Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m1.660 ms - -[0m
+
+2017-03-09T14:27:38.519Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m1.708 ms - -[0m
+
+2017-03-09T14:27:38.520Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m2.103 ms - -[0m
+
+2017-03-09T14:27:38.521Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m1.698 ms - -[0m
+
+2017-03-09T14:27:38.522Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m1.592 ms - -[0m
+
+2017-03-09T14:27:38.526Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m2.161 ms - -[0m
+
+2017-03-09T14:27:38.526Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m2.141 ms - -[0m
+
+2017-03-09T14:27:38.529Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m2.630 ms - -[0m
+
+2017-03-09T14:27:38.530Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m2.432 ms - -[0m
+
+2017-03-09T14:27:38.531Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m2.302 ms - -[0m
+
+2017-03-09T14:27:38.532Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m1.610 ms - -[0m
+
+2017-03-09T14:27:38.533Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m1.709 ms - -[0m
+
+2017-03-09T14:27:38.537Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m2.649 ms - -[0m
+
+2017-03-09T14:27:38.540Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m4.863 ms - -[0m
+
+2017-03-09T14:27:38.543Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m4.808 ms - -[0m
+
+2017-03-09T14:27:38.543Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m4.246 ms - -[0m
+
+2017-03-09T14:27:38.543Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m3.910 ms - -[0m
+
+2017-03-09T14:27:38.545Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m2.679 ms - -[0m
+
+2017-03-09T14:27:38.545Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m1.201 ms - -[0m
+
+2017-03-09T14:27:38.555Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m0.719 ms - -[0m
+
+2017-03-09T14:27:38.562Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m5.519 ms - -[0m
+
+2017-03-09T14:27:38.562Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m4.751 ms - -[0m
+
+2017-03-09T14:27:38.563Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m4.784 ms - -[0m
+
+2017-03-09T14:27:38.563Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m4.845 ms - -[0m
+
+2017-03-09T14:27:38.564Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m3.332 ms - -[0m
+
+2017-03-09T14:27:38.572Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m2.618 ms - -[0m
+
+2017-03-09T14:27:38.573Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m2.612 ms - -[0m
+
+2017-03-09T14:27:38.573Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m2.618 ms - -[0m
+
+2017-03-09T14:27:38.573Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m2.681 ms - -[0m
+
+2017-03-09T14:27:38.574Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m2.590 ms - -[0m
+
+2017-03-09T14:27:38.583Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m0.508 ms - -[0m
+
+2017-03-09T14:27:38.585Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m1.523 ms - -[0m
+
+2017-03-09T14:27:38.586Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m1.699 ms - -[0m
+
+2017-03-09T14:27:38.589Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m3.005 ms - -[0m
+
+2017-03-09T14:27:38.592Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m2.992 ms - -[0m
+
+2017-03-09T14:27:38.592Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m2.341 ms - -[0m
+
+2017-03-09T14:27:38.592Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m2.194 ms - -[0m
+
+2017-03-09T14:27:38.592Z - info: [0mGET /images/logo.svg [36m304 [0m1.575 ms - -[0m
+
+2017-03-09T14:27:38.593Z - info: [0mGET /images/loading-icon.svg [36m304 [0m1.995 ms - -[0m
+
+2017-03-09T14:27:38.594Z - info: [0mGET /images/iphone-2x.png [36m304 [0m0.793 ms - -[0m
+
+2017-03-09T14:27:38.597Z - info: [0mGET /images/logo-google.png [36m304 [0m0.396 ms - -[0m
+
+2017-03-09T14:27:38.609Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css.map [36m304 [0m1.769 ms - -[0m
+
+2017-03-09T14:27:38.610Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [36m304 [0m1.712 ms - -[0m
+
+2017-03-09T14:27:38.831Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js.map [36m304 [0m0.317 ms - -[0m
+
+2017-03-09T14:27:38.834Z - info: [0mGET /lib/angular-route/angular-route.min.js.map [36m304 [0m0.352 ms - -[0m
+
+2017-03-09T14:27:39.145Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m0.896 ms - -[0m
+
+2017-03-09T14:27:39.146Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m1.150 ms - -[0m
+
+2017-03-09T14:27:39.146Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m0.760 ms - -[0m
+
+2017-03-09T14:27:39.149Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m0.552 ms - -[0m
+
+2017-03-09T14:27:39.151Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m0.538 ms - -[0m
+
+2017-03-09T14:27:39.152Z - info: [0mGET /modules/core/client/images/img-01-small-2x.png [32m200 [0m1.695 ms - 60400[0m
+
+2017-03-09T14:27:39.152Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.722 ms - -[0m
+
+2017-03-09T14:27:39.157Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m0.721 ms - -[0m
+
+2017-03-09T14:27:39.157Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m0.647 ms - -[0m
+
+2017-03-09T14:27:39.554Z - info: [0mGET /images/website-icon.png [36m304 [0m0.639 ms - -[0m
+
+2017-03-09T14:27:39.571Z - info: [0mGET /api/categories/list? [36m304 [0m238.155 ms - -[0m
+
+2017-03-09T14:27:39.601Z - info: [0mGET /modules/core/client/img/brand/favicon.png [32m200 [0m0.972 ms - 284[0m
+
+2017-03-09T14:27:45.404Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Colono [32m200 [0m252.546 ms - -[0m
+
+2017-03-09T14:27:45.874Z - info: [0mGET /api/episode_of_care/search?eocCategoryId=2&q=Colonos [32m200 [0m299.798 ms - -[0m
+
+2017-03-09T14:27:53.323Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378 [32m200 [0m1293.680 ms - -[0m
+
+2017-03-09T14:27:54.063Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378&radius=89.31414862302745&page=1&count=10 [32m200 [0m732.482 ms - -[0m
+
+2017-03-09T14:27:55.746Z - info: [0mGET /api/provider/place_of_service/1083695860? [33m404 [0m213.496 ms - 94[0m
+
+2017-03-09T14:27:55.754Z - info: [0mGET /api/cost_of_care/show/45378/1083695860/8123015617-1831170612? [32m200 [0m236.251 ms - -[0m
+
+2017-03-09T14:27:55.763Z - info: [0mGET /api/provider/practitioner/8123015617-1831170612? [33m404 [0m232.551 ms - 104[0m
+
+2017-03-09T14:27:55.842Z - info: [0mGET /api/cost_of_care/practitioner/8123015617-1831170612? [32m200 [0m318.034 ms - 558[0m
+
+2017-03-09T14:27:55.848Z - info: [0mGET /api/cost_of_care/episode_of_care/45378/1083695860/8123015617-1831170612? [32m200 [0m330.028 ms - 262[0m
+
+2017-03-09T14:27:59.814Z - info: [0mGET /modules/core/client/fonts/proximanova-black-webfont.woff2 [32m200 [0m2.342 ms - -[0m
+
+2017-03-09T14:28:11.969Z - info: [0mGET /api/cost_of_care/episode_of_care/45378/420065/8123015617-1831170612? [32m200 [0m248.465 ms - 262[0m
+
+2017-03-09T14:28:11.970Z - info: [0mGET /api/provider/place_of_service/420065? [33m404 [0m249.401 ms - 90[0m
+
+2017-03-09T14:28:11.971Z - info: [0mGET /api/cost_of_care/practitioner/8123015617-1831170612? [36m304 [0m256.493 ms - -[0m
+
+2017-03-09T14:28:11.972Z - info: [0mGET /api/cost_of_care/show/45378/420065/8123015617-1831170612? [32m200 [0m253.455 ms - -[0m
+
+2017-03-09T14:28:11.973Z - info: [0mGET /api/cost_of_care/place_of_service/420065? [32m200 [0m255.136 ms - -[0m
+
+2017-03-09T14:28:12.339Z - info: [0mGET /api/provider/practitioner/8123015617-1831170612? [33m404 [0m366.159 ms - 104[0m
+
+2017-03-09T14:28:21.073Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378&radius=89.31414862302745&page=2&count=10 [32m200 [0m603.486 ms - -[0m
+
+2017-03-09T14:28:21.404Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=45378&radius=89.31414862302745&page=3&count=10 [32m200 [0m416.792 ms - -[0m
+
+2017-03-09T14:29:39.149Z - info: [0mGET /api/cost_of_care/place_of_service/1083695860? [0m- [0m- ms - -[0m
+
+2017-03-09T14:30:21.402Z - info: [0mGET /api/cost_of_care/place_of_service/1083695860? [0m- [0m- ms - -[0m
+
+2017-03-09T14:32:21.402Z - info: [0mGET /api/cost_of_care/place_of_service/1083695860? [0m- [0m- ms - -[0m
+
+2017-03-09T18:29:34.958Z - info: [0mGET / [36m304 [0m21.840 ms - -[0m
+
+2017-03-09T18:29:34.980Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m0.401 ms - -[0m
+
+2017-03-09T18:29:34.985Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m2.945 ms - -[0m
+
+2017-03-09T18:29:34.986Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m1.725 ms - -[0m
+
+2017-03-09T18:29:34.988Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m2.631 ms - -[0m
+
+2017-03-09T18:29:34.989Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m3.878 ms - -[0m
+
+2017-03-09T18:29:34.989Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m4.045 ms - -[0m
+
+2017-03-09T18:29:34.990Z - info: [0mGET /images/logo.svg [36m304 [0m2.346 ms - -[0m
+
+2017-03-09T18:29:34.991Z - info: [0mGET /images/loading-icon.svg [36m304 [0m0.653 ms - -[0m
+
+2017-03-09T18:29:34.991Z - info: [0mGET /images/iphone-2x.png [36m304 [0m0.611 ms - -[0m
+
+2017-03-09T18:29:34.993Z - info: [0mGET /images/logo-google.png [36m304 [0m0.336 ms - -[0m
+
+2017-03-09T18:29:34.995Z - info: [0mGET /lib/jquery/dist/jquery.js [36m304 [0m0.273 ms - -[0m
+
+2017-03-09T18:29:34.996Z - info: [0mGET /lib/angular/angular.js [36m304 [0m0.233 ms - -[0m
+
+2017-03-09T18:29:34.997Z - info: [0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m0.605 ms - -[0m
+
+2017-03-09T18:29:34.998Z - info: [0mGET /lib/angular-resource/angular-resource.js [36m304 [0m0.718 ms - -[0m
+
+2017-03-09T18:29:34.999Z - info: [0mGET /lib/angular-animate/angular-animate.js [36m304 [0m0.392 ms - -[0m
+
+2017-03-09T18:29:35.007Z - info: [0mGET /lib/angular-messages/angular-messages.js [36m304 [0m0.560 ms - -[0m
+
+2017-03-09T18:29:35.008Z - info: [0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m0.597 ms - -[0m
+
+2017-03-09T18:29:35.008Z - info: [0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m0.204 ms - -[0m
+
+2017-03-09T18:29:35.009Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js [36m304 [0m0.237 ms - -[0m
+
+2017-03-09T18:29:35.010Z - info: [0mGET /lib/owasp-password-strength-test/owasp-password-strength-test.js [36m304 [0m0.201 ms - -[0m
+
+2017-03-09T18:29:35.014Z - info: [0mGET /lib/bootstrap-slider/dist/bootstrap-slider.js [36m304 [0m0.350 ms - -[0m
+
+2017-03-09T18:29:35.017Z - info: [0mGET /lib/angular-route/angular-route.min.js [36m304 [0m0.239 ms - -[0m
+
+2017-03-09T18:29:35.018Z - info: [0mGET /modules/core/client/app/config.js [36m304 [0m0.401 ms - -[0m
+
+2017-03-09T18:29:35.020Z - info: [0mGET /modules/core/client/app/init.js [36m304 [0m0.504 ms - -[0m
+
+2017-03-09T18:29:35.021Z - info: [0mGET /modules/core/client/core.client.module.js [36m304 [0m0.332 ms - -[0m
+
+2017-03-09T18:29:35.022Z - info: [0mGET /modules/users/client/users.client.module.js [36m304 [0m0.506 ms - -[0m
+
+2017-03-09T18:29:35.024Z - info: [0mGET /modules/core/client/config/core-admin.client.menus.js [36m304 [0m0.874 ms - -[0m
+
+2017-03-09T18:29:35.024Z - info: [0mGET /modules/core/client/config/core-admin.client.routes.js [36m304 [0m0.843 ms - -[0m
+
+2017-03-09T18:29:35.025Z - info: [0mGET /modules/core/client/config/core.client.menus.js [36m304 [0m0.404 ms - -[0m
+
+2017-03-09T18:29:35.027Z - info: [0mGET /modules/core/client/config/core.client.route-filter.js [36m304 [0m2.012 ms - -[0m
+
+2017-03-09T18:29:35.030Z - info: [0mGET /modules/core/client/config/core.client.routes.js [36m304 [0m3.663 ms - -[0m
+
+2017-03-09T18:29:35.031Z - info: [0mGET /modules/core/client/controllers/core.client.controller.js [36m304 [0m3.083 ms - -[0m
+
+2017-03-09T18:29:35.032Z - info: [0mGET /modules/core/client/controllers/cta-page.client.controller.js [36m304 [0m3.067 ms - -[0m
+
+2017-03-09T18:29:35.032Z - info: [0mGET /modules/core/client/controllers/cta-text-area.client.controller.js [36m304 [0m3.589 ms - -[0m
+
+2017-03-09T18:29:35.033Z - info: [0mGET /modules/core/client/controllers/header.client.controller.js [36m304 [0m2.333 ms - -[0m
+
+2017-03-09T18:29:35.034Z - info: [0mGET /modules/core/client/controllers/home.client.controller.js [36m304 [0m0.795 ms - -[0m
+
+2017-03-09T18:29:35.035Z - info: [0mGET /modules/core/client/controllers/practitioner-list.client.controller.js [36m304 [0m0.792 ms - -[0m
+
+2017-03-09T18:29:35.036Z - info: [0mGET /modules/core/client/controllers/review-details.client.controller.js [36m304 [0m0.900 ms - -[0m
+
+2017-03-09T18:29:35.037Z - info: [0mGET /modules/core/client/controllers/search.client.controller.js [36m304 [0m1.542 ms - -[0m
+
+2017-03-09T18:29:35.038Z - info: [0mGET /modules/core/client/directives/focusMe.client.directive.js [36m304 [0m1.223 ms - -[0m
+
+2017-03-09T18:29:35.040Z - info: [0mGET /modules/core/client/directives/modal.client.directive.js [36m304 [0m1.667 ms - -[0m
+
+2017-03-09T18:29:35.041Z - info: [0mGET /modules/core/client/directives/page-title.client.directive.js [36m304 [0m1.490 ms - -[0m
+
+2017-03-09T18:29:35.042Z - info: [0mGET /modules/core/client/directives/preventEnterSubmit.client.directive.js [36m304 [0m1.343 ms - -[0m
+
+2017-03-09T18:29:35.043Z - info: [0mGET /modules/core/client/directives/scroll-into-view.client.directive.js [36m304 [0m1.790 ms - -[0m
+
+2017-03-09T18:29:35.046Z - info: [0mGET /modules/core/client/directives/show-errors.client.directives.js [36m304 [0m0.481 ms - -[0m
+
+2017-03-09T18:29:35.050Z - info: [0mGET /modules/core/client/directives/slider.client.directive.js [36m304 [0m1.563 ms - -[0m
+
+2017-03-09T18:29:35.051Z - info: [0mGET /modules/core/client/filters/parseToHtml.client.filter.js [36m304 [0m1.563 ms - -[0m
+
+2017-03-09T18:29:35.052Z - info: [0mGET /modules/core/client/filters/pluralize.client.filter.js [36m304 [0m2.162 ms - -[0m
+
+2017-03-09T18:29:35.053Z - info: [0mGET /modules/core/client/filters/price.client.filter.js [36m304 [0m1.477 ms - -[0m
+
+2017-03-09T18:29:35.053Z - info: [0mGET /modules/core/client/services/api.client.service.js [36m304 [0m0.828 ms - -[0m
+
+2017-03-09T18:29:35.058Z - info: [0mGET /modules/core/client/services/config.client.service.js [36m304 [0m1.448 ms - -[0m
+
+2017-03-09T18:29:35.059Z - info: [0mGET /modules/core/client/services/cost-of-care.client.service.js [36m304 [0m1.340 ms - -[0m
+
+2017-03-09T18:29:35.059Z - info: [0mGET /modules/core/client/services/episode-of-care.client.service.js [36m304 [0m1.439 ms - -[0m
+
+2017-03-09T18:29:35.060Z - info: [0mGET /modules/core/client/services/events.client.service.js [36m304 [0m2.364 ms - -[0m
+
+2017-03-09T18:29:35.061Z - info: [0mGET /modules/core/client/services/gmaps/overlay.client.service.js [36m304 [0m1.343 ms - -[0m
+
+2017-03-09T18:29:35.061Z - info: [0mGET /modules/core/client/services/interceptors/auth-interceptor.client.service.js [36m304 [0m1.380 ms - -[0m
+
+2017-03-09T18:29:35.062Z - info: [0mGET /modules/core/client/services/log.client.service.js [36m304 [0m0.458 ms - -[0m
+
+2017-03-09T18:29:35.066Z - info: [0mGET /modules/core/client/services/menu.client.service.js [36m304 [0m2.771 ms - -[0m
+
+2017-03-09T18:29:35.067Z - info: [0mGET /modules/core/client/services/mobile.client.service.js [36m304 [0m1.793 ms - -[0m
+
+2017-03-09T18:29:35.068Z - info: [0mGET /modules/core/client/services/places-of-care.client.service.js [36m304 [0m2.960 ms - -[0m
+
+2017-03-09T18:29:35.069Z - info: [0mGET /modules/core/client/services/practitioners-of-care-model.client.service.js [36m304 [0m1.879 ms - -[0m
+
+2017-03-09T18:29:35.069Z - info: [0mGET /modules/core/client/services/search-criteria-model.client.service.js [36m304 [0m1.778 ms - -[0m
+
+2017-03-09T18:29:35.070Z - info: [0mGET /modules/core/client/services/socket.io.client.service.js [36m304 [0m1.747 ms - -[0m
+
+2017-03-09T18:29:35.071Z - info: [0mGET /modules/core/client/services/string.client.service.js [36m304 [0m0.986 ms - -[0m
+
+2017-03-09T18:29:35.072Z - info: [0mGET /modules/users/client/config/users-admin.client.menus.js [36m304 [0m1.942 ms - -[0m
+
+2017-03-09T18:29:35.073Z - info: [0mGET /modules/users/client/config/users-admin.client.routes.js [36m304 [0m0.967 ms - -[0m
+
+2017-03-09T18:29:35.074Z - info: [0mGET /modules/users/client/config/users.client.routes.js [36m304 [0m0.482 ms - -[0m
+
+2017-03-09T18:29:35.076Z - info: [0mGET /modules/users/client/controllers/admin/list-users.client.controller.js [36m304 [0m0.800 ms - -[0m
+
+2017-03-09T18:29:35.077Z - info: [0mGET /modules/users/client/controllers/admin/user.client.controller.js [36m304 [0m1.334 ms - -[0m
+
+2017-03-09T18:29:35.079Z - info: [0mGET /modules/users/client/controllers/authentication.client.controller.js [36m304 [0m2.289 ms - -[0m
+
+2017-03-09T18:29:35.084Z - info: [0mGET /modules/users/client/controllers/password.client.controller.js [36m304 [0m5.427 ms - -[0m
+
+2017-03-09T18:29:35.084Z - info: [0mGET /modules/users/client/controllers/settings/change-password.client.controller.js [36m304 [0m5.245 ms - -[0m
+
+2017-03-09T18:29:35.085Z - info: [0mGET /modules/users/client/controllers/settings/change-profile-picture.client.controller.js [36m304 [0m3.475 ms - -[0m
+
+2017-03-09T18:29:35.085Z - info: [0mGET /modules/users/client/controllers/settings/edit-profile.client.controller.js [36m304 [0m3.267 ms - -[0m
+
+2017-03-09T18:29:35.086Z - info: [0mGET /modules/users/client/controllers/settings/manage-social-accounts.client.controller.js [36m304 [0m2.742 ms - -[0m
+
+2017-03-09T18:29:35.086Z - info: [0mGET /modules/users/client/controllers/settings/settings.client.controller.js [36m304 [0m2.601 ms - -[0m
+
+2017-03-09T18:29:35.090Z - info: [0mGET /modules/users/client/directives/password-validator.client.directive.js [36m304 [0m0.532 ms - -[0m
+
+2017-03-09T18:29:35.092Z - info: [0mGET /modules/users/client/directives/password-verify.client.directive.js [36m304 [0m0.809 ms - -[0m
+
+2017-03-09T18:29:35.092Z - info: [0mGET /modules/users/client/directives/users.client.directive.js [36m304 [0m0.826 ms - -[0m
+
+2017-03-09T18:29:35.094Z - info: [0mGET /modules/users/client/services/authentication.client.service.js [36m304 [0m0.810 ms - -[0m
+
+2017-03-09T18:29:35.095Z - info: [0mGET /modules/users/client/services/password-validator.client.service.js [36m304 [0m1.187 ms - -[0m
+
+2017-03-09T18:29:35.095Z - info: [0mGET /modules/users/client/services/users.client.service.js [36m304 [0m0.824 ms - -[0m
+
+2017-03-09T18:29:35.503Z - info: [0mGET /modules/core/client/fonts/proximanova-regular-webfont.woff2 [36m304 [0m1.012 ms - -[0m
+
+2017-03-09T18:29:35.504Z - info: [0mGET /modules/core/client/fonts/proximanova-semibold-webfont.woff2 [36m304 [0m1.766 ms - -[0m
+
+2017-03-09T18:29:35.505Z - info: [0mGET /modules/core/client/fonts/proximanova-light-webfont.woff2 [36m304 [0m1.855 ms - -[0m
+
+2017-03-09T18:29:35.522Z - info: [0mGET /modules/core/client/fonts/proximanova-bold-webfont.woff2 [36m304 [0m0.687 ms - -[0m
+
+2017-03-09T18:29:35.523Z - info: [0mGET /modules/core/client/fonts/icomoon.ttf?vhum67 [36m304 [0m0.493 ms - -[0m
+
+2017-03-09T18:29:35.523Z - info: [0mGET /modules/core/client/images/img-01-2x.png [36m304 [0m1.545 ms - -[0m
+
+2017-03-09T18:29:35.531Z - info: [0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 [36m304 [0m0.727 ms - -[0m
+
+2017-03-09T18:29:35.536Z - info: [0mGET /modules/core/client/images/btn-google-play-2x.png [36m304 [0m0.781 ms - -[0m
+
+2017-03-09T18:29:35.537Z - info: [0mGET /modules/core/client/images/btn-app-store-2x.png [36m304 [0m0.801 ms - -[0m
+
+2017-03-09T18:29:36.025Z - info: [0mGET /images/website-icon.png [36m304 [0m0.359 ms - -[0m
+
+2017-03-09T18:29:36.232Z - info: [0mGET /api/categories/list? [36m304 [0m394.437 ms - -[0m
+
+2017-03-09T18:29:39.073Z - info: [0mGET /api/specialties/list? [36m304 [0m369.703 ms - -[0m
+
+2017-03-09T18:29:43.774Z - info: [0mGET /api/place_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=EPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY) [32m200 [0m455.678 ms - -[0m
+
+2017-03-09T18:29:44.106Z - info: [0mGET /api/practitioner_of_care/search?lat=32.2299039&lng=-80.87652049999997&eocCode=EPV-CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY)&radius=62.920775269481744&page=1&count=10 [32m200 [0m324.959 ms - -[0m
+
+2017-03-09T18:29:49.265Z - info: [0mGET /api/cost_of_care/show/CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY)/8426958919-b27c86a5d4a8bd0c9eb7aa357e6c5a68/8426958919-1255397519? [33m404 [0m291.997 ms - 71[0m
+
+2017-03-09T18:29:49.272Z - info: [0mGET /api/provider/place_of_service/8426958919-b27c86a5d4a8bd0c9eb7aa357e6c5a68? [33m404 [0m296.491 ms - 127[0m
+
+2017-03-09T18:29:49.897Z - info: [0mGET /api/provider/practitioner/8426958919-1255397519? [33m404 [0m904.904 ms - 104[0m
+
+2017-03-09T18:29:49.908Z - info: [0mGET /api/cost_of_care/practitioner/8426958919-1255397519? [32m200 [0m932.654 ms - 578[0m
+
+2017-03-09T18:29:56.727Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m2.722 ms - -[0m
+
+2017-03-09T18:29:56.727Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m2.991 ms - -[0m
+
+2017-03-09T18:29:56.728Z - info: [0mGET /lib/bootstrap-slider/dist/css/bootstrap-slider.css [36m304 [0m2.238 ms - -[0m
+
+2017-03-09T18:29:56.728Z - info: [0mGET /modules/core/client/css/core.css [36m304 [0m2.542 ms - -[0m
+
+2017-03-09T18:29:56.729Z - info: [0mGET /modules/core/client/css/main.css [36m304 [0m0.486 ms - -[0m
+
+2017-03-09T18:29:56.730Z - info: [0mGET /modules/users/client/css/users.css [36m304 [0m0.464 ms - -[0m
+
+2017-03-09T18:29:56.857Z - info: [0mGET /lib/angular-file-upload/dist/angular-file-upload.js.map [36m304 [0m0.478 ms - -[0m
+
+2017-03-09T18:29:56.860Z - info: [0mGET /lib/angular-route/angular-route.min.js.map [36m304 [0m1.608 ms - -[0m
+
+2017-03-09T18:29:56.971Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap.css.map [36m304 [0m0.506 ms - -[0m
+
+2017-03-09T18:29:56.972Z - info: [0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [36m304 [0m0.530 ms - -[0m
+
+2017-03-09T18:31:16.891Z - info: [0mGET /api/cost_of_care/episode_of_care/CARDIOVASCULAR%20DISEASE%20(CARDIOLOGY)/8426958919-b27c86a5d4a8bd0c9eb7aa357e6c5a68/8426958919-1255397519? [0m- [0m- ms - -[0m
+
+2017-03-09T18:31:16.894Z - info: [0mGET /api/cost_of_care/place_of_service/8426958919-b27c86a5d4a8bd0c9eb7aa357e6c5a68? [0m- [0m- ms - -[0m
+

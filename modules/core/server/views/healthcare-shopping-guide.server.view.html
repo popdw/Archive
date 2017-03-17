@@ -1,0 +1,153 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+
+<div class="page page--shopping-guide">
+  <div class="page-title">
+    <h1>Healthcare shopping guide</h1>
+    <p>Why should you shop for healthcare services?</p>
+  </div>
+
+  <section class="page-section page-section--benefits">
+    <div class="page-section__block page-section__block--money">
+      <div class="block-header">
+        <img class="block-icon" src="/images/money.png">
+      </div>
+      <div class="block-content">
+        <h3>Save Money</h3>
+        <p>
+          You might have a high deductible insurance plan,
+          or no insurance at all! There can be great differences
+          between the amounts of healthcare charges for the same service,
+          and you might be able to save money by getting your service
+          at a different type of provider.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-section__block page-section__block--bills">
+      <div class="block-header">
+        <img class="block-icon" src="/images/bills.png" />
+      </div>
+      <div class="block-content">
+        <h3>No Surprise Bills</h3>
+        <p>
+          You want to avoid surprise bills! Simple services might
+          actually involve several healthcare providers, each of which
+          will send you a separate bill. We will show you what to
+          expect by providing all of the detail you need to prepare
+          yourself financially.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-section__block page-section__block--quality">
+      <div class="block-header">
+        <img class="block-icon" src="/images/heart.png" />
+      </div>
+      <div class="block-content">
+        <h3>Quality</h3>
+        <p>
+          You might be concerned with quality. It's your health,
+          after all. The federal government has created quality
+          indicators for hospitals, which you can review, alongside
+          real customers.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-section__block page-section__block--coverage">
+      <div class="block-header">
+        <img class="block-icon" src="/images/coverage.png" />
+      </div>
+      <div class="block-content">
+        <h3>Coverage</h3>
+        <p>
+          All insurance plans were not created equal. Make sure
+          you're prepared for what yours does and doesn't cover.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="page-section page-section--questions">
+    <div class="page-section__block page-section__block--price">
+      <h3>Price</h3>
+      <p>
+        When you shop, how often do you buy something without considering the cost? Likely never...
+        <span ng-show="priceExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        Insurance used to cover most or all of the cost of medically necessary health care services. Some health care coverage,
+        like Medicare, still pays for most of the cost of healthcare. But many of health plans, especially the ObamaCare health
+        plans you can buy on the Exchange, have high deductibles, high coinsurance requirements, and limited networks,
+        which means that consumers will have to pay more out-of-pocket for their care.
+        <br class="blank-line"/><br class="blank-line"/>
+        Additionally, costs for services are not transparent, meaning finding them is difficult at best. You often don’t know what
+        charges make up the service and how they affect the total amount you will need to pay. Now more than ever,
+        healthcare shoppers are burdened by high first-dollar out-of-pocket responsibility due to deductibles and co-pays.
+        <br class="blank-line"/><br class="blank-line"/>
+        We, at HealthCost.com, think it’s time for a change. We will show our shoppers each of the typical components that is
+        part of a healthcare service – we call that an “Episode of Care” and the cost for each component. You will see how
+        selection of service location and practitioner will change the "Total Cost" of the service.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: priceExtended}" ng-click="priceExtended=!priceExtended" >Read ~{priceExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--travel">
+      <h3>How far are you willing to travel to<br/>
+        save money on services?</h3>
+      <p>
+        When you go shopping for groceries, do you consider how far you will have travel to save money?
+        Would you go farther if you could save $50, $100 or more? Possibly...
+        <span ng-show="travelExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        Location is an important factor in deciding where to get a service. Heathcost.com will show you where you can get the
+        service you want, and how much the will cost at each location,and whether you can save money if you are willing to
+        travel.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: travelExtended}" ng-click="travelExtended=!travelExtended" >Read ~{travelExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--quality">
+      <h3>Quality</h3>
+      <p>
+        As a shopper, do you read reviews to help figure out what products or
+        services are the best? Likely more often than not...
+        <span ng-show="qualityExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        Ever try this for healthcare services? The results can be frustrating. Healthcare.com has the solution. While you
+        are shopping, you will be able to to compare service providers using:
+        <br class="blank-line"><br class="blank-line">
+        • Standardized quality measures for facilities,<br class="blank-line">
+        • Practitioner training, affiliations, and board certification,<br class="blank-line">
+        • User experiences related to providers you are considering.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: qualityExtended}" ng-click="qualityExtended=!qualityExtended" >Read ~{qualityExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--insurance">
+      <h3>What is covered by your insurance?</h3>
+      <p>
+        Health insurance plans cover “medically necessary” services. Each health insurer, including Medicare, has its own policies for
+        deciding which services are “medically necessary.” Most insurers have similar definitions regarding which services are
+        medically necessary, but there are differences and it is always advisable to check with your insurance carrier if you have any
+        questions.
+        <br class="blank-line"/><br class="blank-line"/>
+        Some health insurance plans exclude coverage for certain types of services, particularly experimental services and cosmetic
+        services. Each insurance carrier has its own policies about which services it considers to be experimental, cosmetic, or
+        otherwise excluded. So it is always advisable to check the exclusions in your health care policy and ask your insurer if
+        you have any questions.
+      </p>
+    </div>
+
+  </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,346 @@
+#header{
+  .popup-holder{
+    &.full{
+      @include media("screen", ">=tablet") {
+        position: static;
+      }
+      .popup-opener{
+        &:active{
+          z-index: 101;
+        }
+        &:after {
+          @include media("screen", ">=tablet") {
+            border: none;
+          }
+        }
+      }
+      &:before{
+        @include media("screen", ">=tablet") {
+          background:rgba($bg-overlay, 0.8);
+          position: absolute;
+          @include top-left-position(0, 0);
+          @include size(100%);
+          z-index: 11;
+          // content: '';
+        }
+      }
+      &.active:before {
+        content: '';
+      }
+      .popup{
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        @include media("screen", ">=tablet") {
+          left: 20px;
+          right: 20px;
+          top: 65px;
+          z-index: 100;
+        }
+        @include media("screen", ">desktop") {
+          top: 82px;
+          right: 20px;
+        }
+        .page-holder{
+          margin: 0 auto;
+          width: auto;
+          max-width: 1342px;
+          @include media("screen", ">=tablet") {
+            padding: 44px 60px;
+          }
+          @include media("screen", ">=widescreen") {
+            padding: 44px 40px;
+          }
+        }
+      }
+    }
+  }
+  .headline{
+    overflow: hidden;
+    padding: 1px 0 21px;
+    @include media("screen", ">=tablet") {
+      padding: 1px 0 36px;
+    }
+    h1{
+      font-size: 22px;
+      color: $emperor;
+      margin: 0 0 17px;
+      @include media("screen", ">=tablet") {
+        float: left;
+        max-width: 50%;
+        font-size: 40px;
+        margin: 0;
+      }
+    }
+    .btn{
+      font-size: 16px;
+      padding: 13px 20px;
+      @include media("screen", ">=tablet") {
+        float: right;
+        min-width: 301px;
+        font-size: 18px;
+        padding: 12px 20px;
+      }
+    }
+  }
+  .info-open-close{
+    margin: 0 -21px 20px;
+    @include media("screen", ">=tablet") {
+      margin: 0 -60px 20px;
+    }
+    @include media("screen", ">=widescreen") {
+      margin: 0 -40px 20px;
+    }
+    .open-close{
+      .opener{
+        padding: 25px 120px 25px 20px;
+        @include media("screen", ">=tablet") {
+          padding: 26px 200px 26px 60px;
+        }
+        @include media("screen", ">=widescreen") {
+          padding-left: 40px;
+        }
+        span{
+          position: absolute;
+          color: $green;
+          @include top-right-position(50%, 40px);
+          transform: translateY(-50%);
+          @include media("screen", ">=tablet") {
+            right: 98px;
+            font-size: 20px;
+            letter-spacing: 0;
+          }
+        }
+      }
+      .slide{
+        overflow: hidden;
+        padding: 0;
+      }
+    }
+    .diag-section{
+      @include media("screen", ">=tablet") {
+        padding: 0 60px 49px;
+      }
+      @include media("screen", ">desktop") {
+        padding: 0 40px 49px;
+      }
+      .frame{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        position: relative;
+        @include media("screen", ">=tablet") {
+          display: block;
+          padding: 0 0 78px;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+      +.diag-section{
+        border-top: 1px solid $white;
+       @include media("screen", ">=tablet") {
+         padding-top: 79px;
+       }
+        .price-info{
+          margin-top: 48px;
+          @include media("screen", ">=tablet") {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .circle-graph{
+      border-bottom: 1px solid $gallery;
+      padding: 0 10px;
+      margin: 0 auto 4px;
+      @include media("screen", ">=tablet") {
+        clear: both;
+        padding: 46px 0 0 35px;
+        border: none;
+        margin: 0 auto;
+      }
+
+      @include media("screen", ">=1364px") {
+        clear: none;
+        width: 45%;
+        max-width: 530px;
+        float: right;
+      }
+      .title-list{
+        margin-bottom: 24px;
+        @include media("screen", ">=tablet") {
+          margin: 0;
+        }
+      }
+    }
+    .graph{
+      margin: 0 9px 21px;
+      @include media("screen", ">=tablet") {
+        margin: 0 0 21px;
+      }
+    }
+    .data-table{
+      display: table-footer-group;
+      height: 1%;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      @include media("screen", ">=tablet") {
+        padding: 49px 0 0;
+        background: none;
+        box-shadow: none;
+        float: left;
+        width: 49%;
+        font-size: 18px;
+      }
+     @include media("screen", ">=1364px") {
+        width: 26%;
+        display: block;
+      }
+      table{
+        min-width: 0;
+        width: calc(100% - 40px);
+        margin: 0 20px 17px;
+        @include media("screen", ">=widescreen") {
+          width: 100%;
+          margin: 0 0 17px;
+        }
+      }
+      td{
+        padding-top: 15px;
+        @include media("screen", ">=tablet") {
+          padding-top: 19px;
+        }
+      }
+      .col-charges{
+        width: 70px;
+      }
+      .col-icon{
+        @include media("screen", ">desktop") {
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+      }
+      .icon-lock{
+        font-size: 18px;
+        line-height: 12px;
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        @include media("screen", ">=tablet") {
+          top: 2px;
+          margin-left: 10px;
+        }
+        @include media("screen", ">desktop") {
+          margin-left: 0;
+        }
+      }
+    }
+    .price-info{
+      background: $white;
+      margin: 0 auto 30px;
+      max-width: 240px;
+      box-shadow: 4px 4px 7px rgba($dark-gray, 0.1);
+      text-align: center;
+      padding: 26px 20px 28px;
+      color: $dove-gray;
+      font-size: 14px;
+      line-height: 1.1;
+      @include media("screen", ">=tablet") {
+        float: left;
+        margin: 0 2% 30px 0;
+        @include size (49%, 334px);
+        display: table;
+        padding: 0;
+        font-size: 18px;
+        max-width: none;
+      }
+      @include media("screen", ">=1364px") {
+        width: 26%;
+        margin-right: 2%;
+      }
+      .holder{
+        @include media("screen", ">=tablet") {
+          display: table-cell;
+          vertical-align: middle;
+          padding: 20px 10px;
+        }
+      }
+      .price{
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        margin: 0 0 1px;
+        font-weight: normal;
+        color: $green;
+        @include media("screen", ">=tablet") {
+          font-size: 40px;
+          margin-left: -5px;
+        }
+      }
+      p{
+        margin: 0 0 12px;
+      }
+      .title{
+        color: $emperor;
+        font-size: 22px;
+        display: inline-block;
+        border-top: 1px solid $gallery;
+        font-weight: normal;
+        padding: 10px 5px 1px;
+        @include media("screen", ">=tablet") {
+          font-size: 36px;
+          padding: 10px 0 8px;
+        }
+      }
+      .name{
+        display: block;
+        font-weight: normal;
+        color: $emperor;
+        @include media("screen", ">=tablet") {
+          font-size: 28px;
+        }
+      }
+    }
+    .btns{
+      overflow: hidden;
+      margin: 0 0 25px;
+      @include media("screen", ">=tablet") {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        text-align: right;
+      }
+      .btn{
+        padding: 13px 20px;
+        white-space: nowrap;
+        float: left;
+        border-left: 1px solid $white;
+        width: 33.33%;
+        font-size: 16px;
+        @include media("screen", ">desktop") {
+          max-width: 211px;
+          float: none;
+          display: inline-block;
+          vertical-align: top;
+        }
+        &.gray{
+          border: none;
+          @include media("screen", ">desktop") {
+            float: left;
+          }
+        }
+        span{
+          display: none;
+          @include media("screen", ">desktop") {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

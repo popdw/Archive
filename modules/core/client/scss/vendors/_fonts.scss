@@ -1,0 +1,29 @@
+@mixin fonts($fontsName, $fontsPart, $weight, $style){
+  @font-face {
+    font-family: $fontsName;
+    src: url('../fonts/#{$fontsPart}.woff2') format('woff2'),
+         url('../fonts/#{$fontsPart}.woff') format('woff'),
+         url('../fonts/#{$fontsPart}.ttf') format('truetype'),
+         url('../fonts/#{$fontsPart}.svg##{$fontsName}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include fonts('proxima_nova', 'proximanova-light-webfont', 300, normal);
+@include fonts('proxima_nova', 'proximanova-lightitalic-webfont', 300, italic);
+@include fonts('proxima_nova', 'proximanova-regular-webfont', normal, normal);
+@include fonts('proxima_nova', 'proximanova-regularitalic-webfont', normal, italic);
+@include fonts('proxima_nova', 'proximanova-semibold-webfont', 600, normal);
+@include fonts('proxima_nova', 'proximanova-semibold-webfont', 600, italic);
+@include fonts('proxima_nova', 'proximanova-bold-webfont', bold, normal);
+@include fonts('proxima_nova', 'proximanova-boldit-webfont', bold, italic);
+@include fonts('proxima_nova', 'proximanova-extrabold-webfont', 800, normal);
+@include fonts('proxima_nova', 'proximanova-black-webfont', 900, normal);
+
+@include fonts('proxima_nova_condensed', 'proximanovacond-light-webfont', 300, normal);
+@include fonts('proxima_nova_condensed', 'proximanovacond-lightit-webfont', 300, italic);
+@include fonts('proxima_nova_condensed', 'proximanovacond-regular-webfont', normal, normal);
+@include fonts('proxima_nova_condensed', 'proximanovacond-regularit-webfont', normal, italic);
+@include fonts('proxima_nova_condensed', 'proximanovacond-semibold-webfont', 600, normal);
+@include fonts('proxima_nova_condensed', 'proximanovacond-semiboldit-webfont', 600, italic);

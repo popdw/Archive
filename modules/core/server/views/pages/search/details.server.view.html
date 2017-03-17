@@ -1,0 +1,650 @@
+<div class="review-details-block" ng-show="isFacilitySelected()" ng-controller="ReviewDetailsController">
+
+  <div class="review-area">
+    <!-- review-box -->
+    <div class="review-box">
+      <header class="heading">
+        <div class="title-holder">
+          <div class="back-link">
+            <a href="#" class="icon-angle-left" ng-click="showMap()"></a>
+          </div>
+          <h2>~{getEpisodeOfCare().title}~</h2>
+          <strong class="cost">Total Cost: <sup>$</sup>~{getCostOfCare().chargesCost | currency: ""}~</strong>
+
+        </div>
+        <div class="container">
+
+
+          <div class="row">
+            <div class="col-xs-6">
+
+              <address class="contact-address">
+              <strong>~{getDoctor().name}~</strong>
+              <span>~{getFacility().name}~</span>
+              ~{getFacility().address_line_1}~ <br>
+              ~{getFacility().city}~, ~{getFacility().state}~ ~{getFacility().zip}~
+            </address>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="pull-right">
+                <ul class="list-inline">
+                  <li>
+                    <div ng-click="shareModal=1"><i class="glyphicon glyphicon-share-alt"></i> Share</div>
+                  </li>
+                  <li>
+                    <div ng-click="inviteModal=1"><i class="glyphicon glyphicon-envelope"></i> Invite Your Doctor</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div modal id="share-modal" modal-open-when="shareModal">
+            <div class="info-modal" modal-box>
+              <div class="title-head">
+                <h3>Share This Rate</h3>
+                <a href="#" class="close">close</a>
+              </div>
+              <form name="vm.shareForm" ng-submit="shareRate(vm.shareForm.$valid)" novalidate>
+                <div class="slide-holder">
+                  <div class="text-area">
+                    <div ng-show="success" class="alert alert-success alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>~{success}~</strong>
+                    </div>
+                    <div ng-show="errors" class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <span ng-repeat="error in errors"><strong >~{error.message}~</strong><br/></span>
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="share-name">Your Name</label>
+                      <input type="text" ng-model="shareName" class="form-control" name="share-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="share-recipient-name">Recipient Name</label>
+                      <input type="text" ng-model="shareRecipientName" class="form-control" name="share-recipient-name" placeholder="Who will receive the rate info?" required>
+
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="share-recipient-email">Recipient Email</label>
+                      <input type="email" ng-model="shareRecipientEmail" class="form-control" name="share-recipient-email" placeholder="Email address to send to" required>
+                      <div ng-messages="vm.shareForm.share-recipient-email.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">Email address is required.</p>
+                        <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <button type="button" class="btn only-mobile close-button">Close</button>
+                <button ng-show="!success" type="submit" class="btn">Share</button>
+              </form>
+            </div>
+          </div>
+          <div modal id="invite-modal" modal-open-when="inviteModal">
+            <div class="info-modal" modal-box>
+              <div class="title-head">
+                <h3>Invite Your Doctor</h3>
+                <a href="#" class="close">close</a>
+              </div>
+              <form name="vm.inviteForm" ng-submit="inviteDoctor(vm.inviteForm.$valid)" novalidate>
+                <div class="slide-holder">
+                  <div class="text-area">
+                    <div ng-show="success" class="alert alert-success alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>~{success}~</strong>
+                    </div>
+                    <div ng-show="errors" class="alert alert-danger alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <span ng-repeat="error in errors"><strong >~{error.message}~</strong><br/></span>
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="share-name">Your Name</label>
+                      <input type="text" ng-model="inviteName" class="form-control" name="share-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="invite-recipient-name">Your Doctor's Name</label>
+                      <input type="text" ng-model="inviteRecipientName" class="form-control" name="invite-recipient-name" placeholder="Who will receive the rate info?" required>
+
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="invite-recipient-email">Your Doctor's Email (optional)</label>
+                      <input type="email" ng-model="inviteRecipientEmail" class="form-control" name="invite-recipient-email" placeholder="Your Doctor's Email Address (optional)">
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn only-mobile close-button">Close</button>
+                <button type="submit" ng-show="!success" class="btn">Invite</button>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+      </header>
+    </div>
+    <!-- Removed from MVP -->
+
+    <!--<div class="btn-holder">-->
+    <!--&lt;!&ndash; @todo: remove the following class once the functionality is enabled: "temp-disabled" &ndash;&gt;-->
+    <!--<a href="#" class="btn temp-disabled"><i class="icon-cross"></i> Lock In Prices</a>-->
+    <!--</div>-->
+
+    <div class="block">
+      <div class="title-holder">
+        <!--<p>Locking in prices gurantees the HealthCost Network price components shown in <a href="#"><b>green</b></a> below according to our <b>terms and conditions.</b></p>-->
+        <!-- Removed from MVP -->
+        <!--<div class="actions">-->
+        <!--<a href="#" class="add-to-fav"><i class="icon-star2"></i> Add to My Favorites</a>-->
+        <!--<p>Save this information for future reference or comparison</p>-->
+        <!--</div>-->
+        <h2>Cost Breakdown</h2>
+      </div>
+      <!-- info table -->
+      <div class="info-table">
+        <!--<ul class="noties">-->
+        <!--<li class="healthcost">Can be Locked in</li>-->
+        <!--<li>Cannot be Locked in</li>-->
+        <!--</ul>-->
+        <table>
+          <thead>
+            <tr>
+              <th class="name-col"><span>healthcare provider</span></th>
+              <th class="price-col"><i>COST</i><span>COST</span>&nbsp;
+                <a href="#" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="This is the fee billed by the provider for these services based on 2014 Medicare claims data."></a>
+              </th>
+              <!--<th class="stat-col">CAN BE LOCKED IN</th>-->
+              <th class="total-col">Medicare ALLOWED<i>...</i> <span>Reimbursement</span>&nbsp;
+                <a href="#" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="This is the fee Medicare will approve for these services in 2017."></a>
+              </th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="cost in getCostOfCare().costBreakdown track by $index">
+            <tr ng-class="{'healthcost': cost.inNetwork}">
+              <td class="name-col">
+                <i class="icon-cross" ng-if="cost.inNetwork"></i>
+                <strong class="title">~{cost.title}~ <small ng-if="cost.typeLabel">~{cost.typeLabel}~</small></strong>
+                <span ng-class="{'text-danger': cost.note.type==='warning'}">~{cost.note.text}~</span>
+              </td>
+              <td class="price-col">
+                <strong class="price"><sup>$</sup>~{cost.chargesCost | currency: ""}~</strong>
+              </td>
+              <!--<td class="stat-col">-->
+              <!--<i class="icon-checkmark" ng-if="cost.inNetwork"></i>-->
+              <!--<i class="icon-del" ng-if="!cost.inNetwork"></i>-->
+              <!--</td>-->
+              <td class="total-col">
+                <strong class="price"><sup>$</sup>~{cost.medicareCost | currency: ""}~</strong>
+              </td>
+            </tr>
+            <tr class="no-divider" ng-class="{'healthcost': subCost.inNetwork}" ng-repeat="subCost in cost.costBreakdown track by $index">
+              <td class="name-col">
+                <i class="icon-cross" ng-if="subCost.inNetwork"></i>
+                <strong class="title">~{subCost.title}~ <small ng-if="subCost.typeLabel">~{subCost.typeLabel}~</small></strong>
+              </td>
+              <td class="price-col">
+                <strong class="price"><sup>$</sup>~{subCost.chargesCost | currency: ""}~</strong>
+              </td>
+              <!--<td class="stat-col">-->
+              <!--<i class="icon-checkmark" ng-if="subCost.inNetwork"></i>-->
+              <!--<i class="icon-del" ng-if="!subCost.inNetwork"></i>-->
+              <!--</td>-->
+              <td class="total-col">
+                <strong class="price"><sup>$</sup>~{subCost.medicareCost | currency: ""}~</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span ng-class="{'text-danger': getCostOfCare().note.type==='warning'}">~{getCostOfCare().note.text}~</span>
+      </div>
+
+    </div>
+      <small ng-class="{'text-danger': cost.note.type==='warning'}">~{cost.note.text}~</small>
+    <div class="block alt" ng-controller="TabController">
+      <div class="title-holder">
+        <h2>National Procedure Comparison <span>~{getEpisodeOfCare().title}~</span></h2>
+      </div>
+      <!-- <div class="toogler" ng-init="currentTab1 = 'tab-stat-01'"> -->
+        <!-- the tabset has been removed from MVP -- once added the below allows selection of desired tab -->
+        <!--<ul>-->
+        <!--<li ng-class="{'active': isActiveTab('tab-stat-01')}" ng-click="onClickTab('tab-stat-01')"><a href="#">Total Cost</a></li>-->
+        <!--<li ng-class="{'active': isActiveTab('tab-stat-02')}" ng-click="onClickTab('tab-stat-02')"><a href="#">Times Performed at Facility</a></li>-->
+        <!--</ul>-->
+      <!-- </div> -->
+      <!-- <div ng-include="tab-stat-01"></div> -->
+      <!-- <script type="text/ng-template" id="tab-stat-01"> -->
+          <!-- stat info -->
+          <div class="stat-info">
+            <div class="row" ng-class="{'healthcost': dataObj.isSelection}" ng-repeat="dataObj in getNationalComparison() track by $index">
+              <strong class="title"><span>~{dataObj.key}~</span> <sup>$</sup>~{dataObj.value | currency: ""}~</strong>
+              <div class="diag">
+                <address>~{dataObj.heading}~</address>
+                <div class="holder"><span style="width: ~{dataObj.percentValue}~%;" class="line"></span>~{dataObj.subheading}~</div>
+              </div>
+            </div>
+          </div>
+      <!-- </script> -->
+      <!-- the below template has been removed from MVP -- once added the static markup must be replaced! -->
+      <script type="text/ng-template" id="tab-stat-02">
+        <div>
+          <!-- stat info -->
+          <div class="stat-info">
+            <div class="row">
+              <strong class="title"><span>HIGHEST TOTAL COST</span> 2,500 <em>Times</em></strong>
+              <div class="diag">
+                <address>LOS ANGELES, CA</address>
+                <div class="holder"><span style="width: 55%;" class="line"></span>Cedar Sinai Medical Center</div>
+              </div>
+            </div>
+            <div class="row">
+              <strong class="title"><span>AVERAGE TOTAL COST</span> 3,000 <em>Times</em></strong>
+              <div class="diag">
+                <address>LOS UNITED STATES</address>
+                <div class="holder"><span style="width: 78%;" class="line"></span>Average</div>
+              </div>
+            </div>
+            <!-- @todo: selected amount here -->
+            <div class="row healthcost">
+              <strong class="title"><span>YOUR SELECTION</span> 4,000 <em>Times</em></strong>
+              <div class="diag">
+                <address>~{getFacility().city|uppercase}~, ~{getFacility().state|uppercase}~</address>
+                <div class="holder"><span style="width: 100%;" class="line"></span>~{getFacility().name}~</div>
+              </div>
+            </div>
+            <div class="row">
+              <strong class="title"><span>LOWEST TOTAL COST</span> 450 <em>Times</em></strong>
+              <div class="diag">
+                <address>AKRON, OH</address>
+                <div class="holder"><span style="width: 8%;" class="line"></span>WAM Express Surgical Center</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </script>
+    </div>
+  </div>
+  <!-- review-box -->
+  <div class="review-box" ng-controller="TabController">
+    <!-- main tabset -->
+    <ul class="global-tabset" ng-init="currentTab = 'tab-qualityInfo-practitioner'">
+      <li ng-class="{'active healthcost': isActiveTab('tab-qualityInfo-practitioner')}" ng-click="onClickTab('tab-qualityInfo-practitioner')"><a href="#"><span><i class="icon-cross" ng-if="getDoctor().inNetwork"></i> ~{getDoctor().name}~</span></a></li>
+      <li ng-show="getFacility().place_of_service_type === 'H'" ng-class="{'active healthcost': isActiveTab('tab-qualityInfo-facility')}" ng-click="onClickTab('tab-qualityInfo-facility')"><a href="#"><span><i class="icon-cross" ng-if="getFacility().inNetwork"></i> ~{getFacility().name}~</span></a></li>
+    </ul>
+    <div class="block" ng-include="currentTab"></div>
+    <!-- details information -->
+    <script type="text/ng-template" id="tab-qualityInfo-practitioner">
+      <div>
+        <header class="title-holder">
+          <h2>Quality Information</h2>
+        </header>
+        <div class="text-columns">
+
+            <div class="column" ng-repeat="qualityObj in getPractitionerQuality() track by $index">
+              <div ng-if="isQualityTypeText(qualityObj)" >
+              <dl>
+                <dt>~{qualityObj.key}~</dt>
+                <dd>~{qualityObj.value}~</dd>
+              </dl>
+             </div>
+              <ul class="note-links" ng-if="isQualityTypeBool(qualityObj)">
+                <li><a href="#"><i class="icon-star2"></i>~{qualityObj.key}~<i class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{qualityObj.tooltip}~"></i></a></li>
+              </ul>
+              <div ng-if="isQualityTypeRating(qualityObj)">
+                <h3>~{qualityObj.key}~ <a href="#" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{qualityObj.tooltip}~"></a></h3>
+                <div class="rating">
+                  <div class="rating-holder">
+                    <uib-rating ng-model="qualityObj.value" read-only="true" state-on="'icon-fav'" state-off="'icon-fav-o'"></uib-rating>
+                  </div>
+                </div>
+                <!-- should this have a default of zero? -->
+                <strong class="rating-note">AVERAGE OF ~{qualityObj.count}~ TOTAL RATINGS</strong>
+                <a href="#" class="btn" ng-click="scrollToRatings()" ng-show="getPractitionerProviderInfo().reviews.length">Read All Reviews</a>
+              </div>
+            </div>
+
+
+        </div>
+        <div class="hr">
+          <hr>
+        </div>
+        <div class="title-holder">
+          <h2>Provider Information</h2>
+        </div>
+        <div class="text-columns">
+          <div class="column">
+            <address><strong>~{getDoctor().name}~</strong> ~{getFacility().address_line_1}~ <br>~{getFacility().city}~, ~{getFacility().state}~ ~{getFacility().zip}~</address>
+          </div>
+          <div class="column">
+            <div class="phones">
+              <a href="tel:~{getPractitionerProviderInfo().data.phone}~" ng-if="getPractitionerProviderInfo().data.phone">P: ~{getPractitionerProviderInfo().data.phone}~</a><br>
+              <a href="fax:~{getPractitionerProviderInfo().data.fax}~" ng-if="getPractitionerProviderInfo().data.fax">F: ~{getPractitionerProviderInfo().data.fax}~</a>
+            </div>
+            <ul class="socials" ng-if="!isEmptyObject(getPractitionerProviderInfo().data.socialMedia)">
+              <li ng-if="getPractitionerProviderInfo().data.socialMedia.facebook">
+                <a href="//www.facebook.com/~{getPractitionerProviderInfo().data.socialMedia.facebook}~" target="_blank" class="icon-facebook"></a>
+              </li>
+              <li ng-if="getPractitionerProviderInfo().data.socialMedia.twitter">
+                <a href="//www.twitter.com/~{getPractitionerProviderInfo().data.socialMedia.twitter}~" target="_blank" class="icon-twitter"></a>
+              </li>
+              <li ng-if="getPractitionerProviderInfo().data.socialMedia.linkedin">
+                <a href="//www.linkedin.com/in/~{getPractitionerProviderInfo().data.socialMedia.linkedin}~" target="_blank" class="icon-linkedin"></a>
+              </li>
+              <li ng-if="getPractitionerProviderInfo().data.socialMedia.url">
+                <a href="//~{getPractitionerProviderInfo().data.socialMedia.url}~" target="_blank">
+                  <!-- @todo: this should be moved to an icomoon font -->
+                  <figure>
+                    <picture>
+                      <source srcset="images/website-icon.png">
+                      <img src="images/website-icon.png" alt="website link logo">
+                    </picture>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-columns">
+          <div class="column">
+            <dl>
+              <dt ng-if="getPractitionerProviderInfo().data.portal">Online Patient Portal:</dt>
+              <dd ng-if="getPractitionerProviderInfo().data.portal">~{getPractitionerProviderInfo().data.portal}~</dd>
+              <dt ng-if="getPractitionerProviderInfo().data.officeHours.length">Office Hours:</dt>
+              <dd ng-if="getPractitionerProviderInfo().data.officeHours.length">
+                <dl class="shedule" ng-repeat="hoursObj in getPractitionerProviderInfo().data.officeHours track by $index">
+                  <dt>~{hoursObj.day | limitTo : 3}~</dt>
+                  <dd ng-if="hoursObj.has_hours">~{hoursObj.startTimeDateObj | date : 'ha' | lowercase}~ - ~{hoursObj.endTimeDateObj | date : 'ha' | lowercase}~</dd>
+                  <dd ng-if="!hoursObj.has_hours">Closed</dd>
+                </dl>
+              </dd>
+            </dl>
+          </div>
+          <div class="column">
+            <dl>
+              <dt ng-if="getPractitionerProviderInfo().data.labServices">Lab Services:</dt>
+              <dd ng-if="getPractitionerProviderInfo().data.labServices">~{getPractitionerProviderInfo().data.labServices}~</dd>
+              <dt ng-if="getPractitionerProviderInfo().data.imagingServices">Imaging Services:</dt>
+              <dd ng-if="getPractitionerProviderInfo().data.imagingServices">~{getPractitionerProviderInfo().data.imagingServices}~</dd>
+              <dt ng-if="getPractitionerProviderInfo().data.surgicalServices">Surgical Service:</dt>
+              <dd ng-if="getPractitionerProviderInfo().data.surgicalServices">~{getPractitionerProviderInfo().data.surgicalServices}~</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/ng-template" id="tab-qualityInfo-facility">
+      <div>
+        <header class="title-holder">
+          <h2>Quality Information</h2>
+        </header>
+        <div class="text-columns">
+          <div class="column">
+            <h3>HCAHPS Overall Rating <a href="#" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{getFacilityQuality().ratings.overallRating.tooltip}~"></a></h3>
+            <div class="rating stars">
+              <div class="rating-holder">
+                <uib-rating ng-model="getFacilityQuality().ratings.overallRating.value" read-only="true" state-on="'icon-star2'" state-off="'icon-star3'"></uib-rating>
+              </div>
+            </div>
+            <strong class="rating-note">AVERAGE</strong>
+            <a href="#" class="btn" ng-click="scrollToRatings()" ng-show="getFacilityProviderInfo().reviews.length">Read All Reviews</a>
+          </div>
+          <div class="column">
+            <h3>HCAHPS Consumer Satisfaction Rating <a href="#" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{getFacilityQuality().ratings.consumerSatisfactionRating.tooltip}~"></a></h3>
+            <div class="rating stars">
+              <div class="rating-holder">
+                <uib-rating ng-model="getFacilityQuality().ratings.consumerSatisfactionRating.value" read-only="true" state-on="'icon-star2'" state-off="'icon-star3'"></uib-rating>
+              </div>
+            </div>
+            <strong class="rating-note">AVERAGE</strong>
+          </div>
+        </div>
+        <div class="slider-stat">
+          <ul class="noties">
+            <li class="green">~{getFacility().name}~ <span class="marker glyphicon glyphicon-triangle-bottom"></span></li>
+            <li class="blue">State Average <span class="marker glyphicon glyphicon-triangle-top"></span></li>
+            <li>National Average <span class="marker glyphicon glyphicon-triangle-top"></span></li>
+          </ul>
+          <div class="group" ng-repeat="report in getFacilityQuality().reports | limitTo : initialFacilityCharts track by $index">
+            <p>~{report.title}~</p>
+            <span class="percent-marker-border"></span>
+            <span style="left: 25%;" class="percent-marker-border"></span>
+            <span style="left: 50%;" class="percent-marker-border"></span>
+            <span style="left: 75%;" class="percent-marker-border"></span>
+            <span class="percent-marker-border max"></span>
+            <div class="slider-line">
+              <div class="line">
+                <strong class="min">0%</strong>
+                <strong style="left: 25%;" class="percent-marker">25%</strong>
+                <strong style="left: 50%;" class="percent-marker">50%</strong>
+                <strong style="left: 75%;" class="percent-marker">75%</strong>
+                <strong class="max">100%</strong>
+                <strong style="left: ~{valueObj.percentValue}~%;" ng-class="facilityQualityReportColorClass(valueObj)" ng-repeat="valueObj in report.values track by $index">
+                    <span class="glyphicon" ng-class="facilityQualityReportTriangleClass(valueObj)"></span>
+                    <span ng-if="isSelectedFacilityReport(valueObj)">~{valueObj.percentValue}~%</span>
+                  </strong>
+              </div>
+            </div>
+          </div>
+          <div ng-show="getFacilityQuality().reports.length > initialFacilityCharts" ng-controller="CollapseController">
+            <div uib-collapse="isCollapsed">
+              <div class="group" ng-repeat="report in getFacilityQuality().reports | limitTo : (getFacilityQuality().reports.length - initialFacilityCharts) : initialFacilityCharts track by $index">
+                <p>~{report.title}~</p>
+                <span class="percent-marker-border"></span>
+                <span style="left: 25%;" class="percent-marker-border"></span>
+                <span style="left: 50%;" class="percent-marker-border"></span>
+                <span style="left: 75%;" class="percent-marker-border"></span>
+                <span class="percent-marker-border max"></span>
+                <div class="slider-line">
+                  <div class="line">
+                    <strong class="min">0%</strong>
+                    <strong style="left: 25%;" class="percent-marker">25%</strong>
+                    <strong style="left: 50%;" class="percent-marker">50%</strong>
+                    <strong style="left: 75%;" class="percent-marker">75%</strong>
+                    <strong class="max">100%</strong>
+                    <strong style="left: ~{valueObj.percentValue}~%;" ng-class="facilityQualityReportColorClass(valueObj)" ng-repeat="valueObj in report.values track by $index">
+                        <span class="glyphicon" ng-class="facilityQualityReportTriangleClass(valueObj)"></span>
+                        <span ng-if="isSelectedFacilityReport(valueObj)">~{valueObj.percentValue}~%</span>
+                      </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="more" ng-click="isCollapsed = !isCollapsed"> ~{isCollapsed ? 'MORE' : 'LESS'}~ <i ng-class="{'icon-angle-down': isCollapsed, 'icon-angle-up': !isCollapsed}"></i></a>
+          </div>
+        </div>
+        <div class="hr">
+          <hr>
+        </div>
+        <div class="title-holder">
+          <h2>Provider Information</h2>
+        </div>
+        <div class="text-columns">
+          <div class="column">
+            <address><strong>~{getFacility().name}~</strong> ~{getFacility().address_line_1}~ <br>~{getFacility().city}~, ~{getFacility().state}~ ~{getFacility().zip}~</address>
+          </div>
+          <div class="column">
+            <div class="phones">
+              <a href="tel:~{getFacilityProviderInfo().data.phone}~" ng-if="getFacilityProviderInfo().data.phone">P: ~{getFacilityProviderInfo().data.phone}~</a><br>
+              <a href="fax:~{getFacilityProviderInfo().data.fax}~" ng-if="getFacilityProviderInfo().data.fax">F: ~{getFacilityProviderInfo().data.fax}~</a>
+            </div>
+            <ul class="socials" ng-if="!isEmptyObject(getFacilityProviderInfo().data.socialMedia)">
+              <li ng-if="getFacilityProviderInfo().data.socialMedia.facebook">
+                <a href="//www.facebook.com/~{getFacilityProviderInfo().data.socialMedia.facebook}~" target="_blank" class="icon-facebook"></a>
+              </li>
+              <li ng-if="getFacilityProviderInfo().data.socialMedia.twitter">
+                <a href="//www.twitter.com/~{getFacilityProviderInfo().data.socialMedia.twitter}~" target="_blank" class="icon-twitter"></a>
+              </li>
+              <li ng-if="getFacilityProviderInfo().data.socialMedia.linkedin">
+                <a href="//www.linkedin.com/in/~{getFacilityProviderInfo().data.socialMedia.linkedin}~" target="_blank" class="icon-linkedin"></a>
+              </li>
+              <li ng-if="getFacilityProviderInfo().data.socialMedia.url">
+                <a href="//~{getFacilityProviderInfo().data.socialMedia.url}~" target="_blank">
+                  <!-- @todo: this should be moved to an icomoon font -->
+                  <figure>
+                    <picture>
+                      <source srcset="images/website-icon.png">
+                      <img src="images/website-icon.png" alt="website link logo">
+                    </picture>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-columns">
+          <div class="column">
+            <dl>
+              <dt ng-if="getFacilityProviderInfo().data.portal">Online Patient Portal:</dt>
+              <dd ng-if="getFacilityProviderInfo().data.portal">~{getFacilityProviderInfo().data.portal}~</dd>
+              <dt ng-if="getFacilityProviderInfo().data.officeHours.length">Office Hours:</dt>
+              <dd ng-if="getFacilityProviderInfo().data.officeHours.length">
+                <dl class="shedule" ng-repeat="hoursObj in getFacilityProviderInfo().data.officeHours track by $index">
+                  <dt>~{hoursObj.day | limitTo : 3}~</dt>
+                  <dd ng-if="hoursObj.has_hours">~{hoursObj.startTimeDateObj | date : 'ha' | lowercase}~ - ~{hoursObj.endTimeDateObj | date : 'ha' | lowercase}~</dd>
+                  <dd ng-if="!hoursObj.has_hours">Closed</dd>
+                </dl>
+              </dd>
+            </dl>
+          </div>
+          <div class="column">
+            <dl>
+              <dt ng-if="getFacilityProviderInfo().data.labServices">Lab Services:</dt>
+              <dd ng-if="getFacilityProviderInfo().data.labServices">~{getFacilityProviderInfo().data.labServices}~</dd>
+              <dt ng-if="getFacilityProviderInfo().data.imagingServices">Imaging Services:</dt>
+              <dd ng-if="getFacilityProviderInfo().data.imagingServices">~{getFacilityProviderInfo().data.imagingServices}~</dd>
+              <dt ng-if="getFacilityProviderInfo().data.surgicalServices">Surgical Service:</dt>
+              <dd ng-if="getFacilityProviderInfo().data.surgicalServices">~{getFacilityProviderInfo().data.surgicalServices}~</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </script>
+    <!-- Removed from MVP -->
+    <!-- content block -->
+    <!--<div class="block">-->
+    <!--<picture class="full-image">-->
+    <!--<source srcset="images/img-02-small.jpg, images/img-02-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-02.jpg, images/img-02-2x.jpg 2x">-->
+    <!--<img src="images/img-02.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<div class="text-holder">-->
+    <!--<h3>Header</h3>-->
+    <!--<p>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem iusto. Amet quod tenetur aut ea. Ipsam sequi veniam animi perferendis voluptatem corporis quidem iste. Voluptas qui ea officiis et cumque sapiente rerum. Hic maiores aut asperiores consectetur qui quasi error vitae.</p>-->
+    <!--<p>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem iusto. Amet quod tenetur aut ea. Ipsam sequi veniam animi perferendis voluptatem corporis quidem iste. Voluptas qui ea officiis et cumque sapiente rerum. Hic maiores aut asperiores consectetur qui quasi error vitae.</p>-->
+    <!--<div class="fig-group">-->
+    <!--<figure>-->
+    <!--<picture>-->
+    <!--<source srcset="images/img-03-small.jpg, images/img-03-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-03.jpg, images/img-03-2x.jpg 2x">-->
+    <!--<img src="images/img-03.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<figcaption>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem iusto. Amet quod tenetur aut ea. Ipsam sequi veniam animi perferendis</figcaption>-->
+    <!--</figure>-->
+    <!--<figure>-->
+    <!--<picture>-->
+    <!--<source srcset="images/img-04-small.jpg, images/img-04-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-04.jpg, images/img-04-2x.jpg 2x">-->
+    <!--<img src="images/img-04.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<figcaption>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem iusto. Amet quod tenetur aut ea. Ipsam sequi veniam animi perferendis</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+    <!--<div class="fig-group three-items">-->
+    <!--<figure>-->
+    <!--<picture>-->
+    <!--<source srcset="images/img-05-small.jpg, images/img-05-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-05.jpg, images/img-05-2x.jpg 2x">-->
+    <!--<img src="images/img-05.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<figcaption>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem</figcaption>-->
+    <!--</figure>-->
+    <!--<figure>-->
+    <!--<picture>-->
+    <!--<source srcset="images/img-06-small.jpg, images/img-06-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-06.jpg, images/img-06-2x.jpg 2x">-->
+    <!--<img src="images/img-06.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<figcaption>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem</figcaption>-->
+    <!--</figure>-->
+    <!--<figure>-->
+    <!--<picture>-->
+    <!--<source srcset="images/img-07-small.jpg, images/img-07-small-2x.jpg 2x" media="(max-width: 767px)">-->
+    <!--<source srcset="images/img-07.jpg, images/img-07-2x.jpg 2x">-->
+    <!--<img src="images/img-07.jpg" alt="image description">-->
+    <!--</picture>-->
+    <!--<figcaption>Repellat magnam iure possimus eum est explicabo hic aspernatur. Fugiat omnis porro aperiam et voluptatem</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!-- reviews information -->
+    <div class="block alt hr" id="~{ratingsAndCommentsId}~" ng-show="getProviderInfoByType(currentTab).reviews.length || getProviderInfoByType(currentTab).comments.length">
+      <header class="title-holder" ng-show="getProviderInfoByType(currentTab).reviews.length">
+        <h2>Verified Patient Reviews</h2>
+      </header>
+      <div class="group" ng-repeat="reviewObj in getProviderInfoByType(currentTab).reviews | limitTo : initialReviews track by $index">
+        <h3 ng-if="isOverallRating(reviewObj)">~{reviewObj.key}~ <a href="#" ng-if="reviewObj.tooltip" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{reviewObj.tooltip}~"></a></h3>
+        <p ng-if="!isOverallRating(reviewObj)">~{reviewObj.key}~
+          <a href="#" ng-if="reviewObj.tooltip" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{reviewObj.tooltip}~"></a>
+        </p>
+        <div class="rating">
+          <div class="rating-holder">
+            <uib-rating ng-model="reviewObj.value" read-only="true" state-on="'icon-fav'" state-off="'icon-fav-o'"></uib-rating>
+          </div>
+        </div>
+        <strong class="rating-note">AVERAGE OF ~{reviewObj.count}~ TOTAL RATINGS</strong>
+      </div>
+      <div ng-class="{'collapsible group': !isCollapsed}" ng-show="getProviderInfoByType(currentTab).reviews.length > initialReviews" ng-controller="CollapseController">
+        <div uib-collapse="isCollapsed">
+          <div class="group" ng-repeat="reviewObj in getProviderInfoByType(currentTab).reviews | limitTo : (maxReviews - initialReviews) : initialReviews track by $index">
+            <h3 ng-if="isOverallRating(reviewObj)">~{reviewObj.key}~ <a href="#" ng-if="reviewObj.tooltip" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{reviewObj.tooltip}~"></a></h3>
+            <p ng-if="!isOverallRating(reviewObj)">~{reviewObj.key}~
+              <a href="#" ng-if="reviewObj.tooltip" class="icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip="~{reviewObj.tooltip}~"></a>
+            </p>
+            <div class="rating">
+              <div class="rating-holder">
+                <uib-rating ng-model="reviewObj.value" read-only="true" state-on="'icon-fav'" state-off="'icon-fav-o'"></uib-rating>
+              </div>
+            </div>
+            <strong class="rating-note">AVERAGE OF ~{reviewObj.count}~ TOTAL RATINGS</strong>
+          </div>
+        </div>
+        <a href="#" class="more" ng-click="isCollapsed = !isCollapsed"> ~{isCollapsed ? 'MORE' : 'LESS'}~ <i ng-class="{'icon-angle-down': isCollapsed, 'icon-angle-up': !isCollapsed}"></i></a>
+      </div>
+      <div class="hr" ng-show="getProviderInfoByType(currentTab).reviews.length && getProviderInfoByType(currentTab).comments.length">
+        <hr>
+      </div>
+      <header class="title-holder" ng-show="getProviderInfoByType(currentTab).comments.length">
+        <h2>Patient Comments</h2>
+      </header>
+      <div class="group" ng-repeat="commentObj in getProviderInfoByType(currentTab).comments | limitTo : initialComments track by $index">
+        <h3>~{commentObj.author}~ <time datetime="~{commentObj.datetime}~">~{commentObj.datetime | date : 'mediumDate'}~</time></h3>
+        <div class="rating">
+          <div class="rating-holder">
+            <uib-rating ng-model="commentObj.value" read-only="true" state-on="'icon-fav'" state-off="'icon-fav-o'"></uib-rating>
+          </div>
+        </div>
+        <strong class="rating-note inline"></strong>
+        <p>~{commentObj.comment}~</p>
+      </div>
+      <div ng-class="{'collapsible group': !isCollapsed}" ng-show="getProviderInfoByType(currentTab).comments.length > initialComments" ng-controller="CollapseController">
+        <div uib-collapse="isCollapsed">
+          <div class="group" ng-repeat="commentObj in getProviderInfoByType(currentTab).comments | limitTo : (maxComments - initialComments) : initialComments track by $index">
+            <h3>~{commentObj.author}~ <time datetime="~{commentObj.datetime}~">~{commentObj.datetime | date : 'mediumDate'}~</time></h3>
+            <div class="rating">
+              <div class="rating-holder">
+                <uib-rating ng-model="commentObj.value" read-only="true" state-on="'icon-fav'" state-off="'icon-fav-o'"></uib-rating>
+              </div>
+            </div>
+            <strong class="rating-note inline"></strong>
+            <p>~{commentObj.comment}~</p>
+          </div>
+        </div>
+        <a href="#" class="more" ng-click="isCollapsed = !isCollapsed"> ~{isCollapsed ? 'MORE' : 'LESS'}~ <i ng-class="{'icon-angle-down': isCollapsed, 'icon-angle-up': !isCollapsed}"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,826 @@
+ /* help form styles */
+.help-form{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.39;
+  @include media("screen", ">desktop") {
+    padding: 17px 0 0;
+    font-size: 28px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  label{
+    @include inline-block(middle);
+    color: $tundora;
+    &.green{
+      color: $green;
+    }
+    span{
+      color: $black;
+    }
+  }
+  input[type="text"],
+  input[type="email"]{
+    color: $green;
+    @include inline-block(middle);
+    border: solid $alto;
+    border-width: 0 0 1px;
+    background: none;
+    font-size: 18px;
+    font-weight: 300;
+    width: auto;
+    min-width: 100px;
+    max-width: 355px;
+    padding: 1px 0;
+    @extend .ellipsis;
+    @include media("screen", ">desktop") {
+      font-size: 28px;
+      padding: 4px 0;
+    }
+  }
+  .row{
+    margin: 0 0 21px;
+    position: relative;
+    @include media("screen", ">desktop") {
+      margin: 0 0 14px;
+    }
+    .text{
+      border-bottom: 1px solid $alto;
+      @include inline-block(middle);
+
+    }
+  }
+  .fake-select{
+    position: relative;
+    font-weight: 300;
+    @include inline-block(middle);
+    .opener{
+      @include inline-block(middle);
+      position: relative;
+      padding-right: 22px;
+      border-bottom: 1px solid $alto;
+      color: $green;
+      @include media("screen", ">desktop") {
+        padding-right: 37px;
+        padding-bottom: 2px;
+        padding: 0 37px 2px 0;
+        margin-top: 3px;
+      }
+      &:after{
+        content:'';
+        position:absolute;
+        @include top-right-position(11px, 0);
+        border:solid transparent;
+        border-top-color:$green;
+        border-width:3px 4px;
+        @include media("screen", ">desktop") {
+          border-width: 6px 5px;
+          top: 15px;
+        }
+      }
+    }
+    &.select-active{
+      .fake-options{
+        opacity: 1;
+        visibility: visible;
+      }
+      .opener{
+        &:after{
+          border-color:transparent;
+          border-bottom-color:$green;
+          top: 7px;
+          @include media("screen", ">desktop") {
+            top: 7px;
+          }
+        }
+      }
+    }
+    .fake-options{
+      position: absolute;
+      text-align: left;
+      z-index: 10;
+      @include top-left-position(100%, 0);
+      opacity: 0;
+      visibility: hidden;
+      @include animate(opacity visibility);
+      @include media("screen", ">desktop") {
+        width: 400px;
+      }
+    }
+  }
+  .text{
+    font-size: 18px;
+    line-height: 21px;
+    color: $green;
+    @include inline-block(middle);
+    @include media("screen", ">desktop") {
+      font-size: 28px;
+      line-height: 1.17;
+      padding: 3px 0;
+    }
+    &.black{
+      color: $black;
+    }
+
+    &.note{
+      @include media("screen", ">desktop") {
+        font-size: 28px;
+        // line-height: 33px;
+      }
+    }
+  }
+  .list{
+    font-size: 14px;
+    @extend %listreset;
+    background: $white;
+    text-align: left;
+    border: 1px solid $alto;
+    @include media("screen", ">desktop") {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    .title{
+      display: block;
+      font-weight: 600;
+      @include media("screen", ">desktop") {
+        margin: 0 0 2px;
+        text-overflow: ellipsis;
+        display: block;
+        white-space: nowrap;
+      }
+    }
+   p{
+      margin: 0;
+    }
+    .selected{
+      a{
+        background: $light-green;
+      }
+    }
+    li{
+      &:last-child{
+        a{
+          border: none;
+        }
+      }
+    }
+    a{
+      border-bottom: 1px solid $alto;
+      display: block;
+      padding: 10px;
+      color: $tundora;
+      @include animate(background);
+      @include media("screen", ">desktop") {
+        padding: 11px 25px 12px;
+      }
+      &:hover{
+        background: $light-green;
+      }
+    }
+  }
+  .autofill-area{
+    position: absolute;
+    @include top-left-position(100%, 50%);
+    transform: translateX(-50%);
+    z-index: 10;
+
+  }
+  .btns-holder{
+    max-width: 400px;
+    margin: 0 auto 22px;
+    text-align: center;
+    padding: 10px 0 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @include media("screen", ">desktop") {
+      padding-bottom: 42px;
+      padding: 15px 0 0;
+      margin-bottom: 27px;
+    }
+  }
+  .radio-list{
+    @extend %listreset;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 -10px -10px;
+    @include media("screen", ">desktop") {
+      font-size: 20px;
+      padding: 6px 0 0;
+      margin: 0 0 -5px;
+    }
+    .radio{
+      margin: 0 6px 10px;
+      @include inline-block(middle);
+      @include media("screen", ">desktop") {
+        margin: 0 23px 10px;
+      }
+      input[type="radio"]{
+        @extend .hidden;
+        &:checked{
+          + label{
+            &:before{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    label{
+      position: relative;
+      padding: 0 0 0 30px;
+      &:after{
+        content: '';
+        position: absolute;
+        @include circle-image(25px);
+        @include top-left-position(-4px, -5px);
+        background: $white;
+        border: 1px solid #e5e5e5;
+        z-index: 4;
+        @include media("screen", ">desktop") {
+          @include size(21px);
+          @include top-left-position(1px, -2px);
+        }
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        @include circle-image(17px);
+        @include top-left-position(0, -1px);
+        background: $green;
+        z-index: 5;
+        display: none;
+        @include media("screen", ">desktop") {
+          @include size(11px);
+          @include top-left-position(6px, 3px);
+        }
+      }
+    }
+  }
+}
+
+.custom-range{
+  @include media("screen", ">desktop") {
+    padding: 16px 0 3px;
+  }
+  .slider{
+    padding: 15px 0;
+    position: relative;
+    @include media("screen", ">desktop") {
+      margin: 0 0 27px;
+    }
+
+    .line-holder{
+      background: rgba($white, 0.5);
+      height: 2px;
+      position: relative;
+      z-index: 1;
+      @include media("screen", ">desktop") {
+        height: 5px;
+        background: rgba($green, 0.2);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+    }
+    .line{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: $white;
+      z-index: 2;
+      @include media("screen", ">desktop") {
+        background: #000;
+      }
+    }
+    .pin{
+      @include size(17px);
+      background: $green;
+      border-radius: 100%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      transform: translateY(-50%);
+      @include media("screen", ">desktop") {
+        @include size(15px);
+      }
+    }
+  }
+  .text{
+    font-size: 18px;
+    display: block;
+    color: #343d4f;
+    margin: 0;
+    @include media("screen", ">desktop") {
+      margin: 0 0 2px;
+    }
+    &.text-miles{
+      @include media("screen", ">desktop") {
+        font-size: 28px;
+        color: $green;
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
+.autofill-form{
+  padding: 20px 0 10px;
+  position: relative;
+  background: #eaebed;
+  margin: 0 auto;
+  z-index: 1;
+  @include media("screen", ">desktop") {
+    text-align: left;
+    padding: 0;
+    background: none;
+  }
+  .slide-holder{
+    margin: 0 0 30px;
+    @include media("screen", ">desktop") {
+      overflow: hidden;
+      margin: 0;
+    }
+  }
+  .table-row{
+    @include media("screen", ">desktop") {
+      padding: 11px 0 0;
+    }
+  }
+  .fake-select{
+    width: 100%;
+    display: block;
+    margin: 0 0 15px;
+    @include media("screen", ">desktop") {
+      margin: 0 0 27px;
+
+    }
+    &.select-active{
+      .fake-options{
+        display: block;
+      }
+    }
+    .opener{
+      font-size: 14px;
+      color: $black;
+      font-weight: normal;
+      font-weight: 300;
+      display: block;
+      width: 100%;
+      line-height: 16px;
+      height: 29px;
+      padding: 6px 0;
+      border-bottom: 1px solid #d3d3d3;
+      margin: 0 auto;
+      max-width: 380px;
+      @include media("screen", ">desktop") {
+        font-size: 24px;
+        max-width: 354px;
+        height: 35px;
+        padding: 3px 0;
+        line-height: 29px;
+      }
+    }
+    .fake-options{
+      margin: -1px -20px 20px;
+      display: none;
+      background: $white;
+      border: solid #d3d3d3;
+      border-width: 1px 0;
+      @include media("screen", ">desktop") {
+        margin: 0 -18px;
+        border: none;
+        position: relative;
+        padding: 48px 0 30px;
+      }
+    }
+    .list{
+      @extend %listreset;
+      font-size: 14px;
+      @include media("screen", ">desktop") {
+        font-size: 18px;
+      }
+      .selected{
+        a{
+          background: #ebf7ed;
+        }
+      }
+      li{
+        display: table;
+        width: 100%;
+      }
+      .title{
+        display: block;
+      }
+      span{
+        font-weight: normal;
+        display: block;
+        @include media("screen", ">desktop") {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      a{
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ebf7ed;
+        color: $black;
+        height: 63px;
+        @include media("screen", ">desktop") {
+          padding: 5px 24px;
+          height: 68px;
+        }
+        &:hover{
+          background: #ebf7ed;
+        }
+      }
+    }
+  }
+  input[type="text"],
+  input[type="search"]{
+    background: none;
+    border: solid #d3d3d3;
+    border-width: 0 0 1px;
+    width: 100%;
+    color: $black;
+    outline: none;
+    font-weight: 300;
+    padding: 6px 0;
+    font-size: 14px;
+    text-align: center;
+     margin: 0 auto;
+    max-width: 380px;
+    display: block;
+    @include placeholder{
+      color: #c3c3c3;
+    }
+    @include media("screen", ">desktop") {
+      text-align: left;
+      font-size: 24px;
+      padding: 3px 0;
+      margin: 0 auto 20px;
+      max-width: 428px;
+    }
+    &.category-input{
+      @include media("screen", ">desktop") {
+        max-width: 354px;
+      }
+    }
+
+  }
+  .autofill{
+    background: #fff;
+    margin: -1px -20px 20px;
+    display: none;
+    border: solid #d3d3d3;
+    border-width: 1px 0;
+
+    @include media("screen", ">desktop") {
+      margin: 0 -18px;
+      position: relative;
+      padding: 28px 0 0;
+      border: none;
+      max-height: 300px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+    &.active{
+      display: block;
+      @include media("screen", ">desktop") {
+        display: block;
+      }
+    }
+    .title{
+      display: block;
+    }
+    span{
+      font-weight: normal;
+      display: block;
+      @include media("screen", ">desktop") {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    ul{
+      @extend %listreset;
+      font-size: 14px;
+      @include media("screen", ">desktop") {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      li{
+        display: table;
+        width: 100%;
+        &:last-child{
+          a{
+            border: none;
+          }
+        }
+      }
+      .found{
+        a{
+          background: #ebf7ed;
+        }
+      }
+      a{
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+        padding: 10px 30px;
+        border-bottom: 1px solid #ebf7ed;
+        color: $black;
+        height: 63px;
+        &:hover{
+          background: #ebf7ed;
+        }
+        @include media("screen", ">desktop") {
+          padding: 5px 24px;
+          height: 68px;
+        }
+      }
+    }
+  }
+}
+
+/* doctors-form styles */
+.doctors-form{
+  .check-label{
+    display: block;
+    position: relative;
+    padding: 0 0 0 32px;
+    font-size: 14px;
+    line-height: 1.17;
+    text-align: left;
+    font-weight: normal;
+    @include media("screen", ">desktop") {
+      font-size: 18px;
+      margin: 0 0 28px;
+    }
+  }
+  .form-holder{
+    padding: 28px 24px;
+  }
+  input[type="checkbox"]{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    z-index: -1;
+    &:checked{
+      ~ .fake-input{
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .fake-input{
+    position: absolute;
+    @include top-left-position(0, 0);
+    right: auto;
+    @include size(17px);
+    border: 2px solid $green;
+    @include media("screen", ">desktop") {
+      @include size(19px);
+    }
+    &:after{
+      @extend .icomoon;
+      font-size: 15px;
+      color: #000;
+      content: $icon-check;
+      opacity: 0;
+      position: absolute;
+      top: -5px;
+      right: -4px;
+      @include media("screen", ">desktop") {
+        font-size: 18px;
+        right: -5px;
+      }
+
+    }
+  }
+}
+/* facilities-form styles */
+.facilities-form{
+  font-size: 14px;
+  text-align: left;
+  padding: 7px 0 0;
+  @include media("screen", ">desktop") {
+    padding-top: 0;
+  }
+
+  .form-content {
+    @include media("screen", "<=desktop") {
+      position: absolute;
+      top: 90px;
+      bottom: 47px;
+      left: 0;
+      right: 0;
+      overflow: auto;
+    }
+
+    @include media("screen", ">desktop") {
+
+    }
+  }
+
+  .form-area{
+    border-bottom: 1px solid $white;
+    padding: 0 20px;
+    @include media("screen", ">desktop") {
+      margin: 0 -18px;
+      padding: 0 10px;
+      border-color: #d9f0dc;
+    }
+   &.types{
+      @include media("screen", ">desktop") {
+        padding: 0 10px 5px;
+        background: #ebf7ed;
+      }
+    }
+  }
+  h3{
+    font-size: 18px;
+    margin: 0;
+    @include media("screen", ">desktop") {
+      text-align: center;
+      margin: 0 0 10px;
+    }
+    .check-label{
+      margin: 0;
+    }
+  }
+  .facilities-title{
+    margin: 0;
+    padding: 20px 0 10px;
+    @include media("screen", ">desktop") {
+      padding: 24px 0 21px;
+      font-weight: 600;
+    }
+  }
+  .heading{
+    font-size: 18px;
+    text-align: center;
+    padding: 0 0 13px;
+    margin: 0 -20px;
+    border-bottom: 1px solid $white;
+
+    p{
+      margin: 0;
+    }
+    h3{
+      margin: 0 0 10px;
+    }
+  }
+  ul{
+    @extend %listreset;
+  }
+  .pins-list{
+    margin-bottom: 7px;
+    .check-label{
+      padding: 9px 38px;
+      @include media("screen", ">desktop") {
+        padding: 6px 38px;
+      }
+    }
+    .pin{
+      @include media("screen", ">desktop") {
+        left: 3px;
+        font-size: 18px;
+      }
+    }
+  }
+  .facilities-list{
+    margin: 0 -20px;
+    @include media("screen", ">desktop") {
+      margin: 0 -10px;
+    }
+    li{
+      border-top: 1px solid $white;
+      padding: 0 20px;
+      @include media("screen", ">desktop") {
+        border-color: #d9f0dc;
+        padding: 0 10px;
+      }
+    }
+    .check-label{
+      @include media("screen", ">desktop") {
+        padding: 13px 38px;
+      }
+    }
+  }
+  input[type="checkbox"]{
+    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    z-index: -1;
+    &:checked{
+      ~ .fake-input{
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .form-row{
+    border-bottom: 1px solid $white;
+    padding: 3px 0;
+    padding: 7px 20px;
+    @include media("screen", ">desktop") {
+      background: #ebf7ed;
+      margin: 0 -18px;
+      padding: 4px 10px;
+      border-color: #d9f0dc;
+      color: $green;
+    }
+    .check-label{
+      @include media("screen", ">desktop") {
+        font-weight: normal;
+      }
+    }
+  }
+  .title-row,
+  .check-label{
+    display: block;
+    position: relative;
+    padding: 10px 38px;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 0;
+    @include media("screen", ">desktop") {
+      font-size: 17px;
+      padding: 6px 38px;
+      font-weight: bold;
+    }
+    &.healthcost{
+      @include media("screen", ">desktop") {
+        color: $green;
+      }
+      &:after{
+        @extend .icomoon;
+        content: $icon-cross;
+         color: $green;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include media("screen", ">desktop") {
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  label.check-label {
+    cursor: pointer;
+  }
+
+  .title-row{
+    padding: 10px 38px;
+  }
+
+  .fake-input{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    @include size(17px);
+    border: 2px solid $green;
+    @include media("screen", ">desktop") {
+      right: 6px;
+      @include size(19px);
+    }
+    &:after{
+      @extend .icomoon;
+      font-size: 15px;
+      color: #000;
+      content: $icon-check;
+      opacity: 0;
+      position: absolute;
+      top: -5px;
+      right: -4px;
+      @include media("screen", ">desktop") {
+        font-size: 18px;
+        right: -5px;
+      }
+    }
+  }
+
+  >.controls {
+    @include media("<=desktop") {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 20px !important;
+      border-top: 1px solid #fff;
+    }
+  }
+}

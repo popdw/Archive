@@ -1,0 +1,78 @@
+$breakpoints: (
+        'xs-phone': 320px,
+        'phone': 480px,
+        'tablet': 768px,
+        'desktop': 1024px,
+        'widescreen': 1200px
+);
+
+
+/* ---------------------------------------------------------
+   1. Embedded fonts styles and normalize reset
+   2. Embedded normalize reset
+   3. General reset
+   4. Common site styles
+  ---------------------------------------------------------*/
+
+
+// keywords
+$media-expressions: (
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+/* 1.  Embedded fonts styles and icons  */
+@import 'vendors/include-media';
+@import 'vendors/fonts';
+@import 'vendors/icomoon';
+
+
+/* 2. Embedded normalize reset */
+@import 'vendors/normalize';
+
+// include variables, functions, mixins, helpers
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+
+/* 3. General reset */
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+
+@import 'base/loading-icon';
+
+/* 4. Common site styles */
+@import 'layout/common';
+
+@import 'layout/icons';
+
+@import 'layout/header';
+@import 'layout/intro-section';
+@import 'layout/custom-forms';
+@import 'layout/steps';
+@import 'layout/diag-section';
+@import 'layout/circle-graph';
+@import 'layout/map';
+@import 'layout/title-content';
+@import 'layout/tables';
+@import 'layout/footer';
+
+@import 'pages/home';
+@import 'pages/search-results';
+@import 'pages/info';
+@import 'pages/saved-rates';
+@import 'pages/review-details';
+
+@import 'pages/intro-section';
+
+@import 'pages/healthcost-shopping-guide';
+@import 'pages/healthcost-tips';
+
+

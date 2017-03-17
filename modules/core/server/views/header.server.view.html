@@ -1,0 +1,50 @@
+<header id="header" ng-controller="HeaderController" ng-class="{shadow: hasShadow}">
+  <div class="page-holder">
+    <!-- page logo -->
+    {% if isHomepage %}
+    <a class="logo" ng-click="gotoHomePage()">
+    {% else %}
+    <a href="/" class="logo" target="_self">
+    {% endif %}
+      <img src="images/logo.svg" width="222" height="56" alt="HealthCost">
+    </a>
+    <!-- popups-list -->
+    <ul class="popup-list">
+      <li class="popup-holder" style="display:none;"> <!-- add class "active" for visible popup -->
+        <a href="#" class="icon-kit rates popup-opener"> <span class="hidden">drop opener</span>
+          <span class="num">1</span>
+        </a>
+        <!-- popup -->
+        <div class="popup">
+          <div class="page-holder">
+            <h1>Rate Saved</h1>
+            <p>Your rate has been saved. Click here at any time to access and compare all of your saved rates or start a
+              new search. </p>
+            <a href="#" class="btn">ok</a>
+          </div>
+        </div>
+      </li>
+      <!--<li class="favorites"><a href="#"> <span class="icon-star"></span> <span class="text">My Favorites</span></a></li>-->
+      <li class="popup-holder" modal> <!-- add class "active" for visible popup -->
+        <a href="#" class="menu-opener popup-opener" modal-opener>
+          <span class="icon">drop-menu</span>
+        </a>
+        <!-- popup -->
+        <div class="menu popup" modal-box>
+          <div class="page-holder">
+            <!-- main navigation -->
+            <ul class="nav">
+              <li><a href="/healthcare-shopping-guide" target="_self">HealthCost Shopping Guide</a></li>
+              <li><a href="/healthcost-tips" target="_self">HealthCost Tips</a></li>
+              <li><a href="/privacy-policy" target="_self">Privacy Policy</a></li>
+              <li><a href="/terms-of-use" target="_self">Terms of Use</a></li>
+              <li><a href="/contact" target="_self">Contact Us</a></li>
+              <li><a href="/faq" target="_self">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+

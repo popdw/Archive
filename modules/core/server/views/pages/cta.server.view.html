@@ -1,0 +1,16 @@
+<!-- action-block add class "edit" for mobile edit view -->
+
+<section class="action-block edit" ng-controller="CtaPageController">
+  <div class="page-holder">
+
+    <div class="top-buttons controls">
+      <a href="#" class="cancel-link" ng-click="goBack()">Cancel</a>
+      <a href="#" class="apply-link" ng-click="saveAndGoBack()">Apply</a>
+    </div>
+
+    {% include 'search/cta-text-area.server.view.html' %}
+
+    <a href="#" class="search-link" ng-click="gotoHomePage()">New Search</a>
+  </div>
+
+</section>

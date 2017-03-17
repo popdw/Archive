@@ -1,0 +1,513 @@
+#main {
+  margin-top: $header-height-mobile;
+
+  @include media(">desktop") {
+    margin-top: $header-height-desktop;
+  }
+}
+
+.homepage {
+  background: #ebf7ed;
+  #header {
+    max-width: 1440px;
+
+    @include media(">desktop") {
+      margin: 0 auto;
+    }
+  }
+}
+
+.main-holder {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* sections styles  */
+.section {
+  padding: 39px 0;
+  @include media("screen", ">desktop") {
+    padding: 126px 0;
+  }
+  &.video-section {
+    background: #f2f3f7;
+    padding: 70px 0 0;
+    @include media("screen", ">desktop") {
+      padding: 102px 0;
+    }
+  }
+  &.top-searches {
+    color: $dove-gray;
+    font-size: 12px;
+    @include media("screen", ">=tablet") {
+      font-size: 18px;
+    }
+  }
+  &.terms {
+    color: #8d8d8d;
+    padding: 30px 0;
+    font-size: 12px;
+    background: #f2f2f2 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: linear-gradient(rgba(242, 242, 242, 1) 0, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+    @include media("screen", ">=tablet") {
+      padding: 50px 0;
+      font-size: 14px;
+    }
+    @include media("screen", ">desktop") {
+      padding: 126px 0 60px;
+    }
+  }
+}
+
+/* video section styles */
+.video-section {
+  .info-list {
+    @extend %listreset;
+    @extend %clearfix;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    font-weight: bold;
+    color: $black;
+    @include media("screen", ">=phone") {
+      margin: 0 0 62px;
+    }
+    @include media("screen", ">=tablet") {
+      font-size: 28px;
+      font-weight: normal;
+    }
+    @include media("screen", ">desktop") {
+      margin: 0 -20px 47px;
+    }
+    li {
+      text-align: center;
+      margin: 0 0 62px;
+      @include media("screen", ">=phone") {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        margin: 0;
+        padding: 0 20px;
+      }
+    }
+    [class*="icon-"] {
+      color: $green;
+      font-size: 36px;
+      display: block;
+      margin: 0 0 11px;
+      @include media("screen", ">=tablet") {
+        font-size: 40px;
+      }
+      @include media("screen", ">desktop") {
+        font-size: 50px;
+        margin: 0 0 22px;
+      }
+    }
+  }
+  .video-holder {
+    position: relative;
+    margin: 0 -20px;
+    @include media("screen", ">desktop") {
+      margin: 0;
+    }
+    img {
+      @include size(100%, auto);
+    }
+    .btn-play {
+      position: absolute;
+      @include top-left-position(50%, 50%);
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-size: 30px;
+      color: $white;
+      @include media("screen", ">=phone") {
+        font-size: 40px;
+      }
+      @include media("screen", ">desktop") {
+        font-size: 60px;
+      }
+      &:hover {
+        color: rgba($white, 0.8);
+      }
+    }
+  }
+}
+
+/* top-searches styles */
+.top-searches {
+  h2 {
+    margin: 0 0 14px;
+    font-size: 17px;
+    color: $black;
+    @include media("screen", ">desktop") {
+      font-size: 28px;
+      font-weight: normal;
+      margin: 0 0 37px;
+    }
+  }
+  .cols {
+    @extend %clearfix;
+    margin: 0 0 28px;
+    @include media("screen", ">desktop") {
+      margin: 0 0 -24px;
+    }
+  }
+  .top-list {
+    @extend %listreset;
+    @include media("screen", ">=tablet") {
+      width: 48%;
+      margin-right: 2%;
+      float: left;
+    }
+    li {
+      padding: 0 0 0 14px;
+      margin: 0 0 14px;
+      position: relative;
+      @include media("screen", ">desktop") {
+        padding: 0 0 0 20px;
+        margin: 0 0 24px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        @include top-left-position(5px, 0);
+        background: $dove-gray;
+        @include circle-image(4px);
+        @include media("screen", ">=tablet") {
+          top: 9px;
+        }
+      }
+    }
+  }
+}
+
+/* terms styles */
+.terms {
+  .app-cols {
+    @extend %clearfix;
+    @include media("screen", ">=tablet") {
+      max-width: 568px;
+      margin: 0 auto 50px;
+    }
+    @include media("screen", ">desktop") {
+      max-width: none;
+      margin-bottom: 133px;
+    }
+  }
+  .iphone-col {
+    width: 259px;
+    text-align: center;
+    margin: 0 auto 28px;
+    @include media("screen", ">=tablet") {
+      float: left;
+      margin: 0 50px 0 0;
+    }
+    @include media("screen", ">desktop") {
+      width: 389px;
+      margin: 0 90px 0 43px;
+    }
+    img {
+      @include media("screen", ">desktop") {
+        @include size(100%, auto);
+      }
+    }
+  }
+  .store-col {
+    max-width: 259px;
+    margin: 0 auto;
+    @include media("screen", ">=tablet") {
+      float: left;
+      padding-top: 60px;
+    }
+    @include media("screen", ">desktop") {
+      width: 380px;
+      font-size: 18px;
+      padding-top: 163px;
+      max-width: none;
+    }
+    .app {
+      @extend %clearfix;
+      margin: 0 0 26px;
+      padding: 0 35px;
+      color: #979797;
+      @include media("screen", ">desktop") {
+        padding: 0;
+        margin: 0 0 51px;
+      }
+    }
+    .logo {
+      float: left;
+      width: 72px;
+      margin: 0 6px 0 0;
+      @include media("screen", ">desktop") {
+        width: 143px;
+        margin: 0 15px 0 0;
+      }
+      img {
+        @include size(100%, auto);
+      }
+    }
+    .description {
+      overflow: hidden;
+    }
+    h2 {
+      text-transform: none;
+      color: $green;
+      font-weight: 300;
+      margin: 0 0 3px;
+      @include media("screen", ">desktop") {
+        font-size: 36px;
+        margin: -5px 0 10px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .btns-holder {
+    margin: 0 -19px 40px 0;
+    @extend %clearfix;
+    @include media("screen", ">desktop") {
+      padding: 0 0 0 11px;
+    }
+    .btn {
+      margin-right: 19px;
+      float: left;
+      @include media("screen", ">desktop") {
+        margin-right: 26px;
+      }
+    }
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.12;
+    font-size: 17px;
+    color: $dove-gray;
+    margin: 0 0 10px;
+    @include media("screen", ">desktop") {
+      font-size: 22px;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.sub-intro {
+  text-align: center;
+  padding: 70px 0 52px;
+
+  font-size: $mobile-font-size-text;
+  @include media(">=tablet") {
+    font-size: $tablet-font-size-text;
+  }
+  @include media(">desktop") {
+    font-size: $desktop-font-size-text;
+  }
+
+  line-height: 1.19;
+  background: url(../images/img-01-small.png) no-repeat 100% 100%/ auto 100%;
+
+  @include media("retina2x") {
+    background-image: url(../images/img-01-small-2x.png);
+  }
+  @include media("screen", ">desktop") {
+    background-image: url(../images/img-01.png);
+    padding: 78px 0 40px;
+  }
+  @include media("screen", ">desktop", "retina2x") {
+    background-image: url(../images/img-01-2x.png);
+  }
+
+  .page-holder {
+    @include media("screen", ">desktop") {
+      max-width: 600px;
+    }
+  }
+  .green {
+    color: $green;
+  }
+}
+
+.advantage-section {
+  padding: 40px 20px 0;
+  text-align: center;
+  background: $white;
+  color: $dark-gray-blue;
+  @include media("screen", ">desktop") {
+    padding: 123px 58px 189px;
+    color: #515151;
+  }
+
+  h1 {
+    font-size: $mobile-font-size-header;
+    margin: 0 0 30px;
+    @include media("screen", ">desktop") {
+      font-size: 36px;
+      margin: 0 0 53px;
+    }
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  .list {
+    @extend %clearfix;
+    @include media("screen", ">desktop") {
+      //padding: 40px 35px 116px;
+      padding: 40px 0 116px;
+    }
+  }
+
+  .item {
+    font-weight: 600;
+    max-width: 260px;
+    margin: 0 auto 40px;
+
+    @include media("screen", ">=tablet") {
+      float: left;
+      width: 33.33%;
+      max-width: none;
+      padding: 0 10px;
+    }
+
+    @include media("screen", ">desktop") {
+      padding: 0 20px;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: none;
+    }
+
+    @include media("screen", ">=widescreen") {
+      padding: 0 40px;
+    }
+
+    .head {
+      font-size: 24px;
+      color: $green;
+      margin: 0 0 12px;
+      min-height: 30px;
+      @include media("screen", ">desktop") {
+        font-size: 50px;
+        min-height: 102px;
+      }
+      .btn {
+        font-weight: 300;
+        font-size: 15px;
+        text-transform: capitalize;
+        padding: 4px 11px;
+        @include media("screen", ">desktop") {
+          font-size: 30px;
+          padding: 15px 23px;
+        }
+        [class*="icon-"] {
+          font-size: 12px;
+          @include media("screen", ">desktop") {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .content {
+      margin-top: 17px;
+      font-size: $mobile-font-size-text;
+
+      @include media(">=tablet") {
+        font-size: $tablet-font-size-text;
+      }
+
+      @include media(">desktop") {
+        font-size: $desktop-font-size-text;
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        font-size: inherit;
+        font-weight: normal;
+
+        @include media("screen", ">desktop") {
+          margin: 0 0 5px;
+        }
+      }
+
+      p {
+        font-size: 0.8em;
+        font-weight: 400;
+
+        @include media("screen", ">desktop") {
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+
+  .holder {
+    background: $light-gray-bg;
+    padding: 55px 20px 132px;
+    margin: 0 -20px;
+    font-size: 14px;
+    font-weight: 500;
+    @extend %clearfix;
+
+    @include media("screen", ">desktop") {
+      font-size: 18px;
+      padding: 90px 142px 55px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: $mobile-font-size-header;
+      margin: 0 0 7px;
+
+      @include media("screen", ">desktop") {
+        font-size: 36px;
+        margin: 0 0 15px;
+      }
+    }
+
+    .link {
+      color: $dark-gray-blue;
+      font-weight: 400;
+      font-size: $mobile-font-size-text;
+
+      @include media("screen", ">desktop") {
+        font-weight: 500;
+        font-size: 18px;
+        color: #515151;
+      }
+      &:hover {
+        color: $green;
+      }
+    }
+    .col {
+      margin: 0 0 46px;
+      @include media("screen", ">=tablet") {
+        float: left;
+        width: 50%;
+        padding: 0 5%;
+      }
+    }
+  }
+}
+
+.homepage-view {
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+
+    &.shop {
+      line-height: 50px;
+      font-weight: 300;
+    }
+
+    &.help {
+      font-weight: 600;
+      margin-top: 14px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+

@@ -1,0 +1,94 @@
+.page--shopping-guide {
+  .page-section {
+    clear: both;
+    overflow: hidden;
+
+    &--benefits {
+      @include responsive-property('margin-bottom', 16px, 20px);
+
+      .page-section__block {
+        box-sizing: border-box;
+        @include responsive-property('width', 100%, 50%);
+        float: left;
+
+        .block-icon {
+          width: auto;
+          @include responsive-property('height', 42px, 54px, 88px);
+        }
+
+        &--money {
+          background-color: transparent;
+        }
+
+        &--bills {
+          background-color: $light-gray-bg;
+        }
+
+        &--quality {
+          background-color: $dark-gray-blue;
+          color: $white;
+        }
+
+        &--coverage {
+          background-color: $white;
+        }
+      }
+
+      .block-content {
+        @include responsive-property('margin-top', 16px, 64px, 120px);
+
+        h3 {
+          margin: 0;
+          font-weight: 600;
+          @include responsive-property('font-size', 18px, 20px, 28px);
+          @include responsive-property('margin-bottom', 0.5em, 0.2em, 0.1em);
+        }
+
+        p {
+          margin: 0;
+          @include responsive-property('font-size', 14px, 16px, 18px);
+
+          @include media(">=tablet", "portrait") {
+            height: 9em;
+          }
+          @include media(">=tablet", "landscape") {
+            height: 6em;
+          }
+          @include media(">desktop") {
+            height: 5em;
+          }
+
+        }
+      }
+    }
+
+    &--questions {
+      .page-section__block {
+        margin-bottom: 1px;
+        background-color: $white;
+
+        &--insurance {
+          background-color: $light-gray-bg;
+        }
+      }
+
+      h3 {
+        @include page-header-size();
+        color: $green;
+        @include responsive-property('margin-bottom', 20px, 28px, 40px);
+        font-weight: 300;
+      }
+
+      p {
+        @include responsive-property('font-size', 14px, 16px, 18px);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.page--content {
+  .page-section__block {
+    background: $white;
+  }
+}

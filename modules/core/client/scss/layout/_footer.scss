@@ -1,0 +1,214 @@
+/* footer styles */
+#footer {
+  overflow: hidden; /*for FF on Windows 7*/
+  display: table-footer-group;
+  height: 1%;
+  color: #ebf1f7;
+  font-size: 12px;
+  line-height: 1.17;
+  @include media("screen", ">desktop") {
+    font-size: 13px;
+  }
+  .footer-holder {
+    background: $dark-gray-blue;
+    padding: 27px 0 42px;
+    @include media("screen", ">=tablet") {
+      padding: 40px 10px 26px;
+    }
+  }
+  .main-holder {
+    @extend %clearfix;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $green;
+    }
+  }
+  ul {
+    @extend %listreset;
+    li {
+      margin: 0 0 26px;
+      @include media("screen", ">desktop") {
+        margin: 0 32px 9px 0;
+      }
+    }
+  }
+  h3 {
+    font-size: 18px;
+    margin: 0 0 27px;
+    font-weight: normal;
+    @include media("screen", ">desktop") {
+      font-size: 22px;
+      margin: 0 0 16px;
+      font-weight: normal;
+    }
+  }
+  address {
+    font-style: normal;
+    margin: 0 0 18px;
+  }
+  .cols {
+    @extend %clearfix;
+    @include media("screen", ">=tablet") {
+      margin: 0 0 30px;
+    }
+    @include media("screen", ">desktop") {
+      margin: 0 0 56px;
+    }
+  }
+  .nav {
+    @include responsive-property('font-size', 16px, 18px);
+    text-align: center;
+    padding-bottom: 16px;
+
+    .socials {
+      padding: 0 34px;
+      margin: 0;
+      @include media("screen", ">desktop") {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 9px;
+      }
+      li {
+        margin: 0 9px 0 0;
+      }
+      a:hover {
+        color: $white;
+      }
+    }
+    @include media("screen", ">desktop") {
+      overflow: hidden;
+      font-size: 20px;
+      font-weight: normal;
+      padding-bottom: 5px;
+    }
+
+    @include media("screen", ">=widescreen") {
+      padding-bottom: 68px;
+      font-size: 22px;
+    }
+
+    li {
+      @include media("screen", ">desktop") {
+        float: left;
+      }
+    }
+
+  }
+  .store-col {
+    text-align: center;
+    margin: 0 0 30px;
+    position: relative;
+    @include media("screen", ">desktop") {
+      float: right;
+      width: 300px;
+      text-align: right;
+      margin: 0 0 -30px 10px;
+      padding-right: 58px;
+    }
+  }
+  .description {
+    @include media("screen", ">desktop") {
+      overflow: hidden;
+    }
+  }
+
+  .img-iphone {
+    display: none;
+    body.homepage & {
+      display: block;
+    }
+
+    width: 152px;
+    position: absolute;
+    top: -149px;
+    right: 50%;
+    transform: translateX(50%);
+    @include media("screen", ">desktop") {
+      top: -269px;
+      width: 185px;
+    }
+    img {
+      max-width: none;
+      width: 100%;
+    }
+
+    + .store-holder {
+      padding-top: 0;
+
+      body.homepage & {
+        padding-top: 122px;
+        @include media("screen", ">desktop") {
+          padding-top: 54px;
+        }
+      }
+    }
+  }
+  .col {
+    margin: 0 0 16px;
+    @include media("screen", ">=tablet") {
+      float: left;
+      width: 33.33%;
+    }
+    @include media("screen", ">desktop") {
+      font-size: 14px;
+      width: 23%;
+      margin: 0 33px 0 0;
+    }
+  }
+  p {
+    margin: 0 0 5px;
+    text-align: justify;
+  }
+  .text-holder {
+    padding: 0 34px;
+    margin: 0 0 36px;
+    @include media("screen", ">desktop") {
+      // max-width: 1100px;
+      padding: 0;
+      line-height: 1.23;
+      margin: 0 0 13px;
+    }
+  }
+  .by {
+    padding: 0 34px;
+    @include media("screen", ">desktop") {
+      padding: 0;
+    }
+  }
+  .btns-holder {
+    margin: 0 0 20px;
+    @include media("screen", ">desktop") {
+      margin: 0 -7px;
+    }
+    .btn {
+      margin: 0 7px;
+      @include media("screen", ">desktop") {
+        @include size(109px, 38px);
+        background-size: 109px 38px;
+      }
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+  .by {
+    text-align: center;
+    @include media("screen", ">desktop") {
+      text-align: left;
+      font-size: 15px;
+    }
+  }
+  .logo-google {
+    @include inline-block(middle);
+    width: 57px;
+    margin: 0 3px;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  .store-holder {
+    padding: 0;
+  }
+}

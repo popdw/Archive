@@ -1,0 +1,67 @@
+<div class="tab result-aside" id="tab1" ng-class="{active: TabsView.tab == 'list'}">
+
+  {% include 'cta-text.server.view.html' %}
+
+  <div class="no-results" ng-show="!Results.hasResults()">
+    No Results Found
+  </div>
+
+  <div class="results-doctors" id="practitioner-results-list" ng-controller="PractitionerListController">
+
+    <!-- result-box save money -->
+    <div class="result-box save-money" ng-show="Results.hasSearchFarther()">
+      <h4 class="heading">Search Farther to Save $$$</h4>
+      <div class="doctor-box" ng-class="{'healthcost': doctor.inNetwork}" ng-repeat="doctor in Results.getSearchFartherDoctors()">
+        {% include 'doctor-box.server.view.html' %}
+      </div>
+    </div>
+
+    <!-- result-box selected -->
+    <div class="result-box selected" ng-show="Results.hasPreferredDoctors()">
+      <h4 class="heading">Your Preferred Doctor</h4>
+      <div class="doctor-box" ng-class="{'healthcost': doctor.inNetwork}" ng-repeat="doctor in Results.getPreferredDoctors()">
+        {% include 'doctor-box.server.view.html' %}
+      </div>
+    </div>
+
+    <!-- result-box healthcost -->
+    <div class="result-box healthcost" ng-show="Results.hasInNetwork()">
+      <h4 class="heading">HealthCost Networks<sup>SM</sup> Doctors <span class="extra-heading">and Their Associated Facilities</span></h4>
+      <div class="doctor-box" ng-repeat="doctor in Results.getInNetworkDoctors()">
+        {% include 'doctor-box.server.view.html' %}
+      </div>
+    </div>
+
+    <!-- result-box -->
+    <div class="result-box" ng-show="Results.hasOutNetwork()">
+      <h4 class="heading">Non-HealthCost Doctors <span class="extra-heading">and Their Associated Facilities</span></h4>
+      <div class="doctor-box" ng-repeat="doctor in Results.getOutNetworkDoctors()">
+        {% include 'doctor-box.server.view.html' %}
+      </div>
+    </div>
+
+    <!--<div class="" ng-show="Results.hasNextPage() && !Results.isLoading()">-->
+    <!--<a href="" ng-click="Results.loadNextPage()">Load more</a>-->
+    <!--</div>-->
+
+    <div ng-show="Results.isLoading()">
+      <img class="loading-icon" src="/images/loading-icon.svg" />
+      <a>Loading results...</a>
+    </div>
+
+  </div>
+
+  <div class="message-row" ng-class="{'active': showSearchFarther }"> <!-- add class "active" for expand -->
+    <a class="opener" ng-click="showSearchFarther = !showSearchFarther;" href="#"><span class="text">Willing to travel more to save money?</span></a>
+    <div class="slide">
+      <div class="text-holder">
+        <p>
+          <b class="text-title">Willing to travel more to save money?</b>
+          Expand the search distance to save 20% off the lowest shown rate.
+        </p>
+        <a href="#" ng-click="searchFarther(); showSearchFarther = false;" class="btn">SEARCH FARTHER<br class="only-mobile"> TO SAVE $$$</a>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,91 @@
+<section class="search-result" ng-controller="SearchController" ng-class="{'facility-selected': isFacilitySelected(), 'review-details': onlyReviewDetails}">
+
+  <div class="loading-progress" ng-show="isLoading">
+    <img class="loading-icon" src="/images/loading-icon.svg" />
+  </div>
+
+  <div id="search-results-wrapper">
+    <div class="results-container">
+
+      <ul class="tabset" id="search-page-tabs">
+        <li ng-class="{active: TabsView.tab == 'list'}">
+          <a ng-click="TabsView.showListTab()">
+            <strong class="title">List</strong>
+          </a>
+        </li>
+        <li ng-class="{active: TabsView.tab == 'map'}">
+          <a ng-click="TabsView.showMapTab()">
+            <strong class="title">Map</strong>
+          </a>
+        </li>
+      </ul>
+
+      {% include 'search/cta-text.server.view.html' %}
+
+      <div class="back-to-map-link" ng-show="isFacilitySelected()">
+        <a href="#" ng-click="showMap()">Back to Map</a>
+      </div>
+
+      <div class="tab-content" id="results-container">
+        {% include 'search/list.server.view.html' %}
+        {% include 'search/map.server.view.html' %}
+        {% include 'search/details.server.view.html' %}
+      </div>
+
+      <div class="no-results" ng-show="!Results.hasResults()">
+        No Results Found
+      </div>
+
+    </div>
+
+    <div modal modal-open-when="Results.isPreferredDoctorOutOfMap">
+      <div class="info-modal" modal-box>
+        <div class="title-head">
+          <h3>Note</h3>
+          <a href="#" class="close">close</a>
+        </div>
+        <div class="slide-holder">
+          <div class="text-area">
+            <p>One or more of the facilities that ~{Results.getPreferredPractitionerName()}~ performs the specified service at is outside of
+              the search radius and is not currently shown on the map.</p>
+            <p>You can still select this doctor to see more details from the list on the left. </p>
+          </div>
+        </div>
+        <a href="#" class="btn only-mobile close-button">ok</a>
+      </div>
+    </div>
+
+    <div modal modal-open-when="Results.isPreferredFacilityOutOfMap">
+      <div class="info-modal" modal-box>
+        <div class="title-head">
+          <h3>Note</h3>
+          <a href="#" class="close">close</a>
+        </div>
+        <div class="slide-holder">
+          <div class="text-area">
+            <p>~{Results.getPreferredFacilityName()}~ is outside of the search radius and is not currently shown on the map.</p>
+            <p>You can still select doctors who perform the selected service there from the list on the left<br/>(they are highlighted). </p>
+          </div>
+        </div>
+        <a href="#" class="btn only-mobile close-button">ok</a>
+      </div>
+    </div>
+
+    <div modal modal-open-when="ModalAlert.show">
+      <div class="info-modal" modal-box>
+        <div class="title-head">
+          <h3>Note</h3>
+          <a href="#" class="close">close</a>
+        </div>
+        <div class="slide-holder">
+          <div class="text-area">
+            <p ng-bind-html="ModalAlert.getMessage()|parseToHtml"></p>
+          </div>
+        </div>
+        <a href="#" class="btn only-mobile close-button">ok</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>

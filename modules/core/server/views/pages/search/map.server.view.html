@@ -1,0 +1,42 @@
+<div class="map-mask" ng-hide="isFacilitySelected()"></div>
+<div class="tab map-block active" id="tab2" ng-style="{visibility: ((TabsView.isMobile() && TabsView.tab == 'map' && !isFacilitySelected()) || (!TabsView.isMobile() && !isFacilitySelected())) ? 'visible' : 'hidden'}">
+
+  <div class="map">
+    <a href="#" class="btn redo-search-button" ng-click="redoSearch()">REDO SEARCH IN THIS AREA</a>
+    <!-- key-list -->
+    <div class="key-list"> <!-- add class "visible" for visible key's description  -->
+      <a href="#" class="key-opener" ng-click="toggleKeySlide()">key</a>
+      <ul class="key-slide">
+        <li>Search Origin <span class="pin home icon-home"></span></li>
+        <li>Hospital <span class="pin in-hospital icon-h-square"></span></li>
+        <li>Office <span class="pin office icon-user-md"></span></li>
+        <li>Ambulatory Surgery Center <span class="pin center icon-medkit"></span></li>
+        <li>Preferred Provider <span class="pin in-hospital icon-h-square selected"></span></li>
+        <li>HealthCost Networks<sup>SM</sup> Provider <span class="pin healthcost in-hospital icon-h-square"></span></li>
+      </ul>
+    </div>
+    <div id="search-map"></div>
+    <div class="place-popup" id="place-popup">
+      <div class="info">
+        <span class="title"></span>
+        <span class="type place"></span>
+        <p class="doctors-text"></p>
+        <span class="price"></span>
+      </div>
+      <a href="javascript:void(0)" ng-click="" class="view-more"></a>
+    </div>
+  </div>
+
+  <div class="message-row" ng-class="{'active': showSearchFarther }"> <!-- add class "active" for expand -->
+    <a class="opener" ng-click="showSearchFarther = !showSearchFarther;" href="#"><span class="text">Willing to travel more to save money?</span></a>
+    <div class="slide">
+      <div class="text-holder">
+        <p>
+          <b class="text-title">Willing to travel more to save money?</b>
+          Expand the search distance to save 20% off the lowest shown rate.
+        </p>
+        <a href="#" ng-click="searchFarther(); showSearchFarther = false;" class="btn">SEARCH FARTHER<br class="only-mobile"> TO SAVE $$$</a>
+      </div>
+    </div>
+  </div>
+</div>

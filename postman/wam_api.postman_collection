@@ -1,0 +1,417 @@
+{
+	"variables": [],
+	"info": {
+		"name": "WAM API",
+		"_postman_id": "7f085037-bce3-f82e-c472-51d8a1297099",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "COC",
+			"description": "",
+			"item": [
+				{
+					"name": "Cost of Care - Set Postman Variables",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"eoc_code\", jsonData.eoc_code);",
+									"postman.setEnvironmentVariable(\"place_of_service_id\", jsonData.place_of_service_id);",
+									"postman.setEnvironmentVariable(\"practitioner_id\", jsonData.practitioner_id);",
+									"postman.setEnvironmentVariable(\"lat\", jsonData.lat);",
+									"postman.setEnvironmentVariable(\"lng\", jsonData.lng);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{base_url}}/api/cost_of_care/postman",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Cost of Care - Show",
+					"request": {
+						"url": "{{base_url}}/api/cost_of_care/show/{{eoc_code}}/{{place_of_service_id}}/{{practitioner_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Cost of Care - Place of Service",
+					"request": {
+						"url": "{{base_url}}/api/cost_of_care/place_of_service/{{place_of_service_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Cost of Care - Practitioner",
+					"request": {
+						"url": "{{base_url}}/api/cost_of_care/practitioner/{{practitioner_id}}/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Cost of Care - EOC",
+					"request": {
+						"url": "{{base_url}}/api/cost_of_care/eoc/{{eoc_code}}/",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EOC",
+			"description": "",
+			"item": [
+				{
+					"name": "eocCategoriesGet",
+					"request": {
+						"url": "{{base_url}}/api/categories/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "eocPracticesGet",
+					"request": {
+						"url": "{{base_url}}/api/eoc/practices",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "eocSearchGet",
+					"request": {
+						"url": "{{base_url}}/api/episode_of_care/search?q= path&eocCategoryId=cc1b92ba-6267-4ec0-8bfe-4f8eb3da2bdd&count=20",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "eocShowEocCodeGet",
+					"request": {
+						"url": "{{base_url}}/api/episode_of_care/show/d4bc9819-273b-4611-8733-fe62dba4daaa",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "eocSpecialtiesGet",
+					"request": {
+						"url": "{{base_url}}/api/specialties/list",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"description": "",
+			"item": [
+				{
+					"name": "locationSearchGet",
+					"request": {
+						"url": "{{base_url}}/api/location/search?q=cranford&count=20",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ReverseGeocodeSearchGet",
+					"request": {
+						"url": "{{base_url}}/api/location/reverse_geocode?lat=40.7765067&lng=-74.5990377",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Place of Care",
+			"description": "",
+			"item": [
+				{
+					"name": "Place of Care Search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if(responseCode.code === 200) {",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"tests[\"Body has places_of_care\"] = responseBody.has(\"places_of_care\");",
+									"tests[\"Body has search_filters\"] = responseBody.has(\"search_filters\");",
+									"tests[\"Body has search_metadata\"] = responseBody.has(\"search_metadata\");",
+									"tests[\"Counts okay\"] = jsonData.search_metadata.total_count === jsonData.places_of_care.length || jsonData.search_metadata.per_page === jsonData.places_of_care.length;",
+									"",
+									"tests[\"places_of_care has place_of_service_id\"] = jsonData.places_of_care[0].place_of_service_id.length>0;",
+									"tests[\"places_of_care has place_of_service_name\"] = jsonData.places_of_care[0].place_of_service_name.length>0;",
+									"tests[\"places_of_care has place_of_service_address.address_line_1\"] = jsonData.places_of_care[0].place_of_service_address.address_line_1.length>0;",
+									"tests[\"places_of_care has place_of_service_address.address_line_2\"] = jsonData.places_of_care[0].place_of_service_address.address_line_2.length>0;",
+									"tests[\"places_of_care has place_of_service_address.city\"] = jsonData.places_of_care[0].place_of_service_address.city.length>0;",
+									"tests[\"places_of_care has place_of_service_address.state\"] = jsonData.places_of_care[0].place_of_service_address.state.length>0;",
+									"tests[\"places_of_care has place_of_service_address.zip\"] = jsonData.places_of_care[0].place_of_service_address.zip.length>0;",
+									"tests[\"places_of_care has place_of_service_phone\"] = jsonData.places_of_care[0].place_of_service_phone.length>0;",
+									"tests[\"places_of_care has place_of_service_type\"] = jsonData.places_of_care[0].place_of_service_type.length>0;",
+									"// tests[\"places_of_care has place_of_service_website\"] = jsonData.places_of_care[0].place_of_service_website.length>0;",
+									"tests[\"places_of_care has place_of_service_lat\"] = jsonData.places_of_care[0].place_of_service_lat.length>0;",
+									"tests[\"places_of_care has place_of_service_lng\"] = jsonData.places_of_care[0].place_of_service_lng.length>0;",
+									"tests[\"places_of_care has place_of_service_category\"] = jsonData.places_of_care[0].place_of_service_category.length>0;",
+									"tests[\"places_of_care has place_of_service_min_cost\"] = jsonData.places_of_care[0].place_of_service_min_cost>0;",
+									"tests[\"places_of_care has place_of_service_max_cost\"] = jsonData.places_of_care[0].place_of_service_max_cost>0;",
+									"tests[\"places_of_care has place_of_service_practitioner_count\"] = jsonData.places_of_care[0].place_of_service_practitioner_count>0;",
+									"tests[\"places_of_care has place_of_service_preferred\"] = jsonData.places_of_care[0].place_of_service_preferred === false || jsonData.places_of_care[0].place_of_service_preferred === true;",
+									"}",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{base_url}}/api/place_of_care/search?eocCode={{eoc_code}}&lat={{lat}}&lng={{lng}}",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Find Lower Rates",
+					"request": {
+						"url": "{{base_url}}/api/place_of_care/find_lower_rates?eocCode={{eoc_code}}&lat={{lat}}&lng={{lng}}&targetPrice=86.4",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Practitioner of Care",
+			"description": "",
+			"item": [
+				{
+					"name": "Practitioner of Care Search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"if(responseCode.code === 200) {",
+									"    tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"    tests[\"Body has practitioners_of_care\"] = responseBody.has(\"practitioners_of_care\");",
+									"    tests[\"Body has search_metadata\"] = responseBody.has(\"search_metadata\");",
+									"    tests[\"Counts okay\"] = jsonData.search_metadata.total_count === jsonData.practitioners_of_care.length || jsonData.search_metadata.per_page === jsonData.practitioners_of_care.length;",
+									"    ",
+									"    tests[\"practitioners_of_care has practitioner_id\"] = jsonData.practitioners_of_care[0].practitioner_id.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_first_name\"] = jsonData.practitioners_of_care[0].practitioner_first_name.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_last_name\"] = jsonData.practitioners_of_care[0].practitioner_last_name.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_display_name\"] = jsonData.practitioners_of_care[0].practitioner_display_name.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_specialty\"] = jsonData.practitioners_of_care[0].practitioner_specialty.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_phone\"] = jsonData.practitioners_of_care[0].practitioner_phone.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_category\"] = jsonData.practitioners_of_care[0].practitioner_category.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_preferred\"] = jsonData.practitioners_of_care[0].practitioner_preferred === false || jsonData.practitioners_of_care[0].practitioner_preferred === true;",
+									"    ",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_id\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_id.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_name\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_name.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_address.address_line_1\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_address.address_line_1.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_address.address_line_2\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_address.address_line_2.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_address.city\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_address.city.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_address.state\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_address.state.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_address.zip\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_address.zip.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_phone\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_phone.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_type\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_type.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_lat\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_lat.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_lng\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_lng.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_category\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_category.length>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_cost\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_cost>0;",
+									"    tests[\"practitioners_of_care has practitioner_places_of_service.place_of_service_distance\"] = jsonData.practitioners_of_care[0].practitioner_places_of_service[0].place_of_service_distance>=0;",
+									"}",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{base_url}}/api/practitioner_of_care/search?eocCode={{eoc_code}}&lat={{lat}}&lng={{lng}}&radius=105",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"description": "",
+			"item": [
+				{
+					"name": "providerSearchGet",
+					"request": {
+						"url": "{{base_url}}/api/provider/search?q=gra&count=20&eoc_code=54a30771-58a4-43fa-9b41-a7c14ad9b643",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Provider - Place of Service Metadata",
+					"request": {
+						"url": "{{base_url}}/api/provider/place_of_service/{{place_of_service_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Returns Provider - Place of Service Metadata, specified by the place_of_service_id parameter."
+					},
+					"response": []
+				},
+				{
+					"name": "Provider - Practitioner Metadata",
+					"request": {
+						"url": "{{base_url}}/api/provider/practitioner/{{practitioner_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Returns Provider - Practitioner Metadata, specified by the practitioner_id parameter."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Google Geo Reverse Lookup",
+			"request": {
+				"url": "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key={{google_api_key}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Place of Care Search - Preferred Practitioner",
+			"request": {
+				"url": "{{base_url}}/api/place_of_care/search?eocCode={{eoc_code}}&lat={{lat}}&lng={{lng}}",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,51 @@
+.page--understand-results {
+  .page-section {
+    .page-section__block {
+      .block-header {
+        @include responsive-property('margin-bottom', 16px, 60px);
+      }
+
+      .block-icon {
+        width: auto;
+        @include responsive-property('height', 42px, 54px, 88px);
+      }
+
+      &--facilities {
+        background-color: $light-gray-bg;
+
+      }
+
+      &--billing {
+        background-color: $white;
+      }
+
+      &--practitioners {
+        background-color: $dark-gray-blue;
+        color: $white;
+      }
+
+      &--using {
+        background-color: $light-gray-bg;
+
+        h3 {
+          @include page-header-size();
+          color: $green;
+          @include responsive-property('margin-bottom', 20px, 28px, 40px);
+          font-weight: 300;
+        }
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      @include responsive-property('font-size', 18px, 20px, 28px);
+    }
+
+    p {
+      margin: 0;
+      @include responsive-property('font-size', 14px, 16px, 18px);
+    }
+  }
+}

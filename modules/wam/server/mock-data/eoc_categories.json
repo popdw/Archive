@@ -1,0 +1,22 @@
+[
+  {
+    "eoc_category_id": "20d3c033-8dd0-4e23-8372-76ca4e841890",
+    "eoc_category_name": "Imaging Exam",
+    "eoc_category_description": "CT Scan, MRI Scan, Nuclear Scan, Ultrasound..."
+  },
+  {
+    "eoc_category_id": "d0a41cbf-2f7c-4018-8c26-3ddb89408d42",
+    "eoc_category_name": "Lab Test",
+    "eoc_category_description": "Abdominal Fluid Cytology, ABO Grouping..."
+  },
+  {
+    "eoc_category_id": "f28904b7-7d49-4f00-9dfb-def6a04cb843",
+    "eoc_category_name": "Medical or Surgical Procedure",
+    "eoc_category_description": "Knee Arthroscopic Surgery, Plica Surgery..."
+  },
+  {
+    "eoc_category_id": "cc1b92ba-6267-4ec0-8bfe-4f8eb3da2bdd",
+    "eoc_category_name": "Office Visit",
+    "eoc_category_description": "Allergist, Cardiologist, Endocrinologist..."
+  }
+]

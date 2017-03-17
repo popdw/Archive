@@ -1,0 +1,13 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+  <div ng-show="page == 'home'" class="page--home">
+    {% include 'pages/home.server.view.html' %}
+  </div>
+  <div ng-show="page == 'search'" class="page--search">
+    {% include 'pages/search.server.view.html' %}
+  </div>
+  <div ng-show="page == 'cta'" class="page--cta">
+    {% include 'pages/cta.server.view.html' %}
+  </div>
+{% endblock %}

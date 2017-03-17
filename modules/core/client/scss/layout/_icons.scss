@@ -1,0 +1,7 @@
+.money--icon {
+  @include icon-image('/images/icons/Asset 1.svg', 64px, 63px, 64px, 62px, 112px, 109px);
+}
+
+.bills--icon {
+  @include icon-image('/images/icons/Asset 4.svg', 49px, 61px, 49px, 61px, 87px, 109px);
+}

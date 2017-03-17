@@ -1,0 +1,344 @@
+/* header styles */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 10px $mobile-gutter;
+  background: $white;
+  transition: box-shadow 0.1s ease-in-out;
+
+  &.shadow {
+    box-shadow: 0 0 9px 0 #ccc;
+  }
+
+  @include media("screen", ">desktop") {
+    padding: 20px 50px;
+  }
+
+  .page-holder {
+    padding: 0;
+  }
+
+  .logo {
+    float: left;
+    width: 115px;
+    margin: 0;
+    cursor: pointer;
+
+    @include media("screen", ">desktop") {
+      width: 176px;
+    }
+
+    img {
+      @include size(100%, auto);
+    }
+  }
+
+  .popup-list {
+    @extend %listreset;
+    float: right;
+    margin-top: 6px;
+    //font-size: 22px;
+
+    @include media("screen", ">desktop") {
+      margin: 13px 0 0 0;
+    }
+
+    li {
+      float: left;
+
+      &.favorites {
+
+        @include media("screen", ">desktop") {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        .text {
+          display: none;
+          @include media("screen", ">desktop") {
+            @include inline-block(middle);
+          }
+        }
+
+        [class*="icon-"] {
+          @include media("screen", ">desktop") {
+            @include inline-block(middle);
+          }
+        }
+
+        .icon-star {
+          font-size: 19px;
+        }
+      }
+
+      &.popup-holder {
+        margin-top: 3px;
+        margin-left: 16px;
+
+        @include media("screen", ">desktop") {
+          position: relative;
+          margin-left: 39px;
+        }
+
+        a.menu-opener {
+          width: 16px;
+          height: 13px;
+
+          @include media(">desktop") {
+            width: 32px;
+            height: 17px;
+          }
+
+          .icon {
+            width: 100%;
+            height: 100%;
+            margin-top: -1px;
+            border-width: 2px 0;
+
+            &:after {
+              height: 2px;
+            }
+          }
+        }
+
+        &.active {
+          .popup-opener {
+            z-index: 115;
+            &:after {
+              opacity: 1;
+            }
+
+          }
+          .popup {
+            visibility: visible;
+            top: calc(100% - 7px);
+            right: 10px;
+            opacity: 1;
+            //transition: top 0s linear, right 0s linear, opacity 0.4s linear;
+            @include media("screen", ">desktop") {
+              right: -52px;
+            }
+            &.menu {
+              right: 6px;
+              @include media("screen", ">desktop") {
+                margin-top: 23px;
+                margin-right: -22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popup-opener {
+    @include size(56px);
+    display: block;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    color: $dove-gray;
+    @include media("screen", ">desktop") {
+      @include size(67px, 63px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      left: -10px;
+      height: 33px;
+      border: solid $light-gray;
+      border-bottom-color: $white;
+      border-width: 1px;
+      background: $white;
+      z-index: -1;
+      opacity: 0;
+
+      @include media("screen", ">desktop") {
+        top: -16px;
+        right: -16px;
+        left: -16px;
+        height: 50px;
+      }
+    }
+
+    &:hover {
+      color: $black;
+      &:after {
+      }
+    }
+    &[class*="icon-"] {
+      font-size: 22px;
+      @include media("screen", ">desktop") {
+        font-size: 24px;
+      }
+    }
+    &:before {
+      position: absolute;
+
+      @include top-left-position(50%, 50%);
+      transform: translate(-50%, -50%);
+      margin-top: -6px;
+      @include media("screen", ">desktop") {
+        margin-top: 1px;
+      }
+    }
+    .num {
+      font-size: 12px;
+      position: absolute;
+      @include bottom-right-position(16px, 10px);
+      background: $green;
+      @include circle-image(17px);
+      line-height: 17px;
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      font-family: $base-font-sans-serif;
+      @include media("screen", ">desktop") {
+        bottom: 10px;
+        font-size: 14px;
+        line-height: 21px;
+        @include size(21px);
+      }
+    }
+  }
+
+  .popup {
+    //width: calc(100% - 20px);
+    visibility: hidden;
+    position: absolute;
+    max-width: 355px;
+    @include top-right-position(-9999px, 0);
+    margin-top: -1px;
+    z-index: 2;
+    font-size: 18px;
+    opacity: 0;
+    transition: top 0s linear 0.4s, right 0.4s linear 0.4s, opacity 0.4s linear, visibility 0.4s linear;
+    //@include media("screen", ">desktop") {
+    //  width: 411px;
+    //  max-width: none;
+    //}
+
+    .page-holder {
+      border: 1px solid $light-gray;
+      background: $white;
+      padding: 20px;
+      @include media("screen", ">desktop") {
+        padding: 29px 37px;
+      }
+    }
+
+    &.menu {
+      color: $dove-gray;
+      line-height: 1.19;
+      transition: none;
+
+      font-size: 16px;
+      @include media("screen", ">desktop") {
+        font-size: 20px;
+      }
+
+      .page-holder {
+        padding: 15px;
+        @include media("screen", ">desktop") {
+          padding: 25px;
+        }
+      }
+
+      ul {
+        @extend %listreset;
+        font-weight: 600;
+        //text-transform: uppercase;
+        padding: 0;
+        li {
+          margin: 0;
+          float: none;
+
+          a {
+            white-space: nowrap;
+            padding: 12px;
+            @include media("screen", ">desktop") {
+              padding: 16px;
+              padding-right: 72px;
+            }
+          }
+        }
+      }
+      a {
+        color: $dove-gray;
+        &:hover {
+          color: $black;
+        }
+      }
+      .info {
+        font-style: normal;
+      }
+    }
+    .btn {
+      display: block;
+      max-width: 328px;
+      margin: 0 auto;
+      @include media("screen", ">desktop") {
+        margin-bottom: 10px;
+      }
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: normal;
+      @include media("screen", ">desktop") {
+        margin: 0;
+      }
+    }
+    p {
+      @include media("screen", ">desktop") {
+        margin: 0 0 27px;
+      }
+    }
+  }
+  .menu-opener {
+    &:hover {
+      .icon {
+        border-color: $black;
+        &:after {
+          background: $black;
+        }
+      }
+    }
+    .icon {
+      position: absolute;
+      @include top-left-position(50%, 50%);
+      transform: translate(-50%, -50%);
+      @include size(20px, 14px);
+      border: solid $dove-gray;
+      border-width: 1px 0;
+      text-indent: -9999px;
+      direction: ltr;
+      overflow: hidden;
+      margin-top: -6px;
+      @include animate(border);
+      @include media("screen", ">desktop") {
+        @include size(31px, 16px);
+        border-width: 2px 0;
+        margin-top: 1px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        margin-top: -1px;
+        @include top-left-position(50%, 0);
+        @include size(100%, 1px);
+        background: $dove-gray;
+        @include animate(background);
+        @include media("screen", ">desktop") {
+          height: 2px;
+        }
+      }
+    }
+  }
+}

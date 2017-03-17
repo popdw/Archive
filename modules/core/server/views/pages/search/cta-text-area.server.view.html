@@ -1,0 +1,315 @@
+<div class="text-area" ng-controller="CtaTextAreaController">
+
+  <span ng-if="getProcedureCategoryId() > '1'">
+    <span >~{getNumberOfDoctors()|pluralize:'doctor performs':'doctors perform'}~ the </span>
+  <!-- action-text modal holder -->
+    <div class="action-text">
+     <a href="#" class="">~{getProcedureName()}~</a>
+    </div>
+
+    <span> procedure within</span>
+  </span>
+
+  <span ng-if="getProcedureCategoryId() ==='1'">
+    <span >~{getNumberOfDoctors() }~  </span>
+    <!-- action-text modal holder -->
+    <div class="action-text">
+     <a href="#" class="">~{getProcedureName()}~(s)</a>
+    </div>
+
+    <span> were found within</span>
+
+  </span>
+
+  <br class="shown-edit">
+
+  <!-- action-text modal holder -->
+  <div class="action-text" modal on-modal-open="resetRadiusSlider=true">
+    <a href="#" class="opener" modal-opener>~{getSearchRadius()|pluralize:'mile':'miles'}~</a>
+
+    <div class="slide slide-miles slide--custom" modal-box>
+      <div class="title-head">
+        <h2>~{newRadius|pluralize:'mile':'miles'}~</h2>
+        <a href="#" class="close">close</a>
+      </div>
+      <div class="slide-holder">
+        <div class="custom-range">
+          <slider
+            class="slider"
+            ng-model="newRadius"
+            value="getSearchRadius()"
+            min="1"
+            max="250"
+            step="1"
+            reset-on="resetRadiusSlider"
+            tooltip="hide">
+          </slider>
+          <span class="text">Mileage Radius</span>
+          <span class="text text-miles">~{newRadius|pluralize:'Mile':'Miles'}~</span>
+        </div>
+      </div>
+      <footer class="controls">
+        <a href="#" class="apply-link close" ng-click="saveRadius()">OK</a>
+      </footer>
+    </div>
+  </div>
+
+  <span class="">of</span>
+
+  <br class="shown-edit">
+
+  <!-- action-text modal holder -->
+  <div class="action-text" modal on-modal-open="initLocation()">
+    <a href="#" class="opener" modal-opener>~{getLocationAddress()}~</a>
+    <div class="slide slide-autofill slide--autocomplete" modal-box>
+      <div class="title-head">
+        <h2>~{newLocation.address || getLocationAddress()}~</h2>
+        <a href="#" class="close">close</a>
+      </div>
+      <form action="javascript:void(0)" class="autofill-form">
+        <div class="slide-holder">
+          <div class="table-row">
+            <input
+              places-autocomplete
+              type="text"
+              placeholder="Enter Address, City and State, or Zipcode"
+              ng-focus="resetLocation()"
+              ng-model="newAddress" />
+          </div>
+        </div>
+        <footer class="controls">
+          <input type="submit" class="hidden" value="submit">
+          <a href="#" class="apply-link close" ng-click="saveLocation()">OK</a>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <br class="shown-edit">
+  <span class="">across</span>
+  <br class="shown-edit">
+
+  <!-- action-text modal holder -->
+  <div class="action-text" modal on-modal-open="updateFacilityFilter()">
+    <a href="#" class="opener" modal-opener>~{(getFilteredFacilitiesCount())|pluralize:'facility':'facilities'}~</a>
+    <div class="slide slide-facility" modal-box>
+      <div class="title-head">
+        <h2>~{(newFacilitiesCount)|pluralize:'facility':'facilities'}~</h2>
+        <a href="#" class="close">close</a>
+      </div>
+      <form action="javascript:void(0)" class="facilities-form">
+        <div class="slide-holder">
+          <div class="heading">
+            <h3>~{(newFacilitiesCount)|pluralize:'facility':'facilities'}~</h3>
+            <p>Choose the facilities <br class="only-desktop"> you want to show</p>
+          </div>
+          <div class="form-content">
+            <div class="form-area types">
+              <h3 class="facilities-title">Facility Types</h3>
+              <div class="key-list visible">
+                <ul class="pins-list">
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" ng-checked="facilitiesModel.types.H" ng-model="facilitiesModel.types.H" ng-change="updateFacilitiesFilter()">
+                      <span class="pin in-hospital icon-h-square"></span>
+                      Hospitals
+                      <span class="fake-input"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" ng-checked="facilitiesModel.types.O" ng-model="facilitiesModel.types.O" ng-change="updateFacilitiesFilter()">
+                      <span class="pin office icon-user-md"></span>
+                      Offices
+                      <span class="fake-input"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" ng-checked="facilitiesModel.types.ASC" ng-model="facilitiesModel.types.ASC" ng-change="updateFacilitiesFilter()">
+                      <span class="pin center icon-medkit"></span>
+                      Ambulatory Surgery Centers
+                      <span class="fake-input"></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="check-label healthcost">
+                <input type="checkbox" ng-checked="facilitiesModel.inNetwork" ng-model="facilitiesModel.inNetwork" ng-change="updateFacilitiesFilter()">
+                Only show HealthCost Networks<sup>SM</sup> facilities
+                <span class="fake-input"></span>
+              </label>
+            </div>
+            <div class="form-area">
+              <h3 class="facilities-title">Facilities</h3>
+              <ul class="facilities-list">
+                <li ng-repeat="facility in getFacilities()">
+                  <label class="check-label" ng-class="{healthcost: facility.inNetwork}">
+                    <input type="checkbox" ng-checked="facilitiesModel.facilities[facility.id]" ng-model="facilitiesModel.facilities[facility.id]" ng-change="updateFacilitiesFilter()" >
+                    ~{facility.name}~
+                    <span class="fake-input"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <input class="hidden" type="submit" value="submit">
+          <a href="#" class="apply-link close-button" ng-click="saveFacilities()">OK</a>
+          <a href="#" class="cancel-link" ng-click="resetFacilities();updateFacilitiesFilter()">Reset</a>
+        </div>
+      </form>
+    </div>
+    <span>.</span>
+  </div>
+
+  <br class="shown-edit">
+
+  <span class="total-text">Total costs <sup class="sup icon-question-circle" tooltip-trigger="mouseenter outsideClick" tooltip-placement="auto top" uib-tooltip-html="totalCostTooltip"></sup> range from</span>
+  <!-- action-text modal holder -->
+  <div class="action-text" modal on-modal-open="resetCostRangeSlider=true; newCostRange=[getMinCost(), getMaxCost()]">
+    <a href="#" class="opener" modal-opener><sup>$</sup>~{getMinCost()}~ to <sup>$</sup>~{getMaxCost()}~</a>
+    <div class="slide slide-total-cost slide--custom" modal-box>
+      <div class="title-head">
+        <h2><sup>$</sup>~{newCostRange[0]}~ to <sup>$</sup>~{newCostRange[1]}~</h2>
+        <a href="#" class="close">close</a>
+      </div>
+      <div class="slide-holder">
+        <div class="cost-range">
+          <h3>Show total cost options from:</h3>
+          <span class="text-range"><sup>$</sup>~{newCostRange[0]}~ to <sup>$</sup>~{newCostRange[1]}~</span>
+          <div class="custom-range">
+            <slider
+              class="slider"
+              ng-model="newCostRange"
+              range="true"
+              min="getIntervalMinCost()"
+              max="getIntervalMaxCost()"
+              step="1"
+              reset-on="resetCostRangeSlider"
+              tooltip="hide">
+            </slider>
+            <span class="text">(Drag green circles to adjust)</span>
+          </div>
+        </div>
+      </div>
+      <footer class="controls">
+        <a href="#" class="apply-link close" ng-click="saveCostRange()">OK</a>
+      </footer>
+    </div>
+    <span>.</span>
+  </div>
+
+  <br class="shown-edit">
+
+  <span ng-show="hasPreferredDoctor() && hasResults()">
+    <!-- action-text modal holder -->
+    <div class="action-text" modal on-modal-open="resetPreferredDoctor()">
+      <a href="#" class="opener" modal-opener>~{getPreferredDoctorName()}~</a>
+      <div class="slide slide-autofill slide--autocomplete" modal-box>
+        <div class="title-head">
+          <h2>~{selectedPreferredDoctor.name || getPreferredDoctorName()}~</h2>
+          <a href="#" class="close">close</a>
+        </div>
+        <form action="javascript:void(0)" class="autofill-form">
+          <div class="slide-holder">
+            <div class="table-row">
+              <input
+                type="text"
+                placeholder="Enter Preferred Doctor"
+                ng-focus="resetPreferredDoctor()"
+                ng-model="newPreferredDoctorName"
+                prevent-enter-submit
+                uib-typeahead="item.name for item in suggestPreference($viewValue, 'DR')"
+                typeahead-editable="false"
+                typeahead-focus-on-select="false"
+                typeahead-focus-first="false"
+                typeahead-min-length="3"
+                typeahead-wait-ms="250"
+                typeahead-on-select="selectPreferredDoctor($item)"
+              />
+            </div>
+          </div>
+          <footer class="controls">
+            <input type="submit" class="hidden" value="submit">
+            <a href="#" class="apply-link close" ng-click="savePreferredDoctor()">OK</a>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <span ng-hide="selectNewDoctor"> performs this procedure at ~{getPreferredDoctorFacilities()}~ facilities<span class="hidden-edit"> <mark>highlighted</mark> below</span>.</span>
+  </span>
+
+  <span ng-show="hasPreferredFacility() && Results.hasResults()">
+    <!-- action-text modal holder -->
+    <span>At </span>
+    <div class="action-text" modal on-modal-open="resetPreferredFacility()">
+      <a href="#" class="opener" modal-opener>~{getPreferredFacilityName()}~</a>
+      <div class="slide slide-autofill slide--autocomplete" modal-box>
+        <div class="title-head">
+          <h2>~{selectedPreferredFacility.name || getPreferredFacilityName()}~</h2>
+          <a href="#" class="close">close</a>
+        </div>
+        <form action="javascript:void(0)" class="autofill-form">
+          <div class="slide-holder">
+            <div class="table-row">
+              <input
+                type="text"
+                placeholder="Enter Preferred Facility"
+                ng-focus="resetPreferredFacility()"
+                ng-model="newPreferredFacilityName"
+                prevent-enter-submit
+                uib-typeahead="item.name for item in suggestPreference($viewValue, 'PS')"
+                typeahead-editable="false"
+                typeahead-focus-on-select="false"
+                typeahead-focus-first="false"
+                typeahead-min-length="3"
+                typeahead-wait-ms="250"
+                typeahead-on-select="selectPreferredFacility($item)"
+              />
+            </div>
+          </div>
+          <footer class="controls">
+            <input type="submit" class="hidden" value="submit">
+            <a href="#" class="apply-link close" ng-click="savePreferredFacility()">OK</a>
+          </footer>
+        </form>
+      </div>
+    </div>
+    <span ng-hide="selectNewFacility">, ~{getPreferredFacilityDoctorsCount()|pluralize:'doctor performs':'doctors perform'}~ this procedure<span class="hidden-mobile">, <mark>highlighted</mark> below</span>.</span>
+  </span>
+
+  <span ng-show="false">
+    <span>The</span>
+    <!-- action-text modal holder -->
+    <div class="action-text" modal>
+      <a href="#" class="opener" _modal-opener>12 doctors</a>
+      <div class="slide slide-doctors" modal-box>
+        <div class="title-head">
+          <h2>12 doctors</h2>
+          <a href="#" class="close">close</a>
+        </div>
+        <form action="javascript:void(0)" class="doctors-form">
+          <div class="slide-holder">
+            <div class="form-holder">
+              <label class="check-label">
+                <input type="checkbox" checked="">
+                <span class="fake-input"></span>
+                Only show doctors who perform at the specified facility
+              </label>
+            </div>
+          </div>
+          <footer class="controls">
+            <input type="submit" class="hidden" value="submit">
+            <a href="#" class="apply-link">OK</a>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </span>
+
+  <span class="note-text" ng-show="Results.hasResults()"><span class="hidden-desktop">Tap</span> <span class="hidden-mobile">Click</span> on a doctor/facility below to see cost breakdown, reviews, and more.</span>
+</div>

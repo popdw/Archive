@@ -1,0 +1,722 @@
+{
+  "places_of_service": [
+    {
+      "place_of_service_id": "1fd18c12-8cf1-4804-9937-f662b627b85b",
+      "place_of_service_name": "Geekosis"
+    },
+    {
+      "place_of_service_id": "49ba5851-fbf7-4b7f-a24c-15b19977e6bd",
+      "place_of_service_name": "Providco"
+    },
+    {
+      "place_of_service_id": "ebbfd969-4e0f-49d7-80fc-41353b3b9247",
+      "place_of_service_name": "Imkan"
+    },
+    {
+      "place_of_service_id": "a93206e9-076e-4cb0-ac74-389bd0bbbda3",
+      "place_of_service_name": "Soprano"
+    },
+    {
+      "place_of_service_id": "4faa773f-5f93-4624-87ad-3407ad8fffd4",
+      "place_of_service_name": "Genmom"
+    },
+    {
+      "place_of_service_id": "353956db-7f20-4f11-8c84-0c47f646b73f",
+      "place_of_service_name": "Geeketron"
+    },
+    {
+      "place_of_service_id": "cbcb09b0-97d8-49ce-b92e-4cd436b2bf10",
+      "place_of_service_name": "Eclipsent"
+    },
+    {
+      "place_of_service_id": "8a7433a4-3396-4423-9529-8480abe0453a",
+      "place_of_service_name": "Vortexaco"
+    },
+    {
+      "place_of_service_id": "fa8d8abd-91a0-4a0a-b72e-61d45a9989b5",
+      "place_of_service_name": "Exoplode"
+    },
+    {
+      "place_of_service_id": "52929016-b241-4039-b364-d2fe42f2aaca",
+      "place_of_service_name": "Vixo"
+    },
+    {
+      "place_of_service_id": "a9c2990f-8d91-4f0a-89c3-ced2cdc175c8",
+      "place_of_service_name": "Moreganic"
+    },
+    {
+      "place_of_service_id": "dfbb7ae2-9cac-4a2c-963d-0ea4f7f212d8",
+      "place_of_service_name": "Zillatide"
+    },
+    {
+      "place_of_service_id": "52f50025-47d9-4657-abf8-bc9bdc12ea90",
+      "place_of_service_name": "Cowtown"
+    },
+    {
+      "place_of_service_id": "a1ed5517-acf0-49ca-acd3-13c28a5d77ad",
+      "place_of_service_name": "Geologix"
+    },
+    {
+      "place_of_service_id": "356f461e-5dd3-4bb5-92e3-86f53a4d2dea",
+      "place_of_service_name": "Conjurica"
+    },
+    {
+      "place_of_service_id": "f8ba1453-9eba-4b67-a22d-645e54d2328f",
+      "place_of_service_name": "Steeltab"
+    },
+    {
+      "place_of_service_id": "5572419a-ada6-44dc-ab9c-c817e5ab6483",
+      "place_of_service_name": "Viasia"
+    },
+    {
+      "place_of_service_id": "c7a78ea5-a329-45e1-b224-a848cc635b21",
+      "place_of_service_name": "Irack"
+    },
+    {
+      "place_of_service_id": "df9b2fd8-0add-4a60-bf9b-9656b82836a5",
+      "place_of_service_name": "Olucore"
+    },
+    {
+      "place_of_service_id": "81158cbb-a2f4-4b26-874a-740d70c15640",
+      "place_of_service_name": "Quarx"
+    },
+    {
+      "place_of_service_id": "eb90c1e3-e981-41b7-9dfc-5f4d557de1e8",
+      "place_of_service_name": "Bunga"
+    },
+    {
+      "place_of_service_id": "a61c2df5-57bf-442b-b6f5-5cb77cd34254",
+      "place_of_service_name": "Eweville"
+    },
+    {
+      "place_of_service_id": "f7c2be2d-39a9-4192-87b4-a36c5d0be184",
+      "place_of_service_name": "Norsup"
+    },
+    {
+      "place_of_service_id": "0bd4391a-d386-4ebc-b7a8-fc3deb985653",
+      "place_of_service_name": "Enerforce"
+    },
+    {
+      "place_of_service_id": "da96b213-2ad2-423e-ba63-39c9c77b9f24",
+      "place_of_service_name": "Zilodyne"
+    },
+    {
+      "place_of_service_id": "a2f9a08f-7e7a-48b8-9e77-9a5ecebb76d3",
+      "place_of_service_name": "Rooforia"
+    },
+    {
+      "place_of_service_id": "bd5fd2f0-5887-4d9e-b5c1-ad8b6abd5206",
+      "place_of_service_name": "Egypto"
+    },
+    {
+      "place_of_service_id": "363d9079-c4cc-469d-8c53-dd69c5440d09",
+      "place_of_service_name": "Prosure"
+    },
+    {
+      "place_of_service_id": "22e2eaf7-1c28-4f4d-a2a8-63381a728ba0",
+      "place_of_service_name": "Microluxe"
+    },
+    {
+      "place_of_service_id": "4830513e-aca3-4108-a58d-109fdf0dae90",
+      "place_of_service_name": "Boilicon"
+    },
+    {
+      "place_of_service_id": "53e994b2-e488-400a-85d9-c6216fb7245a",
+      "place_of_service_name": "Geostele"
+    },
+    {
+      "place_of_service_id": "fef1476d-99f0-432d-93c4-c536810ff999",
+      "place_of_service_name": "Magneato"
+    },
+    {
+      "place_of_service_id": "f2d1cd0d-1f45-40a0-ad78-0cb192fe0657",
+      "place_of_service_name": "Eyeris"
+    },
+    {
+      "place_of_service_id": "3fe47a5c-df43-4b8e-ade2-4931bd09a661",
+      "place_of_service_name": "Virxo"
+    },
+    {
+      "place_of_service_id": "0a8c2aa7-c34b-4269-a608-be042673ad47",
+      "place_of_service_name": "Poochies"
+    },
+    {
+      "place_of_service_id": "a5abeb26-3d98-404f-a6bf-bd398eab5342",
+      "place_of_service_name": "Slax"
+    },
+    {
+      "place_of_service_id": "6ffc6aa8-2635-4603-a934-87e6a83ffa4f",
+      "place_of_service_name": "Accuprint"
+    },
+    {
+      "place_of_service_id": "b2d4d1a1-5764-4d8b-94ab-0f3d093529ac",
+      "place_of_service_name": "Sensate"
+    },
+    {
+      "place_of_service_id": "3f98652c-6c24-46f5-b9d1-0acbaab10647",
+      "place_of_service_name": "Mondicil"
+    },
+    {
+      "place_of_service_id": "202c7cf8-1384-4068-be86-312355edafd1",
+      "place_of_service_name": "Furnafix"
+    },
+    {
+      "place_of_service_id": "881b322a-f5be-4d2c-ab14-619fe5bfa24b",
+      "place_of_service_name": "Apexia"
+    },
+    {
+      "place_of_service_id": "ab05a2df-6f41-411f-b72e-291489e447cb",
+      "place_of_service_name": "Terascape"
+    },
+    {
+      "place_of_service_id": "e947aae9-0aa8-4e57-972c-ea33c5bc20d7",
+      "place_of_service_name": "Bytrex"
+    },
+    {
+      "place_of_service_id": "37d349ad-ba44-4ad2-ab88-fb4d6d6f6736",
+      "place_of_service_name": "Zeam"
+    },
+    {
+      "place_of_service_id": "fa251b74-1eea-4620-8b74-4326799ef996",
+      "place_of_service_name": "Koffee"
+    },
+    {
+      "place_of_service_id": "e9d6ac9b-c6ae-4290-a623-76997bf913c4",
+      "place_of_service_name": "Turnabout"
+    },
+    {
+      "place_of_service_id": "46c44eaf-422c-4355-8636-a20daafd52ae",
+      "place_of_service_name": "Sonique"
+    },
+    {
+      "place_of_service_id": "8b6db4eb-8350-43d1-aa47-8479a7058dac",
+      "place_of_service_name": "Steelfab"
+    },
+    {
+      "place_of_service_id": "0f362be4-ce0a-4ac9-95ab-ffad3a0a800e",
+      "place_of_service_name": "Tingles"
+    },
+    {
+      "place_of_service_id": "db17d3af-4d17-49da-a44b-dc0107ea03d4",
+      "place_of_service_name": "Pharmex"
+    },
+    {
+      "place_of_service_id": "f213387d-faaa-40a7-a813-bbd65e87961a",
+      "place_of_service_name": "Musaphics"
+    },
+    {
+      "place_of_service_id": "583d0abe-7801-401b-a87b-653830cf2815",
+      "place_of_service_name": "Rockabye"
+    },
+    {
+      "place_of_service_id": "713381b3-477b-4a3f-908e-55cc964ce11f",
+      "place_of_service_name": "Genekom"
+    },
+    {
+      "place_of_service_id": "be75950f-e9a0-4a01-83dc-c553968eafbd",
+      "place_of_service_name": "Pholio"
+    },
+    {
+      "place_of_service_id": "1f7a3249-74c8-4d61-be02-b8e5bb09b2b9",
+      "place_of_service_name": "Isosphere"
+    },
+    {
+      "place_of_service_id": "c7daa327-5f2a-42be-9fd8-ff9b164d0025",
+      "place_of_service_name": "Geekus"
+    },
+    {
+      "place_of_service_id": "a07f53cc-dcbb-47e8-bf72-6a150725fac0",
+      "place_of_service_name": "Immunics"
+    },
+    {
+      "place_of_service_id": "2fe7f7b1-e362-4f31-bb77-f0e984157f35",
+      "place_of_service_name": "Accel"
+    },
+    {
+      "place_of_service_id": "f58c2771-5f12-4906-a20d-81fe1386cecd",
+      "place_of_service_name": "Portica"
+    },
+    {
+      "place_of_service_id": "d99b9d10-2aef-44f7-aa2f-6e97ee0c2c95",
+      "place_of_service_name": "Proxsoft"
+    },
+    {
+      "place_of_service_id": "12cf969d-5d9d-474f-9548-321238f9cfc6",
+      "place_of_service_name": "Bizmatic"
+    },
+    {
+      "place_of_service_id": "53add351-7484-477f-8606-742b0615ff8f",
+      "place_of_service_name": "Interfind"
+    },
+    {
+      "place_of_service_id": "2d8275a7-fe1b-46cc-920b-ca88a271d586",
+      "place_of_service_name": "Ozean"
+    },
+    {
+      "place_of_service_id": "ad50d26a-aa82-4e49-aa23-afc2b4366713",
+      "place_of_service_name": "Datagen"
+    },
+    {
+      "place_of_service_id": "3e201d32-3f94-48e7-b53a-3f55709b4ba6",
+      "place_of_service_name": "Comcur"
+    },
+    {
+      "place_of_service_id": "f040a4e8-7521-4cd8-86e6-b0ece43aa653",
+      "place_of_service_name": "Zensor"
+    },
+    {
+      "place_of_service_id": "cf8dfcb3-e160-4dc8-8147-e909c393f972",
+      "place_of_service_name": "Flyboyz"
+    },
+    {
+      "place_of_service_id": "7c0e1ca2-7cc1-4c47-8b30-3cc669a9639e",
+      "place_of_service_name": "Freakin"
+    },
+    {
+      "place_of_service_id": "9410a3be-053a-409e-b3ad-b3f4e25988ec",
+      "place_of_service_name": "Gluid"
+    },
+    {
+      "place_of_service_id": "2eb6ed83-d7eb-46b2-a707-c168de267dbf",
+      "place_of_service_name": "Sequitur"
+    },
+    {
+      "place_of_service_id": "0da2c905-0908-43dc-a754-1ea1d7b6d128",
+      "place_of_service_name": "Otherway"
+    },
+    {
+      "place_of_service_id": "ff2d7d60-5cec-45bb-85a4-d115d72ec34a",
+      "place_of_service_name": "Nixelt"
+    },
+    {
+      "place_of_service_id": "57b7435e-824a-4f58-9c29-20d263bd2d15",
+      "place_of_service_name": "Skybold"
+    },
+    {
+      "place_of_service_id": "4aa1382b-e058-4874-a037-4ce29ba62e55",
+      "place_of_service_name": "Exoswitch"
+    },
+    {
+      "place_of_service_id": "8e47ea7f-ab73-4eae-9098-869aafc243c9",
+      "place_of_service_name": "Unia"
+    },
+    {
+      "place_of_service_id": "b89609bc-f92b-42ee-b04b-4648999637ee",
+      "place_of_service_name": "Corepan"
+    },
+    {
+      "place_of_service_id": "1201feba-df0f-47d6-910e-f6bb82039432",
+      "place_of_service_name": "Lunchpad"
+    },
+    {
+      "place_of_service_id": "44384bd0-3705-4ebd-a660-bb992d787c73",
+      "place_of_service_name": "Isbol"
+    },
+    {
+      "place_of_service_id": "e74d5bdf-72de-4338-a8d7-12dca37543d6",
+      "place_of_service_name": "Locazone"
+    },
+    {
+      "place_of_service_id": "b57ffe2b-3a52-47e7-a4b3-ae0fdfaf9485",
+      "place_of_service_name": "Ceprene"
+    },
+    {
+      "place_of_service_id": "9767a635-6f94-4ee2-8e26-d64f3368e8af",
+      "place_of_service_name": "Marvane"
+    },
+    {
+      "place_of_service_id": "4c228a3a-9ec4-466a-9dcf-457eb19cdb10",
+      "place_of_service_name": "Sultraxin"
+    },
+    {
+      "place_of_service_id": "887bf992-70f4-4c9f-94f1-b0b258669eae",
+      "place_of_service_name": "Anocha"
+    },
+    {
+      "place_of_service_id": "b0178847-f61f-477c-9012-59945c1d86cf",
+      "place_of_service_name": "Venoflex"
+    }
+  ],
+  "practitioners": [
+    {
+      "practitioner_id": "d955b97b-68d0-472e-918b-d900efb2e7a3",
+      "practitioner_display_name": "Downs Conner"
+    },
+    {
+      "practitioner_id": "2e92f686-dc97-4957-b560-48dad44e7a95",
+      "practitioner_display_name": "Grimes Douglas"
+    },
+    {
+      "practitioner_id": "6f7e99a1-1cd6-4b9e-8df8-12f643fee818",
+      "practitioner_display_name": "Luann Waller"
+    },
+    {
+      "practitioner_id": "ebcf7910-cc3b-4dbf-8c80-dca95ade9458",
+      "practitioner_display_name": "Gonzalez Clayton"
+    },
+    {
+      "practitioner_id": "77c35872-6002-4524-899f-b0843bbfa030",
+      "practitioner_display_name": "Dodson Whitehead"
+    },
+    {
+      "practitioner_id": "71b1da17-b706-4b20-b1aa-61889cfe89e0",
+      "practitioner_display_name": "Bridgett Riggs"
+    },
+    {
+      "practitioner_id": "ed4f37dd-3d7b-4694-8993-ce25045e6eff",
+      "practitioner_display_name": "Hayden Leonard"
+    },
+    {
+      "practitioner_id": "b5741659-10ad-45ce-b464-012d5d0d8f13",
+      "practitioner_display_name": "Clements Pruitt"
+    },
+    {
+      "practitioner_id": "4544aa2d-8b54-4620-8d96-281b61132387",
+      "practitioner_display_name": "Rush Ingram"
+    },
+    {
+      "practitioner_id": "9acf2f44-5859-414a-9d69-d01bf3aa0eec",
+      "practitioner_display_name": "Larson Kane"
+    },
+    {
+      "practitioner_id": "86d15854-7321-4bc2-a00d-e8fb5abef6d2",
+      "practitioner_display_name": "Hoffman Sims"
+    },
+    {
+      "practitioner_id": "ca23fbbd-c013-4bc2-889d-ce4f479e0b18",
+      "practitioner_display_name": "Decker Zimmerman"
+    },
+    {
+      "practitioner_id": "cb051637-5fe8-40c4-99e6-b2e78a206af1",
+      "practitioner_display_name": "Tyson Parker"
+    },
+    {
+      "practitioner_id": "7cb217f6-7622-41fd-aa22-22df846bc61a",
+      "practitioner_display_name": "Sabrina Pena"
+    },
+    {
+      "practitioner_id": "a8d688f7-2fb2-466e-bbc4-61d6db98b617",
+      "practitioner_display_name": "Nola Burch"
+    },
+    {
+      "practitioner_id": "af41d22e-dbbb-4490-903a-0be6c650f0b8",
+      "practitioner_display_name": "Glenna Camacho"
+    },
+    {
+      "practitioner_id": "fee3beed-87ab-4cc3-a099-77d876565210",
+      "practitioner_display_name": "Bobbie Justice"
+    },
+    {
+      "practitioner_id": "6c4801ca-607b-4399-84c3-f58fe49c83d0",
+      "practitioner_display_name": "Townsend Puckett"
+    },
+    {
+      "practitioner_id": "57b1675d-7015-4281-afd8-67b6e695b665",
+      "practitioner_display_name": "Beth Norris"
+    },
+    {
+      "practitioner_id": "a375d9d5-4b24-4c45-92aa-428df6bc4900",
+      "practitioner_display_name": "Mamie Rich"
+    },
+    {
+      "practitioner_id": "60d249ac-a168-440e-b5b2-1dc27a8030c8",
+      "practitioner_display_name": "Lauren Bowers"
+    },
+    {
+      "practitioner_id": "0ea56bf1-86ed-4e6f-acf2-796f16b03ed0",
+      "practitioner_display_name": "Moore Chaney"
+    },
+    {
+      "practitioner_id": "fae6a5c8-1a65-4164-9b27-9c25412194fa",
+      "practitioner_display_name": "Hood Eaton"
+    },
+    {
+      "practitioner_id": "8e86d899-0b44-4245-b93a-9ce7ee0bde06",
+      "practitioner_display_name": "Tran Hendricks"
+    },
+    {
+      "practitioner_id": "d038cb1d-6868-42e2-b89d-8746684b87d4",
+      "practitioner_display_name": "Mcfarland Collins"
+    },
+    {
+      "practitioner_id": "984a8515-3bb2-41b7-8c6f-7833e246e6a4",
+      "practitioner_display_name": "Hayes Horn"
+    },
+    {
+      "practitioner_id": "e79eda99-ec7a-437b-a87d-45fcffee1529",
+      "practitioner_display_name": "Duncan Robbins"
+    },
+    {
+      "practitioner_id": "f98f2f02-624d-4c8e-ae8d-03a3b99ba9a0",
+      "practitioner_display_name": "Farley Baker"
+    },
+    {
+      "practitioner_id": "71408b8a-1ba2-441c-931b-1e703e295e62",
+      "practitioner_display_name": "Jeanie Russo"
+    },
+    {
+      "practitioner_id": "197a9c6d-b1a0-40b7-b1db-916b7a38fefc",
+      "practitioner_display_name": "Cruz Sosa"
+    },
+    {
+      "practitioner_id": "cfc13fd3-7834-4356-a312-43acb85cdce1",
+      "practitioner_display_name": "Cochran Cabrera"
+    },
+    {
+      "practitioner_id": "a4079aab-194a-4168-95cb-046df8ce709d",
+      "practitioner_display_name": "Wooten Moran"
+    },
+    {
+      "practitioner_id": "61eddd2a-6310-4d21-99a1-865a032a2291",
+      "practitioner_display_name": "Rae Parks"
+    },
+    {
+      "practitioner_id": "f43645d2-856e-41cc-882f-03da51c3a4e2",
+      "practitioner_display_name": "Louisa Leblanc"
+    },
+    {
+      "practitioner_id": "2ebd5d47-a52a-46e0-90fd-ff7d8c77057b",
+      "practitioner_display_name": "Allison Bowen"
+    },
+    {
+      "practitioner_id": "4b19e3ea-7da9-424a-96f2-9bf507d0d382",
+      "practitioner_display_name": "Rojas Stephenson"
+    },
+    {
+      "practitioner_id": "cf6970a9-9eb7-4baa-b4a2-f1a4e0e7c80c",
+      "practitioner_display_name": "Finch Gay"
+    },
+    {
+      "practitioner_id": "3a54018d-f3d2-4fad-a540-e2ec9a458ea3",
+      "practitioner_display_name": "Boone Goodwin"
+    },
+    {
+      "practitioner_id": "8b0f6f31-0adc-484a-87dd-dceecc4253d7",
+      "practitioner_display_name": "Vicki Hampton"
+    },
+    {
+      "practitioner_id": "f98a3c80-6546-44ee-906c-20f5e6f74e97",
+      "practitioner_display_name": "Skinner Perry"
+    },
+    {
+      "practitioner_id": "8bc9103a-7f73-4a92-9340-5de92c709f02",
+      "practitioner_display_name": "Olga Moses"
+    },
+    {
+      "practitioner_id": "f67cc15d-b75e-4fc4-8988-676ab09b883c",
+      "practitioner_display_name": "Olson Cline"
+    },
+    {
+      "practitioner_id": "97c53bbc-2cdb-43b2-8f3d-b36f5c720fbd",
+      "practitioner_display_name": "Leann Caldwell"
+    },
+    {
+      "practitioner_id": "4cd70af1-90a8-4d82-9e49-59478674001a",
+      "practitioner_display_name": "Angeline Colon"
+    },
+    {
+      "practitioner_id": "4daed342-5c8a-4018-a6e2-3b53cb238dcf",
+      "practitioner_display_name": "Miller Blackburn"
+    },
+    {
+      "practitioner_id": "dea1b21e-6b1a-4fb6-928d-2850f3c6f030",
+      "practitioner_display_name": "Allyson Summers"
+    },
+    {
+      "practitioner_id": "baef1e10-f6a3-4baf-9e10-d49fd7186613",
+      "practitioner_display_name": "Mcintyre Dominguez"
+    },
+    {
+      "practitioner_id": "c610b0e2-b160-4cef-964c-7e8aa7a69df4",
+      "practitioner_display_name": "Espinoza Chambers"
+    },
+    {
+      "practitioner_id": "e179bed1-9999-46ba-b390-58c49fe6b55d",
+      "practitioner_display_name": "Jody Henry"
+    },
+    {
+      "practitioner_id": "3a43643d-9f15-453a-80d1-94295310bb43",
+      "practitioner_display_name": "Bradshaw Griffin"
+    },
+    {
+      "practitioner_id": "7b5f7d12-51b3-4fc7-be83-206d8773fe06",
+      "practitioner_display_name": "Cross Yates"
+    },
+    {
+      "practitioner_id": "6d95d7a4-22f3-4c8b-8130-92591a211013",
+      "practitioner_display_name": "Myers Wynn"
+    },
+    {
+      "practitioner_id": "c32bf889-36f7-4621-8baa-acc413bdfc39",
+      "practitioner_display_name": "Humphrey Clements"
+    },
+    {
+      "practitioner_id": "66cd6b64-d45a-4ade-9756-2e0fa6fca89c",
+      "practitioner_display_name": "Tricia Spence"
+    },
+    {
+      "practitioner_id": "0179c446-8e0f-4e10-8c43-54064be6ce41",
+      "practitioner_display_name": "Brennan Mendoza"
+    },
+    {
+      "practitioner_id": "0cf764af-d30b-4d25-97ec-68fb74b40193",
+      "practitioner_display_name": "Georgina Mcintosh"
+    },
+    {
+      "practitioner_id": "ff87a924-285e-4727-aad9-43dbd473f663",
+      "practitioner_display_name": "Sheppard Chase"
+    },
+    {
+      "practitioner_id": "592b9de9-871a-4f9a-a40b-97ff795dded4",
+      "practitioner_display_name": "Pearl Dodson"
+    },
+    {
+      "practitioner_id": "a244c7b3-5b65-4a28-82a5-6d32c9ada229",
+      "practitioner_display_name": "Ferguson Mcclure"
+    },
+    {
+      "practitioner_id": "4b32f3ab-a95e-486f-98a0-5af8be5a0f40",
+      "practitioner_display_name": "Walter Roy"
+    },
+    {
+      "practitioner_id": "03c69072-c5d5-406c-a121-959dcebcb5a1",
+      "practitioner_display_name": "Bright Horne"
+    },
+    {
+      "practitioner_id": "d7e9077a-60af-4e08-b899-c43a121680b2",
+      "practitioner_display_name": "Greta Washington"
+    },
+    {
+      "practitioner_id": "954d7682-ef59-4cc0-a79b-ccdce6a2f612",
+      "practitioner_display_name": "Velma Melendez"
+    },
+    {
+      "practitioner_id": "1b00c6bf-d9ff-474b-965a-bb2784edd824",
+      "practitioner_display_name": "Kelley Buchanan"
+    },
+    {
+      "practitioner_id": "ed5c7a20-82ec-43bd-988e-b176de2d1840",
+      "practitioner_display_name": "Dickerson Dalton"
+    },
+    {
+      "practitioner_id": "95167c2e-8d2c-4760-871b-661203b696a7",
+      "practitioner_display_name": "Evans Reeves"
+    },
+    {
+      "practitioner_id": "61b6f2ef-d6de-4f84-bc19-f562e977e3da",
+      "practitioner_display_name": "Mathis Parsons"
+    },
+    {
+      "practitioner_id": "c6262b9a-c436-4ebf-b7bf-0ca17f82c150",
+      "practitioner_display_name": "Hester Gomez"
+    },
+    {
+      "practitioner_id": "16bcfb47-0358-4c2e-9588-b8300f2d540a",
+      "practitioner_display_name": "Rosa Rowland"
+    },
+    {
+      "practitioner_id": "cfd2b628-233a-4f36-a500-a8db441f3c59",
+      "practitioner_display_name": "Clarice Tucker"
+    },
+    {
+      "practitioner_id": "e91f9520-42b6-4521-ba3b-233579efbe16",
+      "practitioner_display_name": "Trevino Bailey"
+    },
+    {
+      "practitioner_id": "7acabd1d-525d-4e99-8917-1000a7ee63a8",
+      "practitioner_display_name": "Mejia Lamb"
+    },
+    {
+      "practitioner_id": "5bf4bbc8-9561-44a2-b853-5327fa3cd852",
+      "practitioner_display_name": "Garrison Rice"
+    },
+    {
+      "practitioner_id": "09afa4bb-20b2-4798-89e0-39a223ed2783",
+      "practitioner_display_name": "Leonard Carlson"
+    },
+    {
+      "practitioner_id": "6eb2dc74-6568-4843-beb3-060423c15343",
+      "practitioner_display_name": "Ramos Martinez"
+    },
+    {
+      "practitioner_id": "51ddb79c-5e75-42e3-9207-3e1ad3462eb5",
+      "practitioner_display_name": "Noemi Allen"
+    },
+    {
+      "practitioner_id": "f3631073-f5a1-4fdc-8375-b720d82b9f21",
+      "practitioner_display_name": "Stacey Porter"
+    },
+    {
+      "practitioner_id": "2d10d50e-ab44-45f3-bc16-2544b2dd6b4b",
+      "practitioner_display_name": "Bowers Cooke"
+    },
+    {
+      "practitioner_id": "ca934a5a-98ec-4e4c-be81-009d0aca6720",
+      "practitioner_display_name": "Kristie Henson"
+    },
+    {
+      "practitioner_id": "9dfd616f-5012-4619-9e67-32b1cdfb476f",
+      "practitioner_display_name": "Booth Williamson"
+    },
+    {
+      "practitioner_id": "1b315929-af2d-4fdd-b058-be825679d1d2",
+      "practitioner_display_name": "Mindy Harrison"
+    },
+    {
+      "practitioner_id": "2833154e-6431-4086-9827-8d30f220aad8",
+      "practitioner_display_name": "Lori Finch"
+    },
+    {
+      "practitioner_id": "5db3a1c3-4404-4525-a83e-0bcbf0279dea",
+      "practitioner_display_name": "Glenn Warren"
+    },
+    {
+      "practitioner_id": "cb3a8f38-86a2-448c-959d-f0b0ed2dbe6e",
+      "practitioner_display_name": "Patricia Byrd"
+    },
+    {
+      "practitioner_id": "8c969523-60cf-4dee-a1e5-f9b8f56f37ae",
+      "practitioner_display_name": "Gross Ryan"
+    },
+    {
+      "practitioner_id": "322a1c0e-3c38-494a-a070-3ae2326b6952",
+      "practitioner_display_name": "Gabrielle Jarvis"
+    },
+    {
+      "practitioner_id": "c97bb109-1650-428d-bdd1-5138b382d867",
+      "practitioner_display_name": "Price Salinas"
+    },
+    {
+      "practitioner_id": "09609d75-1b5d-4d0c-8d4a-1d1fccc34551",
+      "practitioner_display_name": "Gill Brennan"
+    },
+    {
+      "practitioner_id": "d61f72e8-bbf1-4315-b633-77ff24eea721",
+      "practitioner_display_name": "Celeste Delaney"
+    },
+    {
+      "practitioner_id": "fa1c3c9b-27bc-4a4a-b58f-34fb0d4d8322",
+      "practitioner_display_name": "Rita Wade"
+    },
+    {
+      "practitioner_id": "90633392-fc76-48d3-8ada-ef61bf88a11f",
+      "practitioner_display_name": "Dyer Livingston"
+    },
+    {
+      "practitioner_id": "3da730a1-5a05-49f0-b7fc-590b9f2ae5b4",
+      "practitioner_display_name": "Hamilton Miranda"
+    },
+    {
+      "practitioner_id": "14cefcea-8f7d-4c62-859c-329da03fd95f",
+      "practitioner_display_name": "Crosby Leach"
+    },
+    {
+      "practitioner_id": "8d72fc65-23c2-44c3-bcd0-9eaf4a8c1468",
+      "practitioner_display_name": "Lorna Barker"
+    },
+    {
+      "practitioner_id": "29649a29-642d-4257-98e0-eb4fe8e17265",
+      "practitioner_display_name": "Trujillo Sexton"
+    }
+  ]
+}

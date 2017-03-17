@@ -1,0 +1,1228 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "WAM Left Shark (Consumer Portal) API Documentation",
+        "description": "Integrate with Left Shark (Consumer Portal) using the API",
+        "version": "1.0.0"
+    },
+    "host": "localhost:3000",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/eoc/categories": {
+            "get": {
+                "summary": "Episode of Care - Categories",
+                "description": "Returns the collection of Episodes of Care Categories the Episodes of Care can be\nsearched by. These currently include \"Medical or Surgical Procedure\",\n\"Specialist Visit\", \"Imaging Exam\", and \"Lab Test\".\n",
+                "tags": [
+                    "EOC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Episode of Care Categories",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/EpisodeOfCareCategory"
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/eoc/specialties": {
+            "get": {
+                "summary": "Episode of Care - Specialties",
+                "description": "Returns the collection of Specialties the Episodes of Care can be\nperformed by. These include \"Cardiologist\", \"Physiatrist\",\n\"Radiologist\", etc.\n",
+                "tags": [
+                    "EOC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Specialties.\n",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Specialty"
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/location/search": {
+            "get": {
+                "summary": "Location - Search",
+                "description": "Returns a collection of Locations matching a specified query.\n",
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "A UTF-8, URL-encoded search query of 500 characters maximum, \nincluding operators.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "utf-8"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "The number of Locations to return per page, up to a maximum \nof 100. Defaults to 5.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 5,
+                        "minimum": 1,
+                        "maximum": 100
+                    }
+                ],
+                "tags": [
+                    "Location"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Locations",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Location"
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/location/geo_search": {
+            "get": {
+                "summary": "Location - Geo Search",
+                "description": "Returns the closest Location to the specified latitude and longitude.\n",
+                "parameters": [
+                    {
+                        "name": "lat",
+                        "in": "query",
+                        "description": "The latitude to search around. This parameter will be rejected unless\nit is inside the range -90.0 to +90.0 (North is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "lng",
+                        "in": "query",
+                        "description": "The longitude to search around. This parameter will be rejected unless\nit is inside the range -180.0 to +180.0 (East is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    }
+                ],
+                "tags": [
+                    "Location"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object containing the closest Location",
+                        "schema": {
+                            "$ref": "#/definitions/Location"
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/eoc/search": {
+            "get": {
+                "summary": "Episode of Care - Search",
+                "description": "Returns a collection of relevant Episodes of Care matching a specified query.\n",
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "A UTF-8, URL-encoded search query of 500 characters maximum, \nincluding operators.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "utf-8"
+                    },
+                    {
+                        "name": "eoc_category_id",
+                        "in": "query",
+                        "description": "Returns Episodes of Care associated with the specified \neoc_category_id.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "utf-8"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "The number of Episodes of Care to return per page, up to a maximum \nof 100. Defaults to 5.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 5,
+                        "minimum": 1,
+                        "maximum": 100
+                    }
+                ],
+                "tags": [
+                    "EOC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Episodes of Care",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/EpisodeOfCare"
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/eoc/show/{eoc_code}": {
+            "get": {
+                "summary": "Episode of Care - Show",
+                "description": "Returns a single Episode of Care, specified by the eoc_code parameter.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "EOC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Episodes of Care",
+                        "schema": {
+                            "$ref": "#/definitions/EpisodeOfCare"
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/provider/search": {
+            "get": {
+                "summary": "Provider - Search",
+                "description": "Returns a collection of Place of Services and Practitioners matching a \nspecified query and Episode of Care.\n",
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "A UTF-8, URL-encoded search query of 500 characters maximum, \nincluding operators.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "utf-8"
+                    },
+                    {
+                        "name": "eoc_code",
+                        "in": "query",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "The number of providers to return per page, up to a maximum \nof 100. Defaults to 10.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 10,
+                        "minimum": 2,
+                        "maximum": 100
+                    }
+                ],
+                "tags": [
+                    "Provider"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object of Places of Service and Practitioners",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "places_of_services": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/PlaceOfService"
+                                    }
+                                },
+                                "practitioners": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Practitioner"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/search/{eoc_code}": {
+            "get": {
+                "summary": "Cost of Care - Search",
+                "description": "Returns a collection of relevant Costs of Care Search Results matching \na specified Episode of Care and geography.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "lat",
+                        "in": "query",
+                        "description": "The latitude to search around. This parameter will be rejected unless\nit is inside the range -90.0 to +90.0 (North is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "lng",
+                        "in": "query",
+                        "description": "The longitude to search around. This parameter will be rejected unless\nit is inside the range -180.0 to +180.0 (East is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "radius",
+                        "in": "query",
+                        "description": "The radius in miles to search around. Defaults to 5.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 5,
+                        "minimum": 0,
+                        "maximum": 2800
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "The number of results to return per page, up to a maximum \nof 600. Defaults to 40.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 40,
+                        "minimum": 1,
+                        "maximum": 600
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Specifies the page of results to retrieve.\n",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32",
+                        "default": 1,
+                        "minimum": 1,
+                        "maximum": 200
+                    },
+                    {
+                        "name": "place_of_service_id",
+                        "in": "query",
+                        "description": "The unique identifier of the Place of Service used to highlight a\npreferred Place of Service.\n",
+                        "required": false,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "practitioner_id",
+                        "in": "query",
+                        "description": "The unique identifier of the Practitioner used to highlight a\npreferred Practitioner.\n",
+                        "required": false,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "COC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object containing the collection of Cost of Care Search Results \nand Search Metadata for pagination.\n",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "coc": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/CostOfCareSearch"
+                                    }
+                                },
+                                "search_metadata": {
+                                    "$ref": "#/definitions/SearchMetadata"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/find_lower_rates/{eoc_code}": {
+            "get": {
+                "summary": "Cost of Care - Find Lower Rates",
+                "description": "Returns a radius to to perform a subsequest search by which will\ndisplay rates with the target price.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "lat",
+                        "in": "query",
+                        "description": "The latitude to search around. This parameter will be rejected unless\nit is inside the range -90.0 to +90.0 (North is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "lng",
+                        "in": "query",
+                        "description": "The longitude to search around. This parameter will be rejected unless\nit is inside the range -180.0 to +180.0 (East is positive) inclusive.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    },
+                    {
+                        "name": "target_price",
+                        "in": "query",
+                        "description": "The target price for the next search query. Frontend applications\nwill submit the lowest price * 0.8 to implement the current\nUX.\n",
+                        "required": true,
+                        "type": "number",
+                        "format": "float"
+                    }
+                ],
+                "tags": [
+                    "COC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object containing the radius to perform a subsequest search by \nwhich will display rates with the target price.\n",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "radius": {
+                                    "type": "integer",
+                                    "format": "int32"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/show/{eoc_code}/{place_of_service_id}": {
+            "get": {
+                "summary": "Cost of Care - Place of Service",
+                "description": "Returns the Episode of Care, Cost of Care - Place of Service, and \ncollection of Cost of Care - Practitioners specified by the eoc_code \nand place_of_service_id parameters.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "place_of_service_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Place of Service.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "COC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object containing the Episode of Care, Cost of Care - Place\nof Service, collection of Cost of Care - Practitioners, and \nPractitioners Search Metadata for pagination.\n",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "eoc": {
+                                    "$ref": "#/definitions/EpisodeOfCare"
+                                },
+                                "coc_place_of_service": {
+                                    "$ref": "#/definitions/CostOfCarePlaceOfService"
+                                },
+                                "coc_practitioners": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/CostOfCarePractitioner"
+                                    }
+                                },
+                                "search_metadata": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/SearchMetadata"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/show/{eoc_code}/{place_of_service_id}/{practitioner_id}": {
+            "get": {
+                "summary": "Cost of Care - Detail",
+                "description": "Returns a Cost of Care for a given Episode of Care, Place of Service,\nand Practitioner specified by the eoc_code, place_of_service_id, and \npractitioner_id parameters.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "place_of_service_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Place of Service.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "practitioner_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Practitioner\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "COC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An object containing the Episode of Care, Cost of Care, Place of \nService, and Practitioner information.\n",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "eoc": {
+                                    "$ref": "#/definitions/EpisodeOfCare"
+                                },
+                                "coc": {
+                                    "$ref": "#/definitions/CostOfCare"
+                                },
+                                "place_of_service": {
+                                    "$ref": "#/definitions/CostOfCarePlaceOfServiceDetail"
+                                },
+                                "practitioner": {
+                                    "$ref": "#/definitions/CostOfCarePractitionerDetail"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/questions/{eoc_code}/{place_of_service_id}/{practitioner_id}": {
+            "get": {
+                "summary": "Cost of Care - Questions to Ask",
+                "description": "Returns an array of Questions to Ask specified by the eoc_code, \nplace_of_service_id, and practitioner_id parameters.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "place_of_service_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Place of Service.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "practitioner_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Practitioner\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "COC"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of Questions to Ask the Provider.\n",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/QuestionsToAsk"
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/save/{eoc_code}/{place_of_service_id}/{practitioner_id}": {
+            "post": {
+                "summary": "Cost of Care - Save",
+                "description": "Saves the Cost of Care specified by the eoc_code, place_of_service_id, \nand practitioner_id parameters.\n",
+                "parameters": [
+                    {
+                        "name": "eoc_code",
+                        "in": "path",
+                        "description": "The unique identifier of the Episode of Care.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "place_of_service_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Place of Service.\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    },
+                    {
+                        "name": "practitioner_id",
+                        "in": "path",
+                        "description": "The unique identifier of the Practitioner\n",
+                        "required": true,
+                        "type": "string",
+                        "format": "rfc3986"
+                    }
+                ],
+                "tags": [
+                    "User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success message",
+                        "schema": {
+                            "$ref": "#/definitions/Success"
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        },
+        "/api/coc/saved": {
+            "get": {
+                "summary": "Cost of Care - Saved",
+                "description": "Returns the collection of Saved Cost of Care - Details\n",
+                "tags": [
+                    "User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array containing the Episode of Care and associated Cost of Care - \nDetails.\n",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "eoc": {
+                                        "$ref": "#/definitions/EpisodeOfCare"
+                                    },
+                                    "coc": {
+                                        "$ref": "#/definitions/CostOfCare"
+                                    },
+                                    "place_of_service": {
+                                        "$ref": "#/definitions/CostOfCarePlaceOfServiceDetail"
+                                    },
+                                    "practitioner": {
+                                        "$ref": "#/definitions/CostOfCarePractitionerDetail"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/responses/BadRequestError"
+                    },
+                    "404": {
+                        "$ref": "#/responses/NotFoundError"
+                    },
+                    "500": {
+                        "$ref": "#/responses/GeneralError"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "EpisodeOfCare": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "Unique identifier representing a specific Episode of Care."
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Title of Episode of Care."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of Episode of Care."
+                },
+                "keywords": {
+                    "type": "string",
+                    "description": "Keywords for Episode of Care."
+                }
+            }
+        },
+        "QuestionsToAsk": {
+            "type": "string",
+            "description": "String of the question to ask the physician."
+        },
+        "EpisodeOfCareCategory": {
+            "type": "object",
+            "properties": {
+                "eoc_category_id": {
+                    "type": "string",
+                    "description": "Unique identifier representing a specific Episode of Care Category."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of Episode of Care Category."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of Episode of Care Category."
+                }
+            }
+        },
+        "Specialty": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of Specialty."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of Specialty."
+                }
+            }
+        },
+        "PlaceOfService": {
+            "type": "object",
+            "properties": {
+                "place_of_service_id": {
+                    "type": "string",
+                    "description": "Unique identifier representing a specific Place of Service."
+                },
+                "place_of_service_name": {
+                    "type": "string",
+                    "description": "Name of the Place of Service."
+                },
+                "place_of_service_address": {
+                    "type": "string",
+                    "description": "Address of the Place of Service."
+                },
+                "place_of_service_phone": {
+                    "type": "string",
+                    "description": "Phone number of the Place of Service."
+                },
+                "place_of_service_type": {
+                    "type": "string",
+                    "description": "Type of the Place of Service."
+                },
+                "place_of_service_website": {
+                    "type": "string",
+                    "description": "Website of the Place of Service."
+                },
+                "place_of_service_location": {
+                    "type": "object",
+                    "description": "Latitude and longitude of the Place of Service.",
+                    "properties": {
+                        "place_of_service_lat": {
+                            "type": "number",
+                            "description": "Latitude component of location."
+                        },
+                        "place_of_service_lon": {
+                            "type": "number",
+                            "description": "Longitude component of location."
+                        }
+                    }
+                }
+            }
+        },
+        "Practitioner": {
+            "type": "object",
+            "properties": {
+                "practitioner_id": {
+                    "type": "string",
+                    "description": "Unique identifier representing a specific Practitioner."
+                },
+                "practitioner_first_name": {
+                    "type": "string",
+                    "description": "First name of the Practitioner."
+                },
+                "practitioner_last_name": {
+                    "type": "string",
+                    "description": "Last name of the Practitioner."
+                },
+                "practitioner_display_name": {
+                    "type": "string",
+                    "description": "Display name of the Practitioner."
+                },
+                "practitioner_specialty": {
+                    "type": "string",
+                    "description": "Specialty of the Practitioner."
+                },
+                "practitioner_address": {
+                    "type": "string",
+                    "description": "Address of the Practitioner."
+                },
+                "practitioner_phone": {
+                    "type": "string",
+                    "description": "Phone number of the Practitioner."
+                },
+                "practitioner_rating": {
+                    "type": "integer",
+                    "description": "Rating of the Practitioner."
+                }
+            }
+        },
+        "CostOfCare": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Display name of cost."
+                },
+                "cost": {
+                    "type": "number",
+                    "description": "Total cost of care."
+                },
+                "cost_breakdown": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "type": "string",
+                            "description": "Display name of cost."
+                        },
+                        "charges_cost": {
+                            "type": "number",
+                            "description": "Charges cost of line item."
+                        },
+                        "medicare_cost": {
+                            "type": "number",
+                            "description": "Medicare cost of line item."
+                        }
+                    }
+                }
+            }
+        },
+        "CostOfCareSearch": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/PlaceOfService"
+                },
+                {
+                    "properties": {
+                        "place_of_service_lowest_cost": {
+                            "type": "string",
+                            "description": "Lowest cost available at Place of Service for the\nspecified Episode of Care.\n"
+                        },
+                        "place_of_service_physicians": {
+                            "type": "string",
+                            "description": "String describing numbers of Practitioners who perform the\nspecified Episode of Care\n"
+                        },
+                        "place_of_service_preferred": {
+                            "type": "boolean",
+                            "description": "Boolean to indicate whether this Place of Serice or its Practitioners\nwere preferred by the User.\n"
+                        },
+                        "place_of_service_distance": {
+                            "type": "string",
+                            "description": "Distance of the Place of Service from the queried lat and lng.\n"
+                        }
+                    }
+                }
+            ]
+        },
+        "CostOfCarePlaceOfService": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/CostOfCareSearch"
+                },
+                {
+                    "properties": {
+                        "place_of_service_quality_data": {
+                            "$ref": "#/definitions/PlaceOfServiceQualityData"
+                        },
+                        "place_of_service_cost_comparison": {
+                            "$ref": "#/definitions/CostComparison"
+                        }
+                    }
+                }
+            ]
+        },
+        "CostOfCarePlaceOfServiceDetail": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/PlaceOfService"
+                },
+                {
+                    "properties": {
+                        "place_of_service_quality_data": {
+                            "$ref": "#/definitions/PlaceOfServiceQualityData"
+                        },
+                        "place_of_service_cost_comparison": {
+                            "$ref": "#/definitions/CostComparison"
+                        }
+                    }
+                }
+            ]
+        },
+        "CostOfCarePractitionerDetail": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Practitioner"
+                },
+                {
+                    "properties": {
+                        "practiticoner_quality_data": {
+                            "$ref": "#/definitions/PlaceOfServiceQualityData"
+                        },
+                        "practiticoner_cost_comparison": {
+                            "$ref": "#/definitions/CostComparison"
+                        },
+                        "practiticoner_affiliated_facilities": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CostOfCareSearch"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "CostComparison": {
+            "type": "object",
+            "properties": {
+                "price_metadata": {
+                    "$ref": "#/definitions/CostComparisonPrice"
+                },
+                "prices_metadata": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CostComparisonPrices"
+                    }
+                }
+            }
+        },
+        "CostComparisonPrice": {
+            "type": "object",
+            "properties": {
+                "lowest_cost": {
+                    "type": "number",
+                    "description": "Lowest cost of Cost of Care"
+                },
+                "highest_cost": {
+                    "type": "number",
+                    "description": "Highest cost of Cost of Care"
+                },
+                "median_cost": {
+                    "type": "number",
+                    "description": "Median cost of Cost of Care"
+                }
+            }
+        },
+        "CostComparisonPrices": {
+            "type": "object",
+            "properties": {
+                "cost": {
+                    "type": "number",
+                    "description": "Cost of Cost of Care"
+                },
+                "cost_count": {
+                    "type": "number",
+                    "description": "Count of specific Cost of Cost of Care"
+                }
+            }
+        },
+        "PlaceOfServiceQualityData": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "description": "Text of the Quality Data\n@todo - Verify this data is just text\n"
+                }
+            }
+        },
+        "CostOfCarePractitioner": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Practitioner"
+                },
+                {
+                    "properties": {
+                        "practitioner_total_cost": {
+                            "type": "number",
+                            "description": "Total Cost of Care for this Practitioner.\n"
+                        },
+                        "practitioner_cost": {
+                            "type": "number",
+                            "description": "Rate of Cost of Care for this Practitioner.\n"
+                        },
+                        "practiticoner_eoc_count": {
+                            "type": "string",
+                            "description": "Text describing the number of time this Practitioner has performed\nthe specificed Episode of Care.\n"
+                        },
+                        "practiticoner_quality_data": {
+                            "$ref": "#/definitions/PlaceOfServiceQualityData"
+                        },
+                        "practiticoner_cost_comparison": {
+                            "$ref": "#/definitions/CostComparison"
+                        },
+                        "practiticoner_affiliated_facilities": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/CostOfCareSearch"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "Location": {
+            "type": "object",
+            "properties": {
+                "location_id": {
+                    "type": "integer",
+                    "description": "Unique identifier representing a specific Location."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of Location."
+                },
+                "lat": {
+                    "type": "number",
+                    "description": "Latitude component of Location. Ex.# \"40.768721\""
+                },
+                "lon": {
+                    "type": "number",
+                    "description": "Longitude component of Location. Ex.# \"-74.600357\""
+                },
+                "zip": {
+                    "type": "string",
+                    "description": "Zip code (if more than one like for bigger cities, then comma separated)"
+                }
+            }
+        },
+        "SearchMetadata": {
+            "type": "object",
+            "properties": {
+                "page": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "per_page": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "page_count": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "total_count": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "next_results": {
+                    "type": "string",
+                    "format": "utf-8"
+                }
+            }
+        },
+        "Status": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "string"
+                }
+            }
+        },
+        "Success": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Status"
+                }
+            ]
+        },
+        "Error": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Status"
+                }
+            ]
+        }
+    },
+    "responses": {
+        "BadRequestError": {
+            "description": "The request was invalid or cannot be processed.",
+            "schema": {
+                "$ref": "#/definitions/Error"
+            }
+        },
+        "NotFoundError": {
+            "description": "The requested page or resource cannot be found.",
+            "schema": {
+                "$ref": "#/definitions/Error"
+            }
+        },
+        "GeneralError": {
+            "description": "The request caused an unrecoverable error.",
+            "schema": {
+                "$ref": "#/definitions/Error"
+            }
+        }
+    }
+}

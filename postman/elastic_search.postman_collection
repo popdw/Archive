@@ -1,0 +1,603 @@
+{
+	"variables": [],
+	"info": {
+		"name": "WAM Elastic Search 1.1",
+		"_postman_id": "621702a7-9d97-93e0-6bd4-6066f50b4784",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Config",
+			"description": "",
+			"item": [
+				{
+					"name": "http://192.168.33.10:9200/wam/",
+					"request": {
+						"url": "{{elastic_url}}/wam/",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Delete index"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Mapping",
+					"request": {
+						"url": "{{elastic_url}}/wam",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"settings\": {\n    \"analysis\": {\n      \"analyzer\": {\n        \"raw_analyzer\": {\n          \"type\": \"custom\",\n          \"tokenizer\": \"keyword\",\n          \"filter\": [\n            \"lowercase\"\n          ]\n        }\n      }\n    }\n  },\n  \"mappings\": {\n    \"eoc\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_code\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"eoc_description\": {\n          \"type\": \"string\"\n        },\n        \"eoc_keywords\": {\n          \"type\": \"string\"\n        },\n        \"eoc_title\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"eoc_category\": {\n          \"properties\": {\n            \"eoc_category_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_category_name\": { \"type\": \"string\" },\n            \"eoc_category_description\": { \"type\": \"string\" }\n          }\n        }\n      }\n    },\n    \"eoc_metadata\" : {\n      \"dynamic\" : \"strict\",\n      \"properties\" : {\n        \"eoc_code\" : {\n          \"type\" : \"string\",\n          \"index\" : \"not_analyzed\"\n        },\n        \"episode_of_care_chart_data\" : {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"key\" : { \"type\" : \"string\" },\n            \"value\" : { \"type\" : \"string\" },\n            \"heading\" : { \"type\" : \"string\" },\n            \"subheading\" : { \"type\" : \"string\" }\n          }\n        }\n      }\n    },\n    \"place_of_service\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"place_of_service_address\": {\n          \"properties\": {\n            \"address_line_1\": { \"type\": \"string\" },\n            \"address_line_2\": { \"type\": \"string\" },\n            \"city\": { \"type\": \"string\" },\n            \"state\": { \"type\": \"string\" },\n            \"zip\": { \"type\": \"string\" }\n          }\n        },\n        \"place_of_service_location\": {\n          \"type\": \"geo_point\"\n        },\n        \"place_of_service_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"place_of_service_phone\": {\n          \"type\": \"string\"\n        },\n        \"place_of_service_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_provider_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_quality_rating\": {\n          \"type\": \"object\"\n        },\n        \"place_of_service_type\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_category\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        }\n      }\n    },\n    \"place_of_service_metadata\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"place_of_service_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_quality_data\": {\n          \"properties\" : {\n            \"key\" : { \"type\" : \"string\" },\n            \"value\" : { \"type\" : \"string\" },\n            \"tooltip\" : { \"type\" : \"string\" },\n            \"count\" : { \"type\" : \"integer\" },\n            \"type\" : { \"type\" : \"string\" }\n          }\n        },\n        \"place_of_service_reports_data\": {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"value_keys\" : { \"type\" : \"string\" },\n            \"survey_values\" : {\n              \"type\" : \"object\",\n              \"properties\" : {\n                \"key\" : { \"type\" : \"string\" },\n                \"values\" : {\n                  \"type\" : \"object\",\n                  \"properties\" : {\n                    \"key\" : { \"type\" : \"string\" },\n                    \"value\" : { \"type\" : \"string\" }\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"place_of_service_practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        }\n      }\n    },\n    \"questions_to_answer\": {},\n    \"practitioner\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_display_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_first_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_last_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_gender\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_phone\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_specialty\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"specialty_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"specialty_name\": { \"type\": \"string\" },\n            \"specialty_description\": { \"type\": \"string\" }\n          }\n        },\n        \"practitioner_practice\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_category\": {\n          \"type\": \"integer\"\n        }\n      }\n    },\n    \"practitioner_metadata\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_quality_data\": {\n          \"properties\" : {\n            \"key\" : { \"type\" : \"string\" },\n            \"value\" : { \"type\" : \"string\" },\n            \"tooltip\" : { \"type\" : \"string\" },\n            \"count\" : { \"type\" : \"integer\" },\n            \"type\" : { \"type\" : \"string\" }\n          }\n        }\n      }\n    },\n    \"provider\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"provider_place_of_service_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"provider_practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"provider_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"provider_name\": { \"type\": \"string\" },\n        \"provider_address\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"address_line_1\": { \"type\": \"string\" },\n            \"address_line_2\": { \"type\": \"string\" },\n            \"city\": { \"type\": \"string\" },\n            \"state\": { \"type\": \"string\" },\n            \"zip\": { \"type\": \"string\" }\n          }\n        },\n        \"provider_phone\": { \"type\": \"string\" },\n        \"provider_fax\": { \"type\": \"string\" },\n        \"provider_portal_settings\": { \"type\": \"string\" },\n        \"provider_office_hours\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"day\": { \"type\": \"string\" },\n            \"has_hours\": { \"type\": \"boolean\" },\n            \"start_time\": { \"type\": \"string\" },\n            \"end_time\": { \"type\": \"string\" }\n          }\n        },\n        \"provider_lab_settings\": { \"type\": \"string\" },\n        \"provider_imaging_settings\" : { \"type\": \"string\" },\n        \"provider_surgical_settings\" : { \"type\": \"string\" },\n        \"provider_social_media_settings\": { \"type\": \"object\", \"dynamic\": true }\n      }\n    },\n    \"eoc_category\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_category_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"eoc_category_name\": { \"type\": \"string\" },\n        \"eoc_category_description\": { \"type\": \"string\" }\n      }\n    },\n    \"practitioner_specialty\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"specialty_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"specialty_name\": {\n          \"type\": \"string\"\n        },\n        \"specialty_description\": {\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"cost_of_care\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"cost_breakdown\": {\n          \"dynamic\": true,\n          \"type\": \"nested\"\n        },\n        \"eoc_data\": {\n          \"properties\": {\n            \"eoc_code\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_description\": {\n              \"type\": \"string\"\n            },\n            \"eoc_keywords\": {\n              \"type\": \"string\"\n            },\n            \"eoc_title\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"eoc_category\": {\n              \"properties\": {\n                \"eoc_category_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"eoc_category_name\": { \"type\": \"string\" },\n                \"eoc_category_description\": { \"type\": \"string\" }\n              }\n            }\n          }\n        },\n        \"place_of_service_data\": {\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            }\n          }\n        },\n        \"practitioner_data\": {\n          \"properties\": {\n            \"practitioner_display_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_first_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_gender\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_last_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_phone\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_specialty\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"specialty_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"specialty_name\": { \"type\": \"string\" },\n                \"specialty_description\": { \"type\": \"string\" }\n              }\n            },\n            \"practitioner_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"practitioner_practice\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_category\": {\n              \"type\": \"integer\"\n            },\n            \"practitioner_eoc_count\": {\n              \"type\": \"integer\"\n            },\n            \"practitioner_cost\": {\n              \"type\": \"double\"\n            }\n          }\n        }\n      }\n    },\n    \"place_of_care\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_data\": {\n          \"properties\": {\n            \"eoc_code\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_description\": {\n              \"type\": \"string\"\n            },\n            \"eoc_keywords\": {\n              \"type\": \"string\"\n            },\n            \"eoc_title\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"eoc_category\": {\n              \"properties\": {\n                \"eoc_category_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"eoc_category_name\": { \"type\": \"string\" },\n                \"eoc_category_description\": { \"type\": \"string\" }\n              }\n            }\n          }\n        },\n        \"place_of_service_data\": {\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_min_cost\": {\n              \"type\": \"double\"\n            },\n            \"place_of_service_max_cost\": {\n              \"type\": \"double\"\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            }\n          }\n        },\n        \"practitioners\": {\n          \"dynamic\": true,\n          \"type\": \"nested\"\n        }\n      }\n    },\n    \"practitioner_of_care\": {\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_organization_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_display_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_first_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_gender\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_last_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_phone\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_specialty\": {\n          \"type\": \"object\"\n        },\n        \"practitioner_category\": {\n          \"type\": \"integer\"\n        },\n        \"eoc_code\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_eoc_count\": {\n          \"type\": \"integer\"\n        },\n        \"places_of_service\": {\n          \"type\": \"nested\",\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_cost\": {\n              \"type\": \"double\"\n            }\n          }\n        }\n      }\n    },\n    \"reviews\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"review_about\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"key\": { \"type\": \"string\" },\n        \"value\": { \"type\": \"float\" },\n        \"tooltip\": { \"type\": \"string\" },\n        \"count\": { \"type\": \"integer\" }\n      }\n    },\n    \"comments\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"comment_about\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"author\": { \"type\": \"string\" },\n        \"comment\": { \"type\": \"string\" },\n        \"value\": { \"type\": \"float\" },\n        \"date\": {\n          \"type\": \"date\"\n        }\n      }\n    }\n  }\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Version",
+					"request": {
+						"url": "{{elastic_url}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"settings\": {\n    \"analysis\": {\n      \"analyzer\": {\n        \"raw_analyzer\": {\n          \"type\": \"custom\",\n          \"tokenizer\": \"keyword\",\n          \"filter\": [\n            \"lowercase\"\n          ]\n        }\n      }\n    }\n  },\n  \"mappings\": {\n    \"eoc\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_code\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"eoc_description\": {\n          \"type\": \"string\"\n        },\n        \"eoc_keywords\": {\n          \"type\": \"string\"\n        },\n        \"eoc_title\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"eoc_category\": {\n          \"properties\": {\n            \"eoc_category_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_category_name\": { \"type\": \"string\" },\n            \"eoc_category_description\": { \"type\": \"string\" }\n          }\n        }\n      }\n    },\n    \"place_of_service\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"place_of_service_address\": {\n          \"properties\": {\n            \"address_line_1\": { \"type\": \"string\" },\n            \"address_line_2\": { \"type\": \"string\" },\n            \"city\": { \"type\": \"string\" },\n            \"state\": { \"type\": \"string\" },\n            \"zip\": { \"type\": \"string\" }\n          }\n        },\n        \"place_of_service_location\": {\n          \"type\": \"geo_point\"\n        },\n        \"place_of_service_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"place_of_service_phone\": {\n          \"type\": \"string\"\n        },\n        \"place_of_service_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_provider_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_quality_rating\": {\n          \"type\": \"object\"\n        },\n        \"place_of_service_type\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_category\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        }\n      }\n    },\n    \"place_of_service_metadata\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"place_of_service_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"place_of_service_quality_data\": {\n          \"properties\" : {\n            \"key\" : { \"type\" : \"string\" },\n            \"value\" : { \"type\" : \"string\" },\n            \"tooltip\" : { \"type\" : \"string\" },\n            \"count\" : { \"type\" : \"integer\" },\n            \"type\" : { \"type\" : \"string\" }\n          }\n        },\n        \"place_of_service_reports_data\": {\n          \"type\" : \"object\",\n          \"properties\" : {\n            \"value_keys\" : { \"type\" : \"string\" },\n            \"survey_values\" : {\n              \"type\" : \"object\",\n              \"properties\" : {\n                \"key\" : { \"type\" : \"string\" },\n                \"values\" : {\n                  \"type\" : \"object\",\n                  \"properties\" : {\n                    \"key\" : { \"type\" : \"string\" },\n                    \"value\" : { \"type\" : \"string\" }\n                  }\n                }\n              }\n            }\n          }\n        },\n        \"place_of_service_practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        }\n      }\n    },\n    \"questions_to_answer\": {},\n    \"practitioner\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_display_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_first_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_last_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_gender\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_phone\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_specialty\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"specialty_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"specialty_name\": { \"type\": \"string\" },\n            \"specialty_description\": { \"type\": \"string\" }\n          }\n        },\n        \"practitioner_practice\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_category\": {\n          \"type\": \"integer\"\n        }\n      }\n    },\n    \"practitioner_metadata\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_quality_data\": {\n          \"properties\" : {\n            \"key\" : { \"type\" : \"string\" },\n            \"value\" : { \"type\" : \"string\" },\n            \"tooltip\" : { \"type\" : \"string\" },\n            \"count\" : { \"type\" : \"integer\" },\n            \"type\" : { \"type\" : \"string\" }\n          }\n        }\n      }\n    },\n    \"eoc_category\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_category_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"eoc_category_name\": { \"type\": \"string\" },\n        \"eoc_category_description\": { \"type\": \"string\" }\n      }\n    },\n    \"practitioner_specialty\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"specialty_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"specialty_name\": {\n          \"type\": \"string\"\n        },\n        \"specialty_description\": {\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"cost_of_care\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"cost_breakdown\": {\n          \"dynamic\": true,\n          \"type\": \"nested\"\n        },\n        \"eoc_data\": {\n          \"properties\": {\n            \"eoc_code\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_description\": {\n              \"type\": \"string\"\n            },\n            \"eoc_keywords\": {\n              \"type\": \"string\"\n            },\n            \"eoc_title\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"eoc_category\": {\n              \"properties\": {\n                \"eoc_category_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"eoc_category_name\": { \"type\": \"string\" },\n                \"eoc_category_description\": { \"type\": \"string\" }\n              }\n            }\n          }\n        },\n        \"place_of_service_data\": {\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            }\n          }\n        },\n        \"practitioner_data\": {\n          \"properties\": {\n            \"practitioner_display_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_first_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_gender\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_last_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"practitioner_phone\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_specialty\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"specialty_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"specialty_name\": { \"type\": \"string\" },\n                \"specialty_description\": { \"type\": \"string\" }\n              }\n            },\n            \"practitioner_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"practitioner_practice\": {\n              \"type\": \"string\"\n            },\n            \"practitioner_category\": {\n              \"type\": \"integer\"\n            },\n            \"practitioner_eoc_count\": {\n              \"type\": \"integer\"\n            },\n            \"practitioner_cost\": {\n              \"type\": \"double\"\n            }\n          }\n        }\n      }\n    },\n    \"place_of_care\": {\n      \"dynamic\": \"strict\",\n      \"properties\": {\n        \"eoc_data\": {\n          \"properties\": {\n            \"eoc_code\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"eoc_description\": {\n              \"type\": \"string\"\n            },\n            \"eoc_keywords\": {\n              \"type\": \"string\"\n            },\n            \"eoc_title\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"eoc_category\": {\n              \"properties\": {\n                \"eoc_category_id\": {\n                  \"type\": \"string\",\n                  \"index\": \"not_analyzed\"\n                },\n                \"eoc_category_name\": { \"type\": \"string\" },\n                \"eoc_category_description\": { \"type\": \"string\" }\n              }\n            }\n          }\n        },\n        \"place_of_service_data\": {\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_min_cost\": {\n              \"type\": \"double\"\n            },\n            \"place_of_service_max_cost\": {\n              \"type\": \"double\"\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_practitioner_display_name\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_practitioner_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            }\n          }\n        },\n        \"practitioners_count\": { \"type\": \"double\" },\n        \"cost_breakdown\": {\n          \"dynamic\": true,\n          \"type\": \"nested\"\n        }\n      }\n    },\n    \"practitioner_of_care\": {\n      \"properties\": {\n        \"practitioner_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_organization_id\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_display_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_first_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_gender\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_last_name\": {\n          \"type\": \"string\",\n          \"fields\": {\n            \"raw\": {\n              \"type\": \"string\",\n              \"analyzer\": \"raw_analyzer\"\n            }\n          }\n        },\n        \"practitioner_phone\": {\n          \"type\": \"string\"\n        },\n        \"practitioner_specialty\": {\n          \"type\": \"object\"\n        },\n        \"practitioner_category\": {\n          \"type\": \"integer\"\n        },\n        \"eoc_code\": {\n          \"type\": \"string\",\n          \"index\": \"not_analyzed\"\n        },\n        \"practitioner_eoc_count\": {\n          \"type\": \"integer\"\n        },\n        \"places_of_service\": {\n          \"type\": \"nested\",\n          \"properties\": {\n            \"place_of_service_address\": {\n              \"properties\": {\n                \"address_line_1\": { \"type\": \"string\" },\n                \"address_line_2\": { \"type\": \"string\" },\n                \"city\": { \"type\": \"string\" },\n                \"state\": { \"type\": \"string\" },\n                \"zip\": { \"type\": \"string\" }\n              }\n            },\n            \"place_of_service_location\": {\n              \"type\": \"geo_point\"\n            },\n            \"place_of_service_name\": {\n              \"type\": \"string\",\n              \"fields\": {\n                \"raw\": {\n                  \"type\": \"string\",\n                  \"analyzer\": \"raw_analyzer\"\n                }\n              }\n            },\n            \"place_of_service_phone\": {\n              \"type\": \"string\"\n            },\n            \"place_of_service_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_provider_id\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_quality_rating\": {\n              \"type\": \"object\"\n            },\n            \"place_of_service_type\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_category\": {\n              \"type\": \"string\",\n              \"index\": \"not_analyzed\"\n            },\n            \"place_of_service_cost\": {\n              \"type\": \"double\"\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document Type Queries",
+			"description": "",
+			"item": [
+				{
+					"name": "Cost of Care Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": { \"match_all\": {} }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Service Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/place_of_service/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": {\n        \"match_all\": {}\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioner Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "EOC Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/eoc/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"size\": 100,\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioner Of Care Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": { \"match_all\": {} }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Care Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/place_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"size\": 100,\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Provider Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/provider/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioner Metadata Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner_metadata/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Service Metadata Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/place_of_service_metadata/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "EOC Metadata Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/eoc_metadata/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Specialist Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner_specialty/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"size\": 100,\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Comments Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/comments/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": {\n    \"match_all\": {}\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Reviews Query All",
+					"request": {
+						"url": "{{elastic_url}}/wam/reviews/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": { \"match_all\": {} }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search Queries",
+			"description": "",
+			"item": [
+				{
+					"name": "CoC GeoFilter",
+					"request": {
+						"url": "http://192.168.33.10:9200/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": {\n        \"filtered\": {\n            \"filter\" : {\n                \"geo_distance\": {\n                    \"distance\": \"1000mi\",\n                    \"place_of_service_location\": {\n                        \"lat\": 28.8609,\n                        \"lon\": 69.8605\n                    }\n                }\n            }\n        }\n    }\n}"
+						},
+						"description": "Query by geo_distance filter"
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioners Within Geo Radius",
+					"request": {
+						"url": "http://192.168.33.10:9200/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"size\": 0,\n    \"query\": {\n        \"filtered\": {\n            \"filter\" : {\n                \"geo_distance\": {\n                    \"distance\": \"10000mi\",\n                    \"place_of_service_data.place_of_service_location\": {\n                        \"lat\": -27.7834,\n                        \"lon\": 132.8108\n                    }\n                }\n            }\n        }\n    },\n    \"aggs\": {\n        \"Practitioners\": {\n            \"terms\": {\n                \"field\": \"practitioner_data.practitioner_id\"\n            },\n            \"aggs\": {\n                \"info\": {\n                    \"top_hits\": {\n                      \"size\": 1,\n                        \"_source\": [ \"practitioner_data.practitioner_display_name\" ]\n                    }\n                }\n            }\n        }\n    }\n}"
+						},
+						"description": "Get all practitioners within n miles from designated geo_point"
+					},
+					"response": []
+				},
+				{
+					"name": "GeoPoint Facility Search",
+					"request": {
+						"url": "http://192.168.33.10:9200/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"size\": 0,\n    \"query\": {\n        \"filtered\": {\n            \"filter\" : {\n                \"geo_distance\": {\n                    \"distance\": \"10000mi\",\n                    \"place_of_service_data.place_of_service_location\": {\n                        \"lat\": -27.7834,\n                        \"lon\": 132.8108\n                    }\n                }\n            }\n        }\n    },\n    \"_source\": [ \"place_of_service_data\" ],\n    \"aggs\": {\n        \"place_of_services\": {\n            \"terms\": {\n                \"field\": \"place_of_service_data.place_of_service_provider_id\"\n            },\n            \"aggs\": {\n                \"pracitioner_count\": {\n                    \"cardinality\": {\n                        \"field\": \"practitioner_data.practitioner_id\",\n                        \"precision_threshold\": 2000\n                    }\n                },\n                \"info\": {\n                    \"top_hits\": { \n                        \"size\": 1, \n                        \"_source\": {\n                            \"include\": [\"place_of_service_data\"]\n                        }\n                    }\n                }\n            }\n        }\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioners via Facility",
+					"request": {
+						"url": "http://192.168.33.10:9200/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"size\": 0,\n    \"aggs\": {\n        \"facility\": {\n            \"filter\": {\n                \"term\": { \"place_of_service_data.place_of_service_provider_id\": \"422464fc-2da1-4b6e-ab4f-5e4a0b295fa4\" }\n            },\n            \"aggs\": {\n                \"practitioners\": {\n                    \"terms\": {\n                        \"field\": \"practitioner_data.practitioner_id\"\n                    },\n                    \"aggs\": {\n                        \"info\": {\n                            \"top_hits\": {\n                                \"_source\": {\n                                    \"include\": [ \"practitioner_data\" ]\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "General Search",
+					"request": {
+						"url": "http://192.168.33.10:9200/wam/eoc/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"filter\": {\n    \"bool\": {\n        \"must\": {\n          \"match\": { \"eoc_category.eoc_category_id\":  \"f0535c3e-53e1-4f59-bad7-210e7290832a\" }\n        }\n      }\n  },\n    \"query\": {\n      \"query_string\": {\n        \"query\": \"eveniet\"\n      }\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Care Query",
+					"request": {
+						"url": "http://localhost:9200/wam/place_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"size\": 1,\n  \"_source\": [ \"place_of_service_data\", \"cost_breakdown\" ],\n  \"sort\": [\n    { \"cost_breakdown.cost\": { \"order\": \"asc\", \"mode\": \"avg\",\"nested_path\": \"cost_breakdown\" } }\n  ],\n  \"query\": {\n    \"bool\": {\n      \"filter\": [\n        { \"term\": { \"eoc_data.eoc_code\": \"81f7a281-1c09-46ab-aa46-ebfd9dc7fd18\" } },\n        { \"term\": { \"place_of_service_data.place_of_service_provider_id\": \"68ea1af9-631a-4f89-a8f4-599283df0cb2\" } }\n      ]\n    }\n  },\n  \"aggs\": {\n    \"cost_breakdown\": {\n      \"nested\": {\n        \"path\": \"cost_breakdown\"\n      },\n      \"aggs\": {\n        \"cost_metadata\": {\n          \"extended_stats\": {\n            \"field\": \"cost_breakdown.cost\"\n          }\n        }\n      }\n    }\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Practitioner of care Search",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_source\": {\n\t\t\"exclude\": [ \"places_of_service\" ]\t\n\t},\n\t\"query\": {\n\t\t\"filtered\": {\n\t\t\t\"filter\": [\n\t\t\t\t{ \"term\": { \"eoc_code\": \"4fc2c659-aebb-4fb0-800e-927b9252b768\" } },\n\t\t\t\t{\n\t\t\t\t\t\"nested\": {\n\t\t\t\t\t\t\"path\": \"places_of_service\",\n\t\t\t\t\t\t\"filter\": {\n\t\t\t\t\t\t\t\"geo_distance\": {\n\t\t\t\t\t\t\t\t\"distance\": \"100mi\",\n\t\t\t\t\t\t\t\t\"places_of_service.place_of_service_location\": {\n\t\t\t\t\t\t\t\t\t\"lat\": \"39.1860\",\n\t\t\t\t\t\t\t\t\t\"lon\": \"-74.7720\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"inner_hits\": {}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t},\n\t\"sort\": {\n\t\t\"places_of_service.place_of_service_cost\": {\n\t\t\t\"order\": \"asc\",\n\t\t\t\"mode\": \"min\",\n\t\t\t\"nested_path\": \"places_of_service\",\n\t\t\t\"nested_filter\": {\n\t\t\t\t\"geo_distance\": {\n\t\t\t\t\t\"distance\": \"100mi\",\n\t\t\t\t\t\"places_of_service.place_of_service_location\": {\n\t\t\t\t\t\t\"lat\": \"39.1860\",\n\t\t\t\t\t\t\"lon\": \"-74.7720\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "CoC - Place of Care",
+					"request": {
+						"url": "{{elastic_url}}/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t//\"fields\": [\"eoc_data.eoc_code\",\"place_of_service_data.place_of_service_id\",\"place_of_service_data.place_of_service_name\"],\n    \"query\": {\n\t    \"bool\": {\n\t      \"filter\": [\n\t        { \"term\": { \"eoc_data.eoc_code\": \"{{eoc_code}}\" } }\n\t      ]\n\t    }\n    },\n\t\"sort\" : [\n        { \"place_of_service_data.place_of_service_id\" : {\"order\" : \"asc\"}}\n    ]\n}"
+						},
+						"description": "Query by geo_distance filter"
+					},
+					"response": []
+				},
+				{
+					"name": "CoC - Place of Care - Ags",
+					"request": {
+						"url": "{{elastic_url}}/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"size\": 0,\n    \"query\": {\n\t    \"bool\": {\n\t      \"filter\": [\n\t        { \"term\": { \"eoc_data.eoc_code\": \"{{eoc_code}}\" } }\n\t      ]\n\t    }\n    },\n    \"aggs\" : {\n        \"place_of_service_id\" : {\n            \"terms\" : {\n                \"field\" : \"place_of_service_data.place_of_service_id\",\n                \"order\" : { \"_count\" : \"asc\" }\n            }\n        }\n    }\n}"
+						},
+						"description": "Query by geo_distance filter"
+					},
+					"response": []
+				},
+				{
+					"name": "CoC - Place of Care - Ags copy",
+					"request": {
+						"url": "{{elastic_url}}/wam/cost_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"size\": 0,\n    \"query\": {\n\t    \"bool\": {\n\t      \"filter\": [\n\t        { \"term\": { \"eoc_data.eoc_code\": \"{{eoc_code}}\" } }\n\t      ]\n\t    }\n    },\n    \"aggs\" : {\n        \"place_of_service_id\" : {\n            \"terms\" : {\n                \"field\" : \"place_of_service_data.place_of_service_id\",\n                //\"order\" : { \"_count\" : \"asc\" }\n                \"size\": 0\n            }\n        },\n\t    \"aggs\": {\n\t      \"info\": {\n\t        \"top_hits\": {\n\t          \"_source\": [ \"place_of_service_data\", \"cost_breakdown\", \"eoc_data\", \"practitioner_data\" ],\n\t          // sort: [{ 'cost_breakdown.cost': { 'order': 'asc' } }],\n\t          \"size\": 1\n\t        }\n\t      }\n\t    }\n    }\n}"
+						},
+						"description": "Query by geo_distance filter"
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Care - Find Lower Rates",
+					"request": {
+						"url": "{{elastic_url}}/wam/place_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"size\" : 1,\n  \"sort\": [\n    {\n      \"_geo_distance\": {\n        \"place_of_service_data.place_of_service_location\": { \n          \"lat\":  40.715,\n          \"lon\": -73.998\n        },\n        \"order\":         \"asc\",\n        \"unit\":          \"mi\", \n        \"distance_type\": \"arc\" \n      }\n    }\n  ],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"match\": {\n            \"eoc_data.eoc_code\": \"10c8e73b-23bf-428b-8566-24a2de27e40d\" \n          }\n        },\n        {\n          \"nested\": {\n            \"path\": \"practitioners\", \n            \"query\": {\n              \"bool\": {\n                \"must\": [ \n                  {\n                    \"range\": {\n                      \"practitioners.practitioner_cost\": {\n                        \"lte\": 1000\n                      }\n                    }\n                  }\n                ]\n              }\n            }\n          }\n        }\n      ]\n}}}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place of Care - Find Lower Rates - Practitioner",
+					"request": {
+						"url": "{{elastic_url}}/wam/practitioner_of_care/_search",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"query\": {\n      \"bool\": {\n        \"must\": [\n          {\n            \"match\": {\n              \"eoc_code\": \"1bab8629-6720-4ffc-9c4c-3d5e1b737c5b\"\n            }\n          },\n          {\n            \"nested\": {\n              \"path\": \"places_of_service\",\n              \"query\": {\n                \"bool\": {\n\t\t\t\t\t\"must\" : [\n                    \t{ \"match\" : {\"places_of_service.place_of_service_id\" : \"0a1a606f-bdc4-4769-a3ab-1d764ba9d6b8\"} },\n                    \t{ \"range\" : {\"places_of_service.place_of_service_cost\" : {\"lte\" : 109}}}\n                    ],\n            \t\t\"filter\" : {\n\t                \"geo_distance\" : {\n\t                    \"distance\" : \"1000mi\",\n\t                    \"places_of_service.place_of_service_location\" : {\n\t                        \"lat\" : 40,\n\t                        \"lon\" : -70\n\t                    }\n\t                }\n\t            }\n                }\n              }\n            }\n          }\n        ]\n      }\n    }\n  }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bell Curve Standard Deviations",
+			"request": {
+				"url": "http://localhost:9200/wam/cost_of_care/_search",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"size\": 0,\n    \"aggs\" : {\n         \"filtered_distance\" : {\n             \"filter\": {\n                 \"geo_distance\": {\n                    \"distance\": \"1000mi\",\n                    \"place_of_service_location\": {\n                        \"lat\": -4.9190,\n                        \"lon\": -64.2708\n                    }\n                }\n             },\n             \"aggs\": {\n                 \"filtered_eoc\": {\n                     \"filter\": {\n                         \"match\": {\n                             \"eoc.code\": \"7fb584f7-74f7-48e0-9656-ff53fa08d722\"\n                         }\n                     },\n                     \"aggs\": {\n                         \"grades_stats\": {\n                            \"extended_stats\" : { \"field\": \"cost_breakdown.cost\", \"sigma\": 12 }    \n                         }\n                     }\n                 }\n             }\n         }\n    }\n  }\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

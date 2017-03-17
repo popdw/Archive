@@ -1,0 +1,161 @@
+{
+  "categories": [
+    {
+      "eoc_category_id": "20d3c033-8dd0-4e23-8372-76ca4e841890",
+      "eoc_category_name": "Imaging Exam",
+      "eoc_category_description": "CT Scan, MRI Scan, Nuclear Scan, Ultrasound..."
+    },
+    {
+      "eoc_category_id": "f28904b7-7d49-4f00-9dfb-def6a04cb843",
+      "eoc_category_name": "Medical or Surgical Procedure",
+      "eoc_category_description": "Knee Arthtoscopic Surgery, Plica Surgery..."
+    },
+    {
+      "eoc_category_id": "d0a41cbf-2f7c-4018-8c26-3ddb89408d42",
+      "eoc_category_name": "Lab Test",
+      "eoc_category_description": "Abdominal Fluid Cytology, ABO Grouping..."
+    },
+    {
+      "eoc_category_id": "cc1b92ba-6267-4ec0-8bfe-4f8eb3da2bdd",
+      "eoc_category_name": "Office Visit",
+      "eoc_category_description": "Allergist, Cardiologist, Endocrinologist..."
+    }
+  ],
+  "specialties":[
+    {
+      "specialty_id":"14870a7b-7471-4c81-b657-018b9ded9453",
+      "specialty_name":"Anesthesiology",
+      "specialty_description":"Quaerat suscipit temporibus. Ducimus consequuntur voluptate. Velit ex suscipit itaque commodi sit dignissimos."
+    },
+    {
+      "specialty_id":"8cd80557-49fa-457c-a1b8-b86905c1ce2a",
+      "specialty_name":"Child Neurology",
+      "specialty_description":"Quia cum et corrupti ut dolorem repudiandae. Quia et sunt sunt soluta hic magni. Sit totam voluptas cupiditate quaerat similique eos. Et corporis consequatur corrupti quae nesciunt sapiente vero nulla maxime."
+    },
+    {
+      "specialty_id":"676656a7-9fb2-4f2b-a423-4e4582364bf0",
+      "specialty_name":"Dermatology",
+      "specialty_description":"Corrupti consequatur illo sapiente voluptatum dolorum est corporis. Expedita voluptatum est autem nisi et. Quibusdam et praesentium ea voluptatem aut dolor. Et tenetur sapiente itaque iste et ut et sit. Delectus voluptatem dignissimos. Non maiores nostrum quisquam sed."
+    },
+    {
+      "specialty_id":"6ed3478f-091e-4d92-aeca-d4a039952fbf",
+      "specialty_name":"Emergency Medicine",
+      "specialty_description":"Voluptatem velit in iste dolor quasi cupiditate consequatur dolores aspernatur. Quo vitae necessitatibus vero similique iure soluta. Earum rerum et quis. Non sed excepturi. Fuga consequatur delectus."
+    },
+    {
+      "specialty_id":"d2226d96-9b5e-475b-a061-d7c687f0c8ec",
+      "specialty_name":"Family Medicine",
+      "specialty_description":"Eos maxime accusamus ad et autem aut accusamus ut. Autem porro libero sed enim. Qui quis dicta."
+    },
+    {
+      "specialty_id":"0bded5d6-e620-4b6e-bd4d-151bd03fff08",
+      "specialty_name":"Internal Medicine",
+      "specialty_description":"Ullam doloribus ipsa modi et. Corrupti ea ea sequi iste. Non autem non provident. Et est voluptatem nulla velit delectus porro ut provident."
+    },
+    {
+      "specialty_id":"d21202d2-6e37-4bb6-9d64-65d54e37a8b4",
+      "specialty_name":"Medical Genetics",
+      "specialty_description":"Ut cum ratione quaerat et dolorem. Illo id molestiae et in qui amet. Sed deleniti aperiam distinctio et sit molestias laboriosam. Quibusdam reprehenderit alias autem et et sit nemo qui quo. Nulla accusamus ut nobis autem repellendus iure. Voluptates est aspernatur qui temporibus distinctio."
+    },
+    {
+      "specialty_id":"8d4a5d79-0fab-4ab2-bebb-214d0708a16a",
+      "specialty_name":"Medicine/Pediatrics",
+      "specialty_description":"Eligendi quam officiis perferendis aut eos. Quae odit tempore molestiae. Magnam velit commodi et. Quis aut dolores est voluptate voluptatibus error non."
+    },
+    {
+      "specialty_id":"90ffd586-cb0c-4ba9-8f47-2f7857288efb",
+      "specialty_name":"Neurological Surgery",
+      "specialty_description":"Dignissimos expedita eos impedit ad et ab consequatur. Totam tempora vero neque qui accusantium vitae asperiores. Sed nam iusto. Aut aut explicabo debitis. Consequatur dolor id vel distinctio numquam modi sed et animi. Sed eos sunt ea dolor."
+    },
+    {
+      "specialty_id":"1a152eaa-4363-4e4a-a09f-dd3fa487287b",
+      "specialty_name":"Neurology",
+      "specialty_description":"Est odio ut incidunt reiciendis molestias sequi minus. Nihil sint consequuntur eum sit non dolor enim odit. Dicta velit velit nobis laboriosam qui perspiciatis quae dolore est. Quasi odio ipsum."
+    },
+    {
+      "specialty_id":"f7dac74b-efd9-4e3c-b1d2-cb13400b4c29",
+      "specialty_name":"Nuclear Medicine",
+      "specialty_description":"Voluptate possimus rerum eius. Reprehenderit nemo ducimus culpa cum. Et cumque et veritatis est quibusdam consequatur autem ut. Tempore voluptas magnam ea sapiente nobis ipsam. Dignissimos ratione minima vero sit. Vel quo blanditiis."
+    },
+    {
+      "specialty_id":"6070517b-521e-40cc-8cae-7e29455060b3",
+      "specialty_name":"Obstetrics and Gynecology",
+      "specialty_description":"Dolores quia ratione eos sed. Numquam nihil nobis est quasi est esse. Voluptatem doloribus sit cumque atque."
+    },
+    {
+      "specialty_id":"3be83ae6-c9a5-4844-9995-272c55a7dd42",
+      "specialty_name":"Ophthalmology",
+      "specialty_description":"Harum quos deserunt. Inventore voluptas corrupti nostrum. Fuga aut illum aut aspernatur harum reiciendis explicabo quas. Voluptas doloremque corrupti ratione quia. Fugit ab voluptatem omnis quis."
+    },
+    {
+      "specialty_id":"f457615e-f01e-4b3e-a72e-16be515ee004",
+      "specialty_name":"Orthopaedic Surgery",
+      "specialty_description":"Aut dicta quia corporis. Quaerat quia doloremque ullam ipsum. Optio assumenda ut exercitationem quas tenetur et distinctio ipsa velit. Deserunt at ipsum necessitatibus qui sint dolores excepturi pariatur. Ut occaecati corrupti dolorum modi necessitatibus eligendi incidunt."
+    },
+    {
+      "specialty_id":"18110019-2c71-482f-9ca2-59b54e7be517",
+      "specialty_name":"Otolaryngology",
+      "specialty_description":"Molestiae maxime aspernatur consequatur totam. Consequatur sed non eligendi non omnis sed sequi. Delectus quia error nesciunt facilis aut reprehenderit in non. Culpa autem tempore aut velit fugit est ullam vel."
+    },
+    {
+      "specialty_id":"6e0eef85-b87d-4bd1-b9ea-eb5771b87c6d",
+      "specialty_name":"Pathology (Anatomic and Clinical)",
+      "specialty_description":"Omnis numquam non ut sequi voluptas ad voluptatem accusamus et. Molestiae et non aperiam autem atque inventore neque ea dolor. Saepe non vel qui natus vitae. Id non veniam cumque ipsa qui dolor distinctio. Dolorem tempora quisquam blanditiis non."
+    },
+    {
+      "specialty_id":"fa8b79cc-51ec-4bb5-b21a-d8cb629fe7ea",
+      "specialty_name":"Pediatrics",
+      "specialty_description":"Sed ea totam fugiat fugiat aliquid veritatis magnam aliquam. Aliquid pariatur animi adipisci ratione iure nam et animi. Unde nihil et mollitia inventore nulla. Ullam molestiae non dolores consequuntur voluptas totam consequatur enim tempora. Est tempora at quam."
+    },
+    {
+      "specialty_id":"792ac414-54ee-415d-8803-f94f087aed53",
+      "specialty_name":"Physical Medicine and Rehabilitation",
+      "specialty_description":"Beatae culpa aut ex officia id saepe. Fugiat eos tempore. Maiores sit omnis eveniet est pariatur ut. Dolorem a rem pariatur quo tempore magnam. Quas saepe eum ut ullam."
+    },
+    {
+      "specialty_id":"2285fc7b-dd54-4a59-935c-8a28d5653f2e",
+      "specialty_name":"Plastic Surgery (Integrated)",
+      "specialty_description":"Sit illum laudantium. Alias quidem quam laboriosam accusantium in iure eligendi numquam ea. Eveniet iste culpa. Repellat repellendus quia rerum qui. Est voluptatibus repellat."
+    },
+    {
+      "specialty_id":"822c1366-1462-4b31-8d38-dcca8481197e",
+      "specialty_name":"Preventive Medicine",
+      "specialty_description":"Debitis voluptates cumque eveniet. Iure eum minima iste adipisci eveniet. Quam necessitatibus quia. Non tempore rerum ducimus suscipit ut quia possimus. Qui sit rerum libero quibusdam optio sit. Sequi nisi deleniti id sit ducimus laborum."
+    },
+    {
+      "specialty_id":"f29ef479-9ae3-4a9a-b9e6-ed0d8960aa2d",
+      "specialty_name":"Psychiatry",
+      "specialty_description":"Hic nostrum voluptatem nam sint at. Nihil aut libero eum debitis. Maxime ipsam laudantium minima veritatis."
+    },
+    {
+      "specialty_id":"a75161cd-c282-498e-aa3d-0360bc22dab0",
+      "specialty_name":"Radiation Oncology",
+      "specialty_description":"Id voluptatibus illo dolorem dicta. Et molestias quaerat doloremque optio quidem corrupti recusandae et. Totam officia nostrum molestias natus dicta velit nemo repellendus. Consequatur aut voluptatem officiis quo sint. Ea quos veniam reprehenderit. Sed cupiditate quia velit similique voluptate aut aut quas earum."
+    },
+    {
+      "specialty_id":"85ab0407-4b0b-4d8d-b378-24eb3effea69",
+      "specialty_name":"Radiology (Diagnostic)",
+      "specialty_description":"Consequatur ratione possimus saepe dolores sed. Qui incidunt aliquid cumque et impedit. Dolore voluptatibus et earum est et. Quidem ut est perferendis deserunt vel. Fuga accusantium consequatur in quam dolore cum vitae. Natus perspiciatis minima aliquam porro."
+    },
+    {
+      "specialty_id":"aa3dc40c-1627-4ad5-b2a7-5b3243b239d1",
+      "specialty_name":"Surgery",
+      "specialty_description":"Quis illo sapiente voluptatem eligendi et. Fuga non fuga nesciunt. Praesentium asperiores culpa fuga odio rerum autem. Laborum recusandae velit nisi suscipit magni. Culpa ipsum temporibus in voluptatum non ullam aspernatur."
+    },
+    {
+      "specialty_id":"7f346c31-39a1-424d-8aa9-198251c0a9a4",
+      "specialty_name":"Thoracic Surgery (Integrated)",
+      "specialty_description":"Deserunt velit ut nostrum sequi sed hic unde provident deleniti. Id libero nihil nisi ipsam alias. Sapiente quia ea architecto id et non tenetur magnam vel. Impedit repellat voluptas quod saepe corrupti pariatur autem. At ut deserunt minima id consectetur excepturi sequi. Soluta commodi placeat odio occaecati."
+    },
+    {
+      "specialty_id":"1568656a-d278-4910-9b53-b2f183181330",
+      "specialty_name":"Urology",
+      "specialty_description":"Animi consectetur quasi magnam sed sed quos. Qui optio est tempora ipsa. Similique inventore non sapiente minima veritatis eum officiis. Quae dicta et consequatur ipsam facilis est vero perferendis exercitationem. Eos iste et."
+    },
+    {
+      "specialty_id":"5bb52beb-753f-4287-aaed-df1285089cff",
+      "specialty_name":"Vascular Surgery (Integrated)",
+      "specialty_description":"Recusandae magni ut rerum dolore dignissimos et distinctio aut repudiandae. Corporis aut aut nostrum tempora. Occaecati rerum eaque qui. Sit voluptates cumque aliquam sunt. Corrupti laudantium ut ducimus quibusdam velit voluptate dolorum in."
+    }
+  ]
+}

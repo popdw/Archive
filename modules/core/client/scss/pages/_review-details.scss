@@ -1,0 +1,1447 @@
+.review-details-block {
+  -custom-noop: noop;
+  /* review area */
+  .review-area {
+    overflow: hidden;
+    padding: 0 10px 50px;
+    background: $white;
+    //@include media("screen", ">tablet") {
+    //  padding: 0 10px;
+    //}
+    @include media("screen", ">desktop") {
+      padding: 0;
+    }
+  }
+
+  /* review box */
+  .review-box {
+    border: 3px solid #343d4f;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 0 8px;
+    @include media("screen", ">=tablet") {
+      border-radius: 10px;
+      margin: 0 0 10px;
+    }
+
+    &.locked {
+      .heading {
+        .btn-holder {
+          .btn {
+            background: #c00;
+          }
+        }
+      }
+    }
+
+    .alert-text {
+      color: #c00;
+    }
+
+    .heading {
+      background: #343d4f;
+      color: $white;
+      padding: 13px 10px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      @include media("screen", ">=tablet") {
+        padding: 20px 33px 22px 22px;
+      }
+
+      > h2 {
+        width: 100%;
+        text-align: center;
+        margin: 3px 0 4px;
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      .back-link {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        font-size: 30px;
+
+        section.review-details & {
+          display: none;
+        }
+
+        @include media("screen", ">desktop") {
+          display: none;
+        }
+
+        a {
+          color: inherit;
+        }
+      }
+
+      .contact-address {
+        line-height: 1.22;
+        font-style: normal;
+        order: 2;
+        width: 100%;
+        margin: 0;
+        font-size: 13px;
+
+        @include media("screen", ">=tablet") {
+          //width: 30%;
+          font-size: 14px;
+          //order: 1;
+        }
+
+        strong {
+          font-weight: 600;
+          font-size: 15px;
+          display: block;
+          @include media("screen", ">=tablet") {
+            font-size: 20px;
+          }
+        }
+
+        span {
+          display: block;
+          @include media("screen", ">=tablet") {
+            margin: 0 0 5px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .title-holder {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 14px;
+
+        @include media("screen", ">=tablet") {
+          //width: 40%;
+          margin: -3px 0 0;
+          //order: 2;
+        }
+
+        h2 {
+          margin: 0 0 3px;
+          font-weight: 300;
+          font-size: 13px;
+          padding-left: 15px;
+
+          section.review-details & {
+            padding-left: 0;
+          }
+
+          @include media("screen", ">=tablet") {
+            font-size: 24px;
+            margin: 0 0 5px;
+          }
+        }
+
+        .cost {
+          font-weight: 300;
+          line-height: 1;
+          font-size: 19px;
+          display: block;
+          @include media("screen", ">=tablet") {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .actions {
+        width: 30%;
+        text-align: right;
+        display: none;
+        @include media("screen", ">=tablet") {
+          display: block;
+          order: 3;
+          margin: -3px 0 0;
+          font-size: 14px;
+        }
+
+        p {
+          @include media("screen", ">=tablet") {
+            margin: 0 0 0 auto;
+            max-width: 190px;
+          }
+        }
+      }
+
+      .btn-holder {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -16px;
+        text-align: center;
+        @include media("screen", ">=tablet") {
+          bottom: -27px;
+        }
+
+        .btn {
+          font-weight: 300;
+          line-height: 1;
+          text-transform: none;
+          font-size: 14px;
+          padding: 8px 17px;
+          @include media("screen", ">=tablet") {
+            font-size: 30px;
+            padding: 12px 17px;
+          }
+
+          [class*='icon-'] {
+            margin: 0 5px 0 0;
+            @include media("screen", ">=tablet") {
+              font-size: 24px;
+            }
+          }
+
+          &.temp-disabled {
+            background: $disabled-gray;
+          }
+        }
+      }
+    }
+
+    .add-to-fav {
+      @include media("screen", ">=tablet") {
+        font-size: 20px;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0 0 13px;
+      }
+    }
+
+    .block {
+      padding: 23px 10px;
+      @include media("screen", ">=tablet") {
+        padding: 45px 40px;
+      }
+      @include media("screen", ">=desktop") {
+        padding: 45px 20px;
+      }
+      @include media("screen", ">=widescreen") {
+        padding: 45px 100px;
+      }
+
+      &.alt {
+        background: #f7f9fc;
+      }
+
+      &.hr {
+        margin: 0;
+
+        .hr {
+          margin: 20px -10px 30px;
+          border-top: 1px solid #dee0e2;
+          @include media("screen", ">=tablet") {
+            margin: 34px -100px 30px;
+          }
+        }
+      }
+
+      .actions {
+        border-bottom: 1px solid #ebf1f7;
+        padding: 8px 10px 15px;
+        margin: 0 -10px 14px;
+
+        a {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        p {
+          margin: 4px 10% 0;
+        }
+
+        @include media("screen", ">=tablet") {
+          display: none;
+        }
+      }
+
+      .title-holder {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 9px;
+        font-size: 12px;
+        line-height: 1.17;
+        font-weight: 500;
+        @include media("screen", ">=tablet") {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          @include media("screen", ">=tablet") {
+            margin: 0 0 25px;
+          }
+        }
+
+        h2 {
+          margin: 0;
+          font-size: 18px;
+          @include media("screen", ">=tablet") {
+            font-size: 24px;
+          }
+
+          span {
+            font-weight: 300;
+            display: block;
+            font-size: 13px;
+            @include media("screen", ">=tablet") {
+              font-size: inherit;
+            }
+          }
+        }
+
+        p {
+          + h2 {
+            margin-top: 40px;
+          }
+        }
+
+        + .group {
+          margin-top: 36px;
+        }
+      }
+    }
+
+    .full-image {
+      margin: -23px -10px 22px;
+      display: block;
+      @include media("screen", ">=tablet") {
+        margin: -45px -100px 66px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .text-holder {
+      font-size: 12px;
+      padding: 0 12px;
+      @include media("screen", ">=tablet") {
+        font-size: 18px;
+        padding: 0;
+      }
+
+      h3 {
+        font-size: 12px;
+        @include media("screen", ">=tablet") {
+          font-size: 20px;
+          margin: 0 0 10px;
+        }
+      }
+
+      p {
+        @include media("screen", ">=tablet") {
+          margin: 0 0 1.4em;
+        }
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 0 5px;
+      @include media("screen", ">=tablet") {
+        font-size: 20px;
+        margin: -4px 0 5px;
+      }
+
+      .icon-question-circle {
+        color: #999;
+        font-size: 12px;
+        @include media("screen", ">=tablet") {
+          font-size: 17px;
+        }
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      time {
+        font-size: 9px;
+        @include media("screen", ">=tablet") {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .group {
+      font-size: 12px;
+      margin: 0 10px;
+      @include media("screen", ">=tablet") {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      + .group {
+        margin-top: 16px;
+        padding-top: 13px;
+        border-top: 1px solid #ebedef;
+        @include media("screen", ">=tablet") {
+          margin-top: 34px;
+          padding-top: 36px;
+        }
+      }
+
+      &.collapsible {
+        margin-left: 0;
+      }
+    }
+
+    .more {
+      color: #343d4f;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 18px 10px 0;
+      font-size: 12px;
+      @include media("screen", ">=tablet") {
+        font-size: 20px;
+        margin: 16px 0 0;
+      }
+
+      i {
+        margin: -5px 0 0 5px;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 19px;
+        @include media("screen", ">=tablet") {
+          font-size: 24px;
+          margin: -2px 0 0 5px;
+        }
+      }
+    }
+  }
+
+  /* info table */
+  .info-table {
+    margin: 0 -10px 8px;
+    font-size: 12px;
+    @include media("screen", ">=tablet") {
+      margin: 0 auto 16px;
+      max-width: 800px;
+      font-size: inherit;
+    }
+
+    .noties {
+      @extend %listreset;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px 14px;
+
+      li {
+        margin: 0 10px;
+        padding-left: 18px;
+        position: relative;
+        @include media("screen", ">=375px") {
+          margin: 0 12px 0 17px;
+        }
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          @include size (12px);
+          background: #343d4f;
+        }
+
+        &.healthcost {
+          &:before {
+            background: $green;
+          }
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      margin: 0;
+      @include media("screen", ">=tablet") {
+        border-bottom: 1px solid #ebf1f7;
+      }
+    }
+
+    .name-col {
+      width: 47%;
+      @include media("screen", ">=tablet") {
+        width: 40%;
+      }
+    }
+
+    .price-col {
+      width: 23%;
+      text-align: right;
+      @include media("screen", ">=tablet") {
+        width: 15%;
+      }
+    }
+
+    .stat-col {
+      text-align: center;
+      width: 24%;
+      display: none;
+      @include media("screen", ">=tablet") {
+        display: table-cell;
+      }
+    }
+
+    .price-col,
+    .total-col {
+      i {
+        font-style: normal;
+        @include media("screen", ">=tablet") {
+          display: none;
+        }
+      }
+
+      span {
+        display: none;
+        @include media("screen", ">=tablet") {
+          display: inline;
+        }
+      }
+    }
+
+    .total-col {
+      text-align: right;
+      width: 31%;
+      @include media("screen", ">=tablet") {
+        width: 21%;
+      }
+    }
+
+    th {
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      vertical-align: top;
+      padding: 0 10px 8px;
+      @include media("screen", ">=tablet") {
+        vertical-align: bottom;
+        font-size: 14px;
+      }
+
+      &.name-col {
+        span {
+          display: block;
+          @include media("screen", ">=tablet") {
+            margin-left: 32px;
+          }
+        }
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+          color: $green;
+        }
+      }
+    }
+
+    .no-divider {
+      td {
+        border: none;
+      }
+
+      .title {
+        margin-left: 30px;
+        @include media("screen", ">=tablet") {
+          margin-left: 55px;
+        }
+
+        .locked & {
+          margin-left: 12px;
+          @include media("screen", ">=tablet") {
+            margin-left: 55px;
+          }
+        }
+      }
+    }
+
+    td {
+      padding: 10px;
+      border-top: 1px solid #ebf1f7;
+      @include media("screen", ">=tablet") {
+        padding: 8px 10px;
+      }
+    }
+
+    tr.healthcost {
+      td {
+        color: $green;
+      }
+    }
+
+    .name-col {
+      [class*='icon'] {
+        float: left;
+        margin: 1px 5px 0 -2px;
+        font-size: 10px;
+        @include media("screen", ">=tablet") {
+          font-size: 20px;
+          margin: 7px 9px 0 3px;
+        }
+      }
+    }
+
+    .title {
+      display: block;
+      overflow: hidden;
+      @include media("screen", ">=tablet") {
+        font-size: 18px;
+      }
+
+      small {
+        font-weight: normal;
+        display: block;
+        font-size: inherit;
+        @include media("screen", ">=tablet") {
+          font-size: 14px;
+          margin-top: -3px;
+        }
+      }
+
+      .locked & {
+        @include media("screen", ">=tablet") {
+          margin-left: 32px;
+        }
+      }
+    }
+
+    .price {
+      font-size: 14px;
+      font-weight: normal;
+      @include media("screen", ">=tablet") {
+        font-size: 28px;
+      }
+    }
+  }
+
+  /* toogler */
+  .toogler {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 24px -10px;
+
+    @include media("screen", ">=tablet") {
+      font-size: 18px;
+      margin: 19px 0 42px;
+    }
+
+    ul {
+      @extend %listreset;
+      border-radius: 40px;
+      display: inline-block;
+      background: #343d4f;
+      color: $white;
+      padding: 3px;
+    }
+
+    li {
+      float: left;
+
+      &.active {
+        a {
+          color: #343d4f;
+          opacity: 1;
+          background: linear-gradient(to bottom, #f3f6fa 0, #dde3ea 100%);
+          box-shadow: inset 0 -3px 3px rgba($black, .2);
+        }
+      }
+    }
+
+    a {
+      border-radius: 40px;
+      opacity: .5;
+      float: left;
+      font-weight: normal;
+      padding: 8px 5px;
+      color: inherit;
+      min-width: 120px;
+      @include media("screen", ">=375px") {
+        min-width: 160px;
+      }
+      @include media("screen", ">=tablet") {
+        min-width: 242px;
+        padding: 3px 5px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  /* stat info*/
+  .stat-info {
+    margin: 0 0 18px;
+    @include media("screen", ">=tablet") {
+      margin: 0 0 21px;
+    }
+
+    .row {
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+      margin-right: -5px;
+      @include media("screen", ">phone") {
+        margin-right: -15px;
+      }
+
+      &:before {
+        border-right: 1px dashed #dbdcde;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        z-index: -1;
+      }
+    }
+
+    .healthcost {
+      .title {
+        color: $green;
+      }
+
+      .line {
+        background: $green;
+      }
+    }
+
+    .title {
+      float: left;
+      text-align: right;
+      font-weight: normal;
+      line-height: 1;
+      padding: 5px 8px 16px 0;
+      width: 120px;
+      font-size: 18px;
+      border-right: 1px solid #999;
+      @include media("screen", ">=tablet") {
+        font-size: 24px;
+        width: 144px;
+        padding: 8px 12px 20px 0;
+      }
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 900;
+        display: block;
+        text-transform: uppercase;
+        white-space: nowrap;
+        font-size: 9px;
+        margin: 0 0 4px;
+        @include media("screen", ">=tablet") {
+          font-size: 12px;
+          margin-bottom: 6px;
+        }
+      }
+
+      em {
+        font-style: normal;
+        font-size: 14px;
+      }
+    }
+
+    address {
+      margin: 0 10px 1px;
+      font-style: normal;
+      font-weight: 900;
+      display: block;
+      font-size: 9px;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @include media("screen", ">=tablet") {
+        font-size: 12px;
+        margin: 0 12px 2px;
+      }
+    }
+
+    .diag {
+      overflow: hidden;
+      padding: 5px 0;
+      position: relative;
+      @include media("screen", ">=tablet") {
+        padding: 7px 0;
+      }
+
+      &:after,
+      &:before {
+        border: 1px dashed #dbdcde;
+        border-width: 0 1px;
+        width: 20%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        content: '';
+        z-index: -1;
+      }
+
+      &:after {
+        right: 20%;
+      }
+      &:before {
+        right: 60%;
+      }
+    }
+
+    .line {
+      opacity: .2;
+      background: #343d4f;
+      height: 22px;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      @include media("screen", ">=tablet") {
+        height: 29px;
+      }
+    }
+
+    .holder {
+      z-index: 1;
+      position: relative;
+      font-size: 12px;
+      line-height: 22px;
+      padding: 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @include media("screen", ">=tablet") {
+        font-size: 16px;
+        line-height: 29px;
+        padding: 0 13px;
+      }
+    }
+  }
+
+  /* global tabset */
+  .global-tabset {
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    background: #343d4f;
+    @include media("screen", ">=tablet") {
+      font-size: 26px;
+    }
+
+    li {
+      flex: 1;
+
+      &.active {
+        a {
+          color: inherit;
+          background: $white;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.healthcost {
+          color: $green;
+        }
+      }
+    }
+
+    [class*='icon-'] {
+      font-size: 10px;
+      margin: 0 5px 0 0;
+      @include media("screen", ">=tablet") {
+        font-size: 20px;
+        margin: 0 2px 0 -7px;
+      }
+    }
+
+    a {
+      color: $white;
+      display: block;
+      padding: 5px 10px;
+      line-height: 40px;
+      border-radius: 3px 3px 0 0;
+      @include media("screen", ">=tablet") {
+        border-radius: 7px 7px 0 0;
+        padding: 17px 10px 23px;
+      }
+
+      span {
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 18px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        opacity: .5;
+      }
+    }
+  }
+
+  /* text twocolumns */
+  .text-columns {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.18;
+    padding: 16px 10px;
+    font-size: 12px;
+    @include media("screen", ">=tablet") {
+      font-size: 17px;
+      padding: 22px 0 0;
+    }
+
+    + .text-columns {
+      padding-top: 0;
+      @include media("screen", ">=tablet") {
+        padding-top: 57px;
+      }
+    }
+
+    .column {
+      width: 100%;
+      @include media("screen", ">=tablet") {
+        width: 51.5%;
+        padding-right: 10px;
+      }
+
+      &:first-child {
+        @include media("screen", ">=tablet") {
+          width: 48.5%;
+        }
+      }
+    }
+
+    .btn {
+      text-transform: none;
+      font-size: 12px;
+      margin: 0 0 17px;
+      padding: 6px 15px;
+      @include media("screen", ">=tablet") {
+        font-size: 17px;
+        margin: 0 0 21px;
+      }
+    }
+
+    dl {
+      margin: 0;
+
+      dt {
+        font-weight: 600;
+        display: block;
+      }
+
+      dd {
+        display: block;
+        margin: 0 0 21px;
+        @include media("screen", ">=tablet") {
+          margin: 0 0 30px;
+        }
+      }
+    }
+
+    address {
+      margin: 0;
+      font-style: normal;
+      @include media("screen", ">=tablet") {
+        margin: 0 0 21px;
+        font-size: 16px;
+      }
+
+      strong {
+        display: block;
+        @include media("screen", ">=tablet") {
+          font-size: 20px;
+          margin: -2px 0 24px;
+        }
+      }
+    }
+  }
+
+  .shedule {
+    dt {
+      font-weight: normal !important;
+      float: left;
+      width: 100px;
+
+      &:after {
+        content: ':';
+      }
+    }
+
+    dd {
+      display: block;
+      overflow: hidden;
+      margin: 0 !important;
+    }
+  }
+
+  .phones {
+    margin: 0 0 21px;
+    @include media("screen", ">=tablet") {
+      font-size: 16px;
+      margin: 2px 0 12px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .fa-star-o:before {
+    content: $icon-fav-o;
+  }
+  .fa-star:before {
+    content: $icon-fav;
+  }
+
+  /* ratings */
+  .rating {
+    font-size: 16px;
+    line-height: 1;
+    color: #343d4f;
+    display: inline-block;
+    box-sizing: content-box;
+    @include media("screen", ">=tablet") {
+      font-size: 21px;
+    }
+
+    &[data-state="disabled"] {
+      pointer-events: none;
+    }
+
+    .rating-holder {
+      display: flex;
+      flex-flow: row-reverse;
+      margin: 0 -0.23em 5px;
+    }
+
+    &.stars {
+      font-size: 23px;
+      .rating-holder {
+        margin: -5px -0.03em -3px;
+      }
+
+      label {
+        cursor: pointer;
+        padding: 0 0.03em;
+        width: 1em;
+        i {
+          @extend .fa-star-o;
+        }
+      }
+      .fa-star-o:before {
+        content: $icon-star3;
+      }
+      .fa-star:before {
+        content: $icon-star2;
+      }
+
+      &:hover {
+        input {
+          &:checked + label,
+          &:checked ~ label {
+            i {
+              @extend .fa-star-o;
+            }
+          }
+          & + label:hover,
+          & + label:hover ~ label {
+            i {
+              @extend .fa-star;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      input {
+        &:checked + label,
+        &:checked ~ label {
+          i {
+            @extend .fa-star-o;
+          }
+        }
+        & + label:hover,
+        & + label:hover ~ label {
+          i {
+            @extend .fa-star;
+          }
+        }
+      }
+    }
+
+    input {
+      display: none;
+      &:checked + label,
+      &:checked ~ label {
+        i {
+          @extend .fa-star;
+        }
+      }
+    }
+
+    label {
+      cursor: pointer;
+      padding: 0 0.23em;
+      width: 1em;
+      i {
+        @extend .fa-star-o;
+      }
+    }
+    &.w-halves {
+      label:nth-of-type(even) {
+        position: absolute;
+        width: 0.37em; // ~(0.5 - padding)
+        overflow: hidden;
+      }
+    }
+  }
+
+  .rating-note {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 8px;
+    font-size: 9px;
+    @include media("screen", ">=tablet") {
+      font-size: 12px;
+      margin: 0 0 11px;
+    }
+
+    &.inline {
+      display: inline-block;
+      vertical-align: top;
+      margin: 6px 0 10px 5px;
+      @include media("screen", ">=tablet") {
+        margin: 10px 0 10px 5px;
+      }
+    }
+  }
+
+  .note-links {
+    font-weight: 600;
+    @extend %listreset;
+    overflow: hidden;
+
+    li {
+      margin: 2px 0 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $green;
+
+        i {
+          color: $green;
+        }
+      }
+
+      [class*='icon-star'] {
+        color: $green;
+        margin: 0 1px 0 0;
+      }
+
+      [class*='icon-question'] {
+        color: #999;
+        transition: all .3s ease;
+      }
+    }
+  }
+
+  .hr {
+    margin: 9px -10px 24px;
+    border-top: 3px solid #343d4f;
+    @include media("screen", ">=tablet") {
+      margin: 63px -100px 33px;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+
+  .fig-group {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 10px 0 0;
+    @include media("screen", ">=tablet") {
+      font-size: 18px;
+      margin: 0 -21px;
+      padding: 22px 0 0;
+    }
+
+    &.three-items {
+      figure {
+        @include media("screen", ">=tablet") {
+          width: 33.33%;
+        }
+      }
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      padding: 0 0 20px;
+      @include media("screen", ">=tablet") {
+        width: 50%;
+        padding: 0 21px 33px;
+      }
+    }
+
+    picture {
+      display: block;
+      margin: 0 -22px 18px;
+      @include media("screen", ">=tablet") {
+        margin: 0 0 22px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .mobile-hide {
+    display: none;
+    @include media("screen", ">=desktop") {
+      display: block;
+    }
+  }
+
+  .slider-stat {
+    border-top: 1px solid #e5e5e5;
+    margin: 0 10px;
+    padding: 22px 0 16px;
+    font-size: 12px;
+    @include media("screen", ">=tablet") {
+      font-size: 18px;
+      margin: 19px 0 0;
+      padding: 37px 0 16px;
+    }
+
+    .noties {
+      font-weight: 600;
+      @extend %listreset;
+      margin: 0 0 20px;
+      @include media("screen", ">=tablet") {
+        font-size: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 39px;
+      }
+
+      li {
+        @include media("screen", ">=tablet") {
+          margin: 0 12px;
+        }
+        .marker {
+          @include size (11px, 12px);
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 0 0 5px;
+          color: #ff7f9d;
+        }
+
+        &.green {
+          .marker {
+            color: #39b549;
+          }
+        }
+
+        &.blue {
+          .marker {
+            color: #7fb5ff;
+          }
+        }
+      }
+    }
+
+    .group {
+      margin: 0;
+      height: 100%;
+      position: relative;
+      + .group {
+        padding-top: 24px;
+        @include media("screen", ">=tablet") {
+          padding-top: 48px;
+        }
+
+        .percent-marker-border {
+          &:before {
+            bottom: 60%;
+          }
+        }
+      }
+
+      .percent-marker-border {
+        position: absolute;
+        left: 0;
+        height: 100%;
+
+        &.max {
+          left: auto;
+          right: 0;
+        }
+
+        &:before {
+          border-right: 1px dashed #dbdcde;
+          border-width: 0 1px;
+          width: 20%;
+          position: absolute;
+          top: 10%;
+          bottom: 47%;
+          content: '';
+          z-index: 0;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .line {
+      background: #d6d8dc;
+      height: 3px;
+      position: relative;
+      margin: 42px 0 42px;
+      font-size: 9px;
+      @include media("screen", ">=tablet") {
+        margin: 56px 0 66px;
+        height: 4px;
+        font-size: 16px;
+      }
+
+      .min,
+      .max,
+      .percent-marker {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        color: #343d4f;
+        font-weight: 300;
+      }
+
+      .percent-marker {
+        margin-left: -9px;
+      }
+
+      .max {
+        left: auto;
+        right: 0;
+      }
+
+      .val {
+        color: #373e51;
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        transform: translateY(-50%);
+        margin-top: -1px;
+        margin-left: -8px;
+        font-weight: 300;
+        height: 14px;
+        font-size: 22px;
+
+        span {
+          position: absolute;
+          width: 30px;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          margin: 0 0 0 -13px;
+
+          &.glyphicon {
+            color: #ff7f9d;
+          }
+        }
+
+        &.green {
+          width: 23px;
+          margin-left: -15px;
+
+          span {
+            top: -200%;
+            font-size: 9px;
+
+            @include media("screen", ">=tablet") {
+              top: -250%;
+              font-size: 16px;
+            }
+
+            &.glyphicon {
+              color: #39b549;
+              top: -125%;
+              font-size: 30px;
+            }
+          }
+        }
+
+        &.blue {
+          span {
+            &.glyphicon {
+              color: #7fb5ff;
+            }
+          }
+        }
+      }
+    }
+
+    .more {
+      margin: 0;
+    }
+  }
+
+  .empty-message {
+    text-align: center;
+    font-weight: 300;
+    color: #343d4f;
+    padding: 15px 0 5px;
+    @include media("screen", ">=tablet") {
+      font-size: 24px;
+      padding: 51px 0 2px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .socials {
+    li {
+      position: relative;
+
+      picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

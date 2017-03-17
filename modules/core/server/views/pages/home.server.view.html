@@ -1,0 +1,185 @@
+<section class="intro-section" ng-controller="HomeController">
+  <div class="page-holder small">
+
+    <div class="box first" style="display: none;"> <!-- first block in the intro -->
+      <h1>Hi, we’re here to<br><span>help</span> you find cost-effective<br>healthcare services.</h1>
+      <a href="#" class="btn">SEARCH RATES</a>
+    </div>
+    <div class="box second" style=""> <!-- second block in the intro -->
+
+      <h1 class="thin">It’s time you shopped <br> for your healthcare services.</h1>
+      <h1>How can we help you?</h1>
+
+      <!-- help-form -->
+      <form action="javascript:void(0)" class="help-form" autocomplete="off" ng-submit="submit()">
+
+        <div class="row row--select-service">
+          <label>I’m looking for a </label>
+          <span uib-dropdown
+                dropdown-append-to-body="true"
+                is-open="selectServiceDropdown">
+            <span uib-dropdown-toggle class="selected-service-category" ng-class="{placeholder: !SelectedService.has()}">
+              <span ng-bind="SelectedService.has() ? SelectedService.getName() : 'Select a Category of Service'"></span>
+              <span class="caret"></span>
+            </span>
+            <ul uib-dropdown-menu class="dropdown-menu dropdown-menu--select-service">
+              <li ng-repeat="service in services">
+                <a href="#" ng-click="SelectedService.set(service)">
+                  <h3 ng-bind="service.name"></h3>
+                  <p ng-bind="service.description"></p>
+                </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+
+        <div class="row row--service-name" ng-show="EpisodeOfCareView.isVisible()">
+          <label ng-bind="SelectedService.isSpecialistVisit() ? 'With a' : 'Called'"></label>
+          <span class="selected-service-name"
+                ng-bind="EpisodeOfCare.getTitle()"
+                ng-show="EpisodeOfCareView.isTextVisible()"
+                ng-click="EpisodeOfCareView.showInput()"></span>
+          <input type="text"
+                 prevent-enter-submit
+                 scroll-into-view
+                 ng-show="EpisodeOfCareView.isInputVisible()"
+                 ng-model="EpisodeOfCareView.inputValue"
+                 focus-on="EpisodeOfCareView.focusInput"
+                 placeholder="~{SelectedService.get().description}~"
+                 ng-class="{'has-error': EpisodeOfCareView.hasError()}"
+                 uib-typeahead="item.name for item in suggestNames($viewValue)"
+                 typeahead-append-to-body="true"
+                 typeahead-editable="false"
+                 typeahead-focus-on-select="false"
+                 typeahead-focus-first="false"
+                 typeahead-min-length="3"
+                 typeahead-wait-ms="250"
+                 typeahead-on-select="EpisodeOfCareView.select($item, $model, $label, $event)" />
+          <div class="error-message" ng-show="EpisodeOfCareView.hasError()">Please fill in the episode of care.</div>
+        </div>
+
+        <div class="row row--existing-patient" ng-show="isExistingPatientVisible()">
+          <ul class="radio-list">
+            <li class="radio">
+              <input id="existing-patient--radio-1"
+                     name="existing-patient--radio-group"
+                     type="radio"
+                     prevent-enter-submit
+                     ng-model="existingPatient"
+                     value="0" />
+              <label for="existing-patient--radio-1">I’m a New Patient</label>
+            </li>
+            <li class="radio">
+              <input id="existing-patient--radio-2"
+                     name="existing-patient--radio-group"
+                     type="radio"
+                     prevent-enter-submit
+                     ng-model="existingPatient"
+                     value="1" />
+              <label for="existing-patient--radio-2">I’m an Existing Patient</label>
+            </li>
+          </ul>
+        </div>
+
+        <div ng-show="isFinalStepVisible()">
+          <div class="row row--select-location">
+            <label>Near </label>
+            <input type="text"
+                   prevent-enter-submit
+                   scroll-into-view
+                   id="homepage-location-search"
+                   ng-model="LocationView._place_address"
+                   ng-blur="!LocationView.hasLocation() && LocationView.clear()"
+                   ng-focus="LocationView.hasLocation() && LocationView.clear()"
+                   placeholder="Enter location to search"
+                   ng-class="{'has-error':!LocationView.isValid()}" />
+            <div class="error-message" ng-show="!LocationView.isValid()">Please fill in the location.</div>
+          </div>
+
+          <div class="btns-holder row--submit">
+            <input class="btn" type="submit" value="SEARCH RATES">
+          </div>
+
+          <div class="row row--select-preference">
+            <label>Optional: My preferred practitioner <br class="multi-line-delimiter"/> or facility is </label>
+            <span class="selected-preference-name"
+                  ng-bind="Preferred.$model"
+                  ng-hide="!displayPreferenceName"
+                  ng-click="displayPreferenceName=false;Preferred.reset();focusPreferenceName=true"></span>
+            <input type="text"
+                   prevent-enter-submit
+                   scroll-into-view
+                   ng-model="Preferred.$model"
+                   ng-hide="displayPreferenceName"
+                   focus-on="focusPreferenceName"
+                   placeholder="Ex: John Smith, MD"
+                   uib-typeahead="item.name for item in suggestPreference($viewValue)"
+                   typeahead-editable="false"
+                   typeahead-focus-on-select="false"
+                   typeahead-focus-first="false"
+                   typeahead-min-length="3"
+                   typeahead-wait-ms="250"
+                   typeahead-on-select="displayPreferenceName=true;Preferred.set($item)" />
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- <a href="#" class="link-next icon-angle-down"><span class="hidden">next</span></a> -->
+</section>
+<div class="sub-intro">
+  <div class="page-holder">
+    <p>
+      Prices for identical medical services <br/>
+      <span class="green">can vary by ten times or more</span><br/>
+      from one facility to another.
+    </p>
+    <p>
+      We can help you find quality healthcare <br/>
+      <span class="green">and transparent prices.</span>
+    </p>
+  </div>
+</div>
+<section class="advantage-section">
+  <h1>The HealthCost Advantage</h1>
+  <div class="list">
+    <div class="item">
+      <div class="head">
+        <span class="icon-cross"></span>
+      </div>
+      <div class="content">
+        <h2>Transparency.</h2>
+        <p>Access accurate prices and cost breakdowns for doctors and facilities in the expanding HealthCost Networks<sup>SM</sup></p>
+      </div>
+    </div>
+    <div class="item" style="visibility: hidden;">
+      <div class="head">
+        <span class="icon-cross"><h2>Lock In Rates</h2></span>
+      </div>
+      <div class="content">
+        <h2>Guaranteed.</h2>
+        <p>Lock in rates to guarantee the HealthCost Networks<sup>SM</sup> price components according to our terms and conditions</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="head">
+        <span class="icon-star"></span>
+      </div>
+      <div class="content">
+        <h2>Quality.</h2>
+        <p>Access national quality information to compare doctors and facilities and empower your decision making</p>
+      </div>
+    </div>
+  </div>
+  <div class="holder">
+    <div class="col">
+      <h2>Why Shop for<br> Healthcare Services?</h2>
+      <a href="/healthcare-shopping-guide" class="link" target="_self">Learn more with our<br> HealthCare Shopping Guide › </a>
+    </div>
+    <div class="col">
+      <h2>Make the<br> Most of Your Search</h2>
+      <a href="/healthcost-tips" class="link" target="_self">Tips for using our<br> doctor/facility search tool › </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+<footer id="footer" role="contentinfo" ng-class="{homepage: page == 'home'}"> <!-- table footer -->
+  <div class="footer-holder">
+    <div class="main-holder">
+      <!-- links of the footer -->
+      <div class="store-col">
+        {% if isHomepage %}
+        <img
+          src="images/iphone-2x.png"
+          alt="image description"
+          class="img-iphone"
+          width="370"
+          height="628" />
+        {% endif %}
+
+        <div class="store-holder">
+          <h3>Grab the<br> HealthCost App Today!</h3>
+          <div class="btns-holder">
+            <a href="https://play.google.com/store/apps/details?id=com.healthcost" target="_blank" title="Get it on Google play" class="btn google-play">get it on google play</a>
+            <a href="https://appsto.re/us/Uv36hb.i" target="_blank" title="Available on the App Store" class="btn app-store">Available on the App Store</a>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <nav class="nav">
+          <ul>
+            <li><a href="/healthcare-shopping-guide" target="_self">HealthCost Shopping Guide</a></li>
+            <li><a href="/healthcost-tips" target="_self">HealthCost Tips</a></li>
+            <li><a href="/privacy-policy" target="_self">Privacy Policy</a></li>
+            <li><a href="/terms-of-use" target="_self">Terms of Use</a></li>
+            <li><a href="/contact" target="_self">Contact Us</a></li>
+            <li><a href="/faq" target="_self">FAQ</a></li>
+          </ul>
+          <ul class="socials">
+            <li><a href="https://www.facebook.com/MyHealthCost/" class="icon-facebook" target="_blank"></a></li>
+            <li><a href="https://twitter.com/MyHealthCost/" class="icon-twitter" target="_blank"></a></li>
+            <!--<li><a href="#" class="icon-linkedin" target="_blank"></a></li>-->
+          </ul>
+        </nav>
+        <div class="text-holder">
+          <p><strong>&copy; Copyright ~{getCurrentYear()}~ <a href="#">HealthCost</a></strong><br></p>
+        </div>
+        <div class="by">
+          <p>Powered By <a href="#" class="logo-google"><img src="images/logo-google.png" alt="google" width="114"
+                                                             height="37"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,119 @@
+{% extends 'layout.server.view.html' %}
+
+{% block content %}
+
+<div class="page page--content page--understand-results">
+  <div class="page-title">
+    <h1>Understanding Your Search Results</h1>
+  </div>
+
+  <section class="page-section">
+    <div class="page-section__block page-section__block--facilities">
+      <div class="block-header">
+        <img class="block-icon" src="/images/healthcost-robo.png" />
+      </div>
+      <h3>Facilities</h3>
+      <p>
+        Your search results might include different types of facilities where the service you searched is performed. When you are
+        comparing different types of facilities, you should know the differences between the facility type, in addition available
+        information about price and quality of services at each facility.
+        <span ng-show="facilitiesExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        States generally have different license and other requirements for different facility types. Some facilities, like physicians’ offices are usually not licensed by the state, but might have to meet other health and safety requirements. Government programs, like Medicare, also have different requirements for contracting with different types of facilities.
+        <br class="blank-line"/><br class="blank-line"/>
+        Not all medical services are delivered at all facilities. Some are only done during a hospital stay. Some are only done in an office
+        setting. There are, however, many services that are performed at several types of facilities.
+        <br class="blank-line"/><br class="blank-line"/>
+        Ambulatory Surgical Centers (ASC) offer patients a nonhospital alternative for some same-day surgeries and diagnostic
+        tests. They can be a lower cost option than hospitals. They might also be more pleasant compared to hospitals because
+        ASC’s do not generally serve emergency or very sick patients.
+        <br class="blank-line"/><br class="blank-line"/>
+        Hospitals offer a comprehensive range of healthcare services. They offer round the clock services, and typically have the staffing
+        and equipment to address emergencies and many life threatening situations. Hospitals provide “same day” services, such as
+        surgeries and diagnostic tests, and can also provide services if an overnight stay is needed (inpatient services). Cost for services
+        provided by a hospital will usually be higher compared to the ASC or office setting.
+        <br class="blank-line"/><br class="blank-line"/>
+        We use the term Office to describe facilities that are not Hospitals or ASCs. This includes medical offices, and clinics, as
+        well as facilities that provide specialty medical services like medical imaging (X-ray, MRI, CT). The types of services that
+        are available in an Office are usually limited. For example, Offices are where the vast majority of practitioner visits take
+        place. Offices are likely to be the lowest cost facility for a service because most medical offices do not bill a separate fee.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: facilitiesExtended}" ng-click="facilitiesExtended=!facilitiesExtended" >Read ~{facilitiesExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--billing">
+      <div class="block-header">
+        <img class="block-icon" src="/images/bills.png" />
+      </div>
+      <h3>Medical Billing</h3>
+      <p>
+        Different types of facilities also bill differently. This can make it hard to compare costs at different types of facilities. You might think you are choosing a low cost provider, when in fact it is a high cost provider when all charges are considered.
+        <span ng-show="billingExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        Have you ever received unexpected bills for a healthcare service? Medical billing is complex and depending on the
+        facility, you may receive multiple bills for one service. HealthCost.com’s cost breakdown will provide you with a list of
+        what your healthcare service will cost, including the facilities, practitioners, and additional fees. You will be able to compare the entire cost for the healthcare service, no matter how it is billed.
+        <br class="blank-line"/><br class="blank-line"/>
+        An office based practitioner’s bill will include the facility and professional fees wrapped into a single “global” bill. If, however the office is hospital owned, you will receive a bill for the facility fee and also one for the professional fee. For example, a physician who practices at her office might charge $100 for a routine office visit. Your search result might show that physician who is employed by a hospital charges $45 for a routine office visit. You might think the hospital physician costs less. But because the hospital that employs the physician also charges a facility fee for the same office visit, the total cost for the hospital physician might be more than $100.
+        <br class="blank-line"/><br class="blank-line"/>
+        For services performed at an ASC or a hospital, you will be billed by the practitioner who performs your surgery and the
+        facility where you get the surgery. Depending on the service, you might also get a bill from an anesthesiologist, other
+        doctors, imaging providers, laboratories or others.
+        <br class="blank-line"/><br class="blank-line"/>
+        The HealthCost.com cost breakdown displays understandable costs for healthcare services. We do the all the work and let you, the shopper, focus on the shopping essentials; price, convenience, and quality.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: billingExtended}" ng-click="billingExtended=!billingExtended" >Read ~{billingExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--practitioners">
+      <div class="block-header">
+        <img class="block-icon" src="/images/doctor.png" />
+      </div>
+      <h3>Practitioners</h3>
+      <p>
+        When you select a particular facility, you will see a list of doctors or other practitioners who furnish the selected service
+        at that facility. A shopper needs to consider the expertise and experience of the practitioner and understand that practitioner choice may limit facility selection.
+        <span ng-show="practitionersExtended">
+        <br class="blank-line"/><br class="blank-line"/>
+        Practitioners are the doctors, physical therapists, and nurse practitioners who deliver the healthcare services to patients.
+        HealthCost.com will show you practitioners by specialty or service type and match them to different facility types in your
+        search area. You will also be able to view practitioner training, board certifications, and other quality metrics and compare
+        them to other practitioners. You will also be able to see their cost.
+        <br class="blank-line"/><br class="blank-line"/>
+        Doctors and other practitioners might not offer the service you searched at all area facilities. A doctor you prefer might offer the searched service at one or more facilities that are high cost or low cost. Or a doctor you prefer might not offer the searched service at a low cost facility you prefer. HealthCost.com gives you information so that you decide the
+        combination that works best for you.
+        </span>
+        <br class="blank-line"><br class="blank-line">
+        <a href="#" class="read-more" ng-class="{extended: practitionersExtended}" ng-click="practitionersExtended=!practitionersExtended" >Read ~{practitionersExtended ? 'Less' : 'More'}~ <span>›</span></a>
+      </p>
+    </div>
+
+    <div class="page-section__block page-section__block--using">
+      <h3>Find Your Way Using HealthCost.com</h3>
+      <p>
+        The HealthCost.com objective is to simplify your shopping experience so you can focus more on your healthcare needs rather than price. We provide the facilities and practitioners that perform your required healthcare service within a specified search area, then transparently provide cost and quality metrics for your review.
+        <br class="blank-line"><br class="blank-line">
+        HealthCost.com uses simple terms to assist your shopping experience. Through clear visual prompts, we will provide a description of terms used during your search.
+        <br class="blank-line"><br class="blank-line">
+        Here are a some examples of the key terms that appear in HealthCost.com.
+        <br class="blank-line"><br class="blank-line">
+        <strong>“Provider”</strong>: any Person or Facility that is licensed to provide healthcare services
+        <br class="blank-line"><br class="blank-line">
+        <strong>“Charges”</strong>: the amount a provider submits for a particular service
+        <br class="blank-line"><br class="blank-line">
+        <strong>“Rates”</strong>: the rate a HealthCost Network Provider is willing to accept from a shopper for a particular service
+        <br class="blank-line"><br class="blank-line">
+        <strong>“Total Cost”</strong>: sum of all charges or rates for the service
+        <br class="blank-line"><br class="blank-line">
+        <strong>“Episodes of Care”</strong>: a group of billing codes that are generated for a particular service.
+      </p>
+    </div>
+
+  </section>
+
+</div>
+{% endblock %}

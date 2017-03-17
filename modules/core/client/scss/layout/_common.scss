@@ -1,0 +1,309 @@
+@mixin page-header-size() {
+  @include responsive-property('font-size', $mobile-font-size-header, $tablet-font-size-header, $desktop-font-size-header);
+}
+
+@mixin page-subheader-size() {
+  @include responsive-property('font-size', $mobile-font-size-text, $tablet-font-size-text, $desktop-font-size-text);
+}
+
+html{height:100%;}
+body {
+  margin:0;
+  height:100%;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+}
+ 
+#wrapper {
+  display:table-cell;
+  margin:0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+.accessibility{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  @include media("screen", ">desktop") {
+
+  }
+}
+.accessibility:focus{
+  position:static;
+  width:auto;
+  height:auto;
+} 
+
+.hidden{
+  position:absolute;
+  left:-9999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.page-holder {
+  max-width: 1382px;
+  margin: 0 auto;
+  padding: 0 $mobile-gutter;
+  @include media(">=tablet") {
+    padding: 0 20px;
+  }
+  @extend %clearfix;
+  &.small{
+    max-width: 1015px;
+  }
+}
+
+/* buttons styles */
+.btn{
+  background: $green;
+  padding: 15px 20px;
+  text-align: center;
+  color: $white;
+
+  &:focus {
+    color: $white;
+    outline: none;
+  }
+
+  font-size: 17px;
+  border: none;
+  @include inline-block(top);
+  @include animate(background, 0.1);
+  font-weight: bold;
+  text-transform: uppercase;
+  @include media("screen", ">desktop") {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 12px 30px;
+  }
+  &:hover{
+    @include media("screen", ">desktop") {
+      background: $dark-green;
+    }
+    color: $white;
+  }
+  &.app-store,
+  &.google-play{
+    @include size(120px, 42px);
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+    overflow: hidden;
+    padding: 0;
+    background: $dark-gray;
+    background-repeat: no-repeat;
+    background-size: 120px 42px;
+    border-radius: 4px;
+    @include media("screen", ">desktop") {
+      @include size(165px, 58px);
+      background-size: 165px 58px;
+      border-radius: 6px;
+    }
+  }
+  &.google-play{
+    background-image: url(../images/btn-google-play.png);
+    @include media("retina2x", "screen", ">desktop") {
+      background-image: url(../images/btn-google-play-2x.png);
+    }
+  }
+  &.app-store{
+    background-image: url(../images/btn-app-store.png);
+    @include media("retina2x", "screen", ">desktop") {
+      background-image: url(../images/btn-app-store-2x.png);
+    }
+  }
+  &.gray{
+    background: $regent-gray;
+    &:hover{
+      background: $rolling-stone;
+    }
+  }
+}
+
+.bg-overlay{
+  background:rgba($bg-overlay, 0.8);
+  position: fixed;
+  @include top-left-position(0, 0);
+  @include bottom-right-position(0, 0);
+  z-index: 99;
+}
+
+.dropdown-menu {
+  overflow: auto;
+
+  max-height: 200px;
+  @include media(">=tablet") {
+    max-height: 280px;
+  }
+  @include media(">desktop") {
+    max-height: 380px;
+  }
+
+  > li > a {
+    display: block;
+    padding: 2px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1;
+    color: #333;
+    background-image: none;
+    white-space: nowrap;
+    transition: none;
+  }
+
+  > .active > a,
+  > li:hover > a {
+    &, &:hover, &:focus {
+      background-color: $light-gray;
+      background-image: none;
+      color: #333;
+    }
+  }
+}
+
+.pac-container {
+  z-index: 1000;
+
+  .pac-matched {
+    font-weight: 600;
+  }
+
+  .pac-item-query {
+    font-size: inherit;
+  }
+
+  .pac-item {
+    .pac-icon {
+      display: none;
+    }
+  }
+}
+
+::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+::-moz-placeholder, /* Firefox 19+ */
+:-ms-input-placeholder, /* IE 10+ */
+:-moz-placeholder { /* Firefox 18- */
+  color: $gray;
+  opacity: 1;
+}
+
+.main-holder > h2 {
+  padding-top: 1em;
+  padding-left: 16px;
+  font-size: 22px;
+  font-weight: 500;
+
+  @include media('>desktop') {
+    font-size: 28px;
+    padding-left: 50px;
+  }
+}
+
+.page {
+  &-title {
+    text-align: center;
+    background-color: $white;
+
+    @include responsive-property('padding', 24px, 30px, 60px);
+
+    h1 {
+      @include page-header-size();
+      color: $green;
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+
+    p {
+      @include page-subheader-size();
+      color: $black;
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+
+  &-section {
+    &__block {
+      @include responsive-property('text-align', center, left);
+      @include responsive-property('padding', 22px, 36px, 70px);
+
+      p {
+        max-width: 1025px;
+        text-align: left;
+
+        br:not(.blank-line) {
+          @include media("<=tablet", "portrait") {
+            display: none;
+          }
+          @include media("<tablet") {
+            display: none;
+          }
+        }
+      }
+    }
+
+    a.read-more {
+      span {
+        transform: rotate(90deg);
+        display: inline-block;
+      }
+
+      &.extended {
+        span {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+/* socials */
+.socials {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 5px;
+
+  li {
+    margin: 0 14px 5px 0;
+    @include media("screen", ">=tablet") {
+      margin: 0 7px 5px 2px;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 24px;
+    @include size (42px);
+    line-height: 42px;
+    text-align: center;
+    color: $white;
+    transition: all .3s ease;
+    @include media("screen", ">=tablet") {
+      @include size (28px);
+      line-height: 28px;
+      font-size: 18px;
+    }
+
+    &.icon-facebook {
+      background: #5c75a9;
+    }
+    &.icon-twitter {
+      background: #6acff4;
+    }
+    &.icon-linkedin {
+      background: #2c6ebb;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

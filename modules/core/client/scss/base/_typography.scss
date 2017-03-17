@@ -1,0 +1,73 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $headings-font-family;
+  line-height: 1.21;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  font-weight: normal;
+  @include media("screen", ">desktop") {
+    font-size: floor($h1-font-size * 1.24);
+  }
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+   @include media("screen", ">desktop") {
+    font-size: floor($h2-font-size * 1.17);
+  }
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+   @include media("screen", ">desktop") {
+    font-size: floor($h3-font-size * 1.29);
+  }
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+   @include media("screen", ">desktop") {
+    font-size: floor($h4-font-size * 1.25);
+  }
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+   @include media("screen", ">desktop") {
+    font-size: floor($h5-font-size * 1.24);
+  }
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+   @include media("screen", ">desktop") {
+    font-size: floor($h6-font-size * 1.24);
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include animate(color);
+  &:hover,
+  &:focus {
+    color: darken($base-link-color, 10%);
+    text-decoration: none;
+  }
+}

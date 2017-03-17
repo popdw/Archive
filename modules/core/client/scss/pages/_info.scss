@@ -1,0 +1,450 @@
+/* info-section styles */
+.info-section{
+  color: $dove-gray;
+  .tab-content{
+    @extend %clearfix;
+    position: relative;
+    &:before{
+      @include media("screen", ">desktop") {
+        content: '';
+        position: absolute;
+        @include top-left-position(0, 50%);
+        background: $gallery;
+        @include size(1px, 100%);
+        z-index: 1;
+      }
+    }
+  }
+  .tab{
+    display: none;
+    @include media("screen", ">desktop") {
+      display: block !important;
+      float: left;
+      width: 50%;
+    }
+    &.active{
+      display: block;
+    }
+  }
+}
+/* quality-area styles */
+.quality-area{
+  padding: 12px 0 0;
+  @include media("screen", ">desktop") {
+    padding: 6px 0 0;
+  }
+  &:after{
+    @include media("screen", ">desktop") {
+      content:'';
+      display:block;
+      clear:both;
+    }
+  }
+  .quality-list{
+    @include media("screen", ">desktop") {
+      float: left;
+      width: 50%;
+      padding-left: 20px;
+    }
+    &:first-child{
+      @include media("screen", ">desktop") {
+        padding-left: 0;
+      }
+    }
+  }
+  &.three-cols{
+    .quality-list{
+      @include media("screen", ">desktop") {
+        width: 33.33%;
+      }
+    }
+  }
+}
+/* cost-section styles */
+.cost-section{
+  .two-cols{
+    @include media("screen", ">=tablet") {
+      overflow: hidden;
+      margin: 0 0 30px;
+      display: table;
+      width: 100%;
+    }
+    @include media("screen", ">desktop") {
+      margin: 0 0 53px;
+    }
+    .col{
+      @include media("screen", ">=tablet") {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 10px;
+      }
+    }
+  }
+  .content{
+    text-align: center;
+    margin: 0 0 20px;
+    color: $emperor;
+    font-size: 14px;
+    @include media("screen", ">desktop") {
+      padding: 44px 0;
+      margin: 0;
+      font-size: 18px;
+    }
+    .title{
+      padding-bottom: 11px;
+      border-bottom: 1px solid $gallery;
+      margin: 0 0 7px;
+      @include inline-block(top);
+      @include media("screen", ">desktop") {
+        padding-bottom: 16px;
+        margin: 0 0 12px;
+      }
+    }
+    .name{
+      display: block;
+      font-size: 22px;
+      font-weight: normal;
+      color: $green;
+      @include media("screen", ">desktop") {
+        font-size: 28px;
+      }
+    }
+    .cost{
+      color: $green;
+      font-size: 30px;
+      display: block;
+      font-weight: normal;
+      margin: 0 0 6px;
+      @include media("screen", ">desktop") {
+        font-size: 40px;
+      }
+    }
+    .sub-title{
+      display: block;
+      @include media("screen", ">desktop") {
+        margin-top: -2px;
+      }
+    }
+    .note{
+      display: block;
+      @include media("screen", ">desktop") {
+        margin-top: -3px;
+      }
+    }
+    .rate{
+      display: block;
+      font-size: 22px;
+      @include media("screen", ">desktop") {
+        font-size: 28px;
+      }
+    }
+  }
+  .times-board{
+    max-width: 230px;
+    background: $black-haze;
+    font-size: 14px;
+    text-align: center;
+    padding: 24px 20px 16px;
+    box-shadow: 5px 5px 5px rgba($dark-gray, 0.1);
+    margin: 0 auto 20px;
+    @include media("screen", ">=tablet") {
+      margin: 20px auto;
+      max-width: 335px;
+      font-size: 18px;
+
+    }
+    @include media("screen", ">desktop") {
+      margin: 20px 0;
+    }
+    p{
+      margin: 0 0 6px;
+      strong, b{
+        font-weight: 600;
+      }
+    }
+    .title{
+      display: block;
+      color: $green;
+      font-size: 22px;
+      margin: 0 0 4px;
+      @include media("screen", ">desktop") {
+        font-size: 36px;
+      }
+
+    }
+  }
+  .btn-holder{
+    margin: 0 auto 20px;
+    max-width: 480px;
+    .btn{
+      width: 100%;
+      padding: 13px 25px;
+      font-size: 16px;
+    }
+  }
+}
+
+/* reviews styles */
+.reviews{
+  padding: 0 0 10px;
+  .post{
+    border-bottom: 1px solid $gallery;
+    padding: 0 0 18px;
+    margin: 0 0 18px;
+    color: $dove-gray;
+    font-size: 14px;
+    @include media("screen", ">desktop") {
+      font-size: 16px;
+      padding: 0 0 22px;
+      margin: 0 0 22px;
+    }
+    &:last-child{
+      border: none;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    .title{
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 15px;
+      @include media("screen", ">desktop") {
+        font-size: 17px;
+        display: block;
+        margin: 0 0 11px;
+      }
+      a{
+        color: inherit;
+        text-decoration: none;
+        &:hover{
+          color: $green;
+        }
+      }
+    }
+    p{
+      margin: 0;
+    }
+  }
+}
+
+/* quality-list styles */
+.quality-list{
+  @extend %listreset;
+  color: $emperor;
+  font-size: 14px;
+  @include media("screen", ">desktop") {
+    font-size: 17px;
+  }
+  li{
+    position: relative;
+    padding-left: 14px;
+    margin: 0 0 19px;
+    @include media("screen", ">desktop") {
+      padding-left: 20px;
+      margin: 0 0 29px;
+    }
+    &:before{
+      @extend .icomoon;
+      content: $icon-cross;
+      position: absolute;
+      @include top-left-position(2px, 0);
+      font-size: 10px;
+      color: $green;
+      @include media("screen", ">desktop") {
+        font-size: 14px;
+      }
+    }
+    .title{
+      display: block;
+      font-weight: 600;
+    }
+    span{
+      display: block;
+    }
+  }
+}
+/* info open-close styles */
+.info-open-close{
+  .open-close{
+    border-bottom: 1px solid $gallery;
+    &:first-child{
+      border-top: 1px solid $gallery;
+    }
+    .opener{
+      position: relative;
+      padding: 24px 50px 24px 20px;
+      display: block;
+      font-size: 14px;
+      color: $dove-gray;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+     
+      @include media("screen", ">desktop") {
+        font-size: 20px;
+        padding: 23px 90px 23px 60px;
+        letter-spacing: 2px;
+      }
+      &:after{
+        @extend .icomoon;
+        content: $icon-angle-down;
+        position: absolute;
+        font-size: 20px;
+        color: $green;
+        @include top-right-position(50%, 16px);
+        transform: translateY(-50%);
+        @include media("screen", ">desktop") {
+          right: 57px;
+        }
+      }
+    }
+    &.active{
+      .slide{
+        display: block;
+      }
+      .opener{
+         background: $black-haze;
+        &:after{
+           content: $icon-angle-up;
+        }
+      }
+    }
+    .slide{
+      display: none;
+      padding: 0 20px 10px;
+      background: $black-haze;
+      @include media("screen", ">desktop") {
+        padding: 0 60px 30px;
+      }
+    }
+    .sub-text{
+      display: block;
+      font-size: 14px;
+      margin: 0 0 31px;
+      letter-spacing: 1px;
+      color: $dove-gray;
+      @include media("screen", ">desktop") {
+        font-size: 16px;
+        margin: 0 0 39px;
+      }
+    }
+    .circle-graph{
+      .graph{
+        margin: 0 0 28px;
+        max-width: 320px;
+        @include media("screen", ">desktop") {
+          margin: 0 0 34px;
+        }
+      }
+    }
+    .graph{
+      margin: 0 auto 28px;
+      max-width: 727px;
+      @include media("screen", ">desktop") {
+        margin: 0 auto 34px;
+      }
+      img{
+        @include size(100%, auto);
+      }
+    }
+    .accordion{
+      @extend %listreset;
+      font-size: 17px;
+      margin: 0 0 31px;
+      border-top: 1px solid $gallery;
+      @include media("screen", ">desktop") {
+      }
+      .active{
+        background: #f5f6f6;
+        font-weight: 600;
+        >.accordion-slide{
+          display: block;
+        }
+        >.accordion-opener{
+          &:after{
+            content: $icon-angle-up;
+          }
+        }
+      }
+      ul{
+        @extend %listreset;
+        padding: 0 20px;
+        font-size: 14px;
+        a{
+          padding: 10px 40px;
+          margin: 0 -20px;
+          @include media("screen", ">desktop") {
+            padding: 18px 40px 17px;
+          }
+        }
+      }
+      >li{}
+      .accordion-slide{
+        display: none;
+      }
+      .accordion-opener{
+        padding: 10px 40px 10px 20px;
+        position: relative;
+        @include media("screen", ">desktop") {
+          padding: 16px 40px 15px 20px;
+          letter-spacing: 1px;
+        }
+        &:after{
+          @extend .icomoon;
+          content: $icon-angle-down;
+          position: absolute;
+          font-size: 14px;
+          color: $green;
+          @include top-right-position(50%, 16px);
+          transform: translateY(-50%);
+          @include media("screen", ">desktop") {
+            right: 18px;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $dove-gray;
+        border-bottom: 1px solid $gallery;
+      }
+    }
+
+    .contact{
+      font-size: 14px;
+      line-height: 1.19;
+      @include media("screen", ">desktop") {
+        font-size: 16px;
+      }
+      .map{
+        margin: 0 -20px 20px;
+        @include media("screen", ">desktop") {
+          margin: 0 0 23px;
+        }
+      }
+      address{
+        font-style: normal;
+        font-size: 16px;
+        a{
+          text-decoration: none;
+        }
+        .head{
+          font-size: 18px;
+        }
+        p{
+          margin: 0 0 11px;
+        }
+      }
+      font-style: normal;
+      .title{
+        font-size: 16px;
+        color: $green;
+        font-weight: 600;
+        @include media("screen", ">desktop") {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

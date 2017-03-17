@@ -1,0 +1,258 @@
+/* step  gallery style */
+.step-gallery{
+  position: relative;
+  margin: 0 -20px;
+  @include media("screen", ">desktop") {
+    margin: 0;
+  }
+  .mask{
+    width: 320px;
+    margin: 0 auto;
+    @include media("screen", ">desktop") {
+      width: calc(100% + 33px);
+      margin: 0 0 0 -33px;
+    }
+  }
+  .switcher{
+    @extend %listreset;
+    position: absolute;
+    @include top-left-position(41px, 50%);
+    transform: translateX(-50%);
+    z-index: 15;
+    text-align: center;
+    font-size: 0;
+    @include media("screen", ">desktop") {
+      display: none;
+    }
+    li{
+      @include inline-block(middle);
+      margin: 0 2px;
+    }
+    a{
+      display: block;
+      @include circle-image(6px);
+      text-indent: -9999px;
+      direction: ltr;
+      background: #9cdaa5;
+      @include animate(background);
+      &:hover{
+        background: $white;
+      }
+    }
+    .active{
+      a{
+        background: $white;
+      }
+    }
+  }
+}
+
+/* steps styles */
+.steps{
+  @extend %listreset;
+  @extend %clearfix;
+  width: 9999px;
+  position: relative;
+  margin-left: -450px;
+  font-size: 18px;
+  overflow: visible;
+  overflow-y: hidden;
+  @include media("screen", ">desktop") {
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    display: table;
+    width: 100%;
+    color: $emperor;
+    margin-left: 0 !important;
+    @include media("screen", ">=widescreen") {
+      font-size: 17px;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    @include top-right-position(0, calc(100% - 2px));
+    @include size(9999px, 100%);
+    background: $regent-gray;
+  }
+  .cell-holder{
+    position: relative;
+    padding: 0 40px 17px;
+    width: 100%;
+    @include media("screen", ">desktop") {
+      padding: 0 50px 0 33px;
+    }
+    &:after,
+    &:before{
+      content: '';
+      position:absolute;
+      @include top-left-position(50%, calc(100% - 1px));
+      transform: translateY(-50%);
+      border:solid transparent;
+      border-left-color:rgba($emperor, 0.2);
+      border-width:34px 12px;
+      z-index: 1;
+      @include media("screen", ">desktop") {
+        border-width:34px 16px;
+        left: calc(100% - 1px);
+      }
+    }
+    &:after{
+      border-left-color: $black-haze;
+      border-width:33px 11px;
+      z-index: 2;
+      @include media("screen", ">desktop") {
+        border-width:33px 15px;
+      }
+    }
+  }
+  li{
+    height: 66px;
+    float: left;
+    width: 320px;
+    position: relative;
+    padding: 14px 0;
+
+    text-align: center;
+    background: $black-haze;
+    border: solid $light-gray;
+    border-width: 1px 0;
+    @include media("screen", ">desktop") {
+      float: none;
+      width: 20%;
+      text-align: left;
+      display: table-cell;
+      table-layout: fixed;
+      vertical-align: middle;
+      padding: 2px 50px 2px 33px;
+      padding: 2px 0;
+    }
+    &.completed{
+      color: $white;
+      background: $regent-gray;
+      border: none;
+      .cell-holder{
+        &:before{
+          border-left-color: $white;
+        }
+        &:after{
+          border-left-color:$regent-gray;
+        }
+      }
+      .edit-input{
+        color: $white;
+      }
+      .link-edit{
+        display: block;
+      }
+      &.edit{
+        color: $white;
+        background: $bg-step-edit;
+        border: none;
+        .cell-holder{
+          &:before{
+            border-left-color: $white;
+          }
+          &:after{
+            border-left-color:$bg-step-edit;
+          }
+        }
+        .name{
+          display: none;
+        }
+
+        .edit-input{
+          display: block;
+        }
+        .link-edit{
+          background: $regent-gray;
+        }
+      }
+    }
+    &.current{
+      color: $white;
+      background: $green;
+      border: none;
+      .cell-holder{
+        &:after{
+         border-left-color: $green;
+        }
+        &:before{
+          border-left-color: rgba(#16411c, 0.5) ;
+        }
+      }
+      .edit-input{
+        color: $white;
+      }
+    }
+    &:last-child{
+      .cell-holder{
+        &:before{
+          content: '';
+          position: absolute;
+          border: none;
+          left: auto;
+          @include top-right-position(50%, 0);
+          @include size(30px, 66px);
+          transform: translateY(-50%);
+          background: url(../images/bg-last-step.png);
+        }
+        &:after{
+          display: none;
+        }
+
+      }
+    }
+  }
+  .name{
+    @extend .ellipsis;
+    font-style: normal;
+    @include media("screen", ">desktop") {
+      white-space: normal;
+      display: block;
+    }
+  }
+  .link-edit{
+    display: none;
+    position: absolute;
+    @include top-right-position(-3px, 4px);
+    color: $white;
+    text-align: center;
+    @include circle-image(27px);
+    @include animate(background);
+    line-height: 27px;
+    font-size: 14px;
+    @include media("screen", ">desktop") {
+      @include top-right-position(50%, 10px);
+      transform: translateY(-50%);
+      @include size(31px);
+      line-height: 31px;
+    }
+  }
+  .edit-input{
+    color: $black;
+    display: none;
+    padding: 0;
+    line-height: 21px;
+    height: 21px;
+    outline: none;
+    border: none;
+    background: none;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    @extend .ellipsis;
+    @include media("screen", ">desktop") {
+      line-height: 28px;
+      height: 28px;
+      text-align: left;
+      max-width: none;
+    }
+    @include media("screen", ">=widescreen") {
+      line-height: 32px;
+      height: 32px;
+    }
+  }
+}

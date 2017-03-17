@@ -1,0 +1,985 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
+      "analyzer": {
+        "raw_analyzer": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        },
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
+          ]
+        }
+      }
+    },
+    "number_of_replicas": "1",
+    "number_of_shards": "15",
+    "max_result_window": 999999999
+  },
+  "mappings": {
+    "questions_to_answer": {},
+    "practitioner_specialty": {
+      "dynamic": "strict",
+      "properties": {
+        "specialty_description": {
+          "type": "string"
+        },
+        "specialty_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "specialty_name": {
+          "type": "string"
+        }
+      }
+    },
+    "eoc_category": {
+      "dynamic": "strict",
+      "properties": {
+        "eoc_category_description": {
+          "type": "string"
+        },
+        "eoc_category_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "eoc_category_name": {
+          "type": "string"
+        }
+      }
+    },
+    "provider": {
+      "dynamic": "strict",
+      "properties": {
+        "provider_address": {
+          "properties": {
+            "address_line_1": {
+              "type": "string"
+            },
+            "address_line_2": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            }
+          }
+        },
+        "provider_fax": {
+          "type": "string"
+        },
+        "provider_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "provider_imaging_settings": {
+          "type": "string"
+        },
+        "provider_lab_settings": {
+          "type": "string"
+        },
+        "provider_name": {
+          "type": "string"
+        },
+        "provider_office_hours": {
+          "properties": {
+            "day": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "has_hours": {
+              "type": "boolean"
+            },
+            "start_time": {
+              "type": "string"
+            }
+          }
+        },
+        "provider_phone": {
+          "type": "string"
+        },
+        "provider_place_of_service_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "provider_portal_settings": {
+          "type": "string"
+        },
+        "provider_practitioner_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "provider_social_media_settings": {
+          "dynamic": "true",
+          "properties": {
+            "facebook_handle": {
+              "type": "string"
+            },
+            "linkedin_handle": {
+              "type": "string"
+            },
+            "twitter_handle": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "provider_surgical_settings": {
+          "type": "string"
+        }
+      }
+    },
+    "comments": {
+      "dynamic": "strict",
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "comment_about": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "date": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "value": {
+          "type": "float"
+        }
+      }
+    },
+    "eoc_metadata": {
+      "dynamic": "strict",
+      "properties": {
+        "eoc_code": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "state": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "episode_of_care_chart_data": {
+          "properties": {
+            "heading": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "subheading": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "cost_of_care": {
+      "dynamic": "strict",
+      "properties": {
+        "cost_breakdown": {
+          "type": "nested",
+          "dynamic": "true",
+          "properties": {
+            "charges_cost": {
+              "type": "long"
+            },
+            "cost_breakdown": {
+              "dynamic": "true",
+              "properties": {
+                "charges_cost": {
+                  "type": "long"
+                },
+                "cost_breakdown": {
+                  "dynamic": "true",
+                  "properties": {
+                    "charges_cost": {
+                      "type": "long"
+                    },
+                    "in_network": {
+                      "type": "boolean"
+                    },
+                    "medicare_cost": {
+                      "type": "double"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "in_network": {
+                  "type": "boolean"
+                },
+                "medicare_cost": {
+                  "type": "long"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            },
+            "medicare_cost": {
+              "type": "long"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
+        "eoc_data": {
+          "properties": {
+            "eoc_category": {
+              "properties": {
+                "eoc_category_description": {
+                  "type": "string"
+                },
+                "eoc_category_id": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "eoc_category_name": {
+                  "type": "string"
+                }
+              }
+            },
+            "eoc_code": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "eoc_description": {
+              "type": "string"
+            },
+            "eoc_keywords": {
+              "type": "string"
+            },
+            "eoc_title": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            }
+          }
+        },
+        "place_of_service_data": {
+          "properties": {
+            "place_of_service_address": {
+              "properties": {
+                "address_line_1": {
+                  "type": "string"
+                },
+                "address_line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              }
+            },
+            "place_of_service_category": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_location": {
+              "type": "geo_point"
+            },
+            "place_of_service_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "place_of_service_phone": {
+              "type": "string"
+            },
+            "place_of_service_provider_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_quality_rating": {
+              "type": "object"
+            },
+            "place_of_service_type": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "practitioner_data": {
+          "properties": {
+            "practitioner_category": {
+              "type": "integer"
+            },
+            "practitioner_cost": {
+              "type": "double"
+            },
+            "practitioner_display_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "practitioner_eoc_count": {
+              "type": "integer"
+            },
+            "practitioner_first_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "practitioner_gender": {
+              "type": "string"
+            },
+            "practitioner_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "practitioner_last_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "practitioner_phone": {
+              "type": "string"
+            },
+            "practitioner_practice": {
+              "type": "string"
+            },
+            "practitioner_specialty": {
+              "properties": {
+                "specialty_description": {
+                  "type": "string"
+                },
+                "specialty_id": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "specialty_name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "practitioner_of_care": {
+      "properties": {
+        "eoc_code": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "places_of_service": {
+          "type": "nested",
+          "properties": {
+            "place_of_service_address": {
+              "properties": {
+                "address_line_1": {
+                  "type": "string"
+                },
+                "address_line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              }
+            },
+            "place_of_service_category": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_cost": {
+              "type": "double"
+            },
+            "place_of_service_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_location": {
+              "type": "geo_point"
+            },
+            "place_of_service_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "place_of_service_phone": {
+              "type": "string"
+            },
+            "place_of_service_provider_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_quality_rating": {
+              "type": "object"
+            },
+            "place_of_service_type": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "practitioner_category": {
+          "type": "integer"
+        },
+        "practitioner_cost": {
+          "type": "long"
+        },
+        "practitioner_display_name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "analyzer": "raw_analyzer"
+            }
+          }
+        },
+        "practitioner_eoc_count": {
+          "type": "integer"
+        },
+        "practitioner_first_name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "analyzer": "raw_analyzer"
+            }
+          }
+        },
+        "practitioner_gender": {
+          "type": "string"
+        },
+        "practitioner_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "practitioner_last_name": {
+          "type": "string",
+          "fields": {
+            "raw": {
+              "type": "string",
+              "analyzer": "raw_analyzer"
+            }
+          }
+        },
+        "practitioner_organization_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "practitioner_phone": {
+          "type": "string"
+        },
+        "practitioner_practice": {
+          "type": "string"
+        },
+        "practitioner_specialty": {
+          "properties": {
+            "specialty_description": {
+              "type": "string"
+            },
+            "specialty_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "specialty_name": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "place_of_service_metadata": {
+      "dynamic": "strict",
+      "properties": {
+        "place_of_service_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "place_of_service_practitioner_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "place_of_service_quality_data": {
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "key": {
+              "type": "string"
+            },
+            "tooltip": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "place_of_service_reports_data": {
+          "properties": {
+            "survey_values": {
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "values": {
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "value_keys": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "place_of_care": {
+      "dynamic": "strict",
+      "properties": {
+        "eoc_data": {
+          "properties": {
+            "eoc_category": {
+              "properties": {
+                "eoc_category_description": {
+                  "type": "string"
+                },
+                "eoc_category_id": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "eoc_category_name": {
+                  "type": "string"
+                }
+              }
+            },
+            "eoc_code": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "eoc_description": {
+              "type": "string"
+            },
+            "eoc_keywords": {
+              "type": "string"
+            },
+            "eoc_title": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            }
+          }
+        },
+        "place_of_service_data": {
+          "properties": {
+            "place_of_service_address": {
+              "properties": {
+                "address_line_1": {
+                  "type": "string"
+                },
+                "address_line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              }
+            },
+            "place_of_service_category": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_location": {
+              "type": "geo_point"
+            },
+            "place_of_service_max_cost": {
+              "type": "double"
+            },
+            "place_of_service_min_cost": {
+              "type": "double"
+            },
+            "place_of_service_name": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "analyzer": "raw_analyzer"
+                }
+              }
+            },
+            "place_of_service_phone": {
+              "type": "string"
+            },
+            "place_of_service_provider_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "place_of_service_quality_rating": {
+              "type": "object"
+            },
+            "place_of_service_type": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "practitioners": {
+          "type": "nested",
+          "dynamic": "true",
+          "properties": {
+            "practitioner_category": {
+              "type": "long"
+            },
+            "practitioner_cost": {
+              "type": "long"
+            },
+            "practitioner_display_name": {
+              "type": "string"
+            },
+            "practitioner_eoc_count": {
+              "type": "long"
+            },
+            "practitioner_first_name": {
+              "type": "string"
+            },
+            "practitioner_gender": {
+              "type": "string"
+            },
+            "practitioner_id": {
+              "type": "string"
+            },
+            "practitioner_last_name": {
+              "type": "string"
+            },
+            "practitioner_phone": {
+              "type": "string"
+            },
+            "practitioner_practice": {
+              "type": "string"
+            },
+            "practitioner_specialty": {
+              "dynamic": "true",
+              "properties": {
+                "specialty_description": {
+                  "type": "string"
+                },
+                "specialty_id": {
+                  "type": "string"
+                },
+                "specialty_name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "eoc": {
+      "dynamic": "strict",
+      "properties": {
+        "eoc_category": {
+          "properties": {
+            "eoc_category_description": {
+              "type": "string"
+            },
+            "eoc_category_id": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "eoc_category_name": {
+              "type": "string"
+            }
+          }
+        },
+        "eoc_code": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "eoc_description": {
+          "type": "string",
+          "analyzer": "autocomplete"
+        },
+        "eoc_keywords": {
+          "type": "string",
+          "analyzer": "autocomplete"
+        },
+        "eoc_title": {
+          "type": "string",
+          "analyzer": "autocomplete"
+        },
+        "eoc_weight": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "reviews": {
+    "dynamic": "strict",
+    "properties": {
+      "count": {
+        "type": "integer"
+      },
+      "key": {
+        "type": "string"
+      },
+      "review_about": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "tooltip": {
+        "type": "string"
+      },
+      "value": {
+        "type": "float"
+      }
+    }
+  },
+  "practitioner": {
+    "dynamic": "strict",
+    "properties": {
+      "practitioner_category": {
+        "type": "integer"
+      },
+      "practitioner_display_name": {
+        "type": "string",
+        "fields": {
+          "raw": {
+            "type": "string",
+            "analyzer": "raw_analyzer"
+          }
+        }
+      },
+      "practitioner_first_name": {
+        "type": "string",
+        "fields": {
+          "raw": {
+            "type": "string",
+            "analyzer": "raw_analyzer"
+          }
+        }
+      },
+      "practitioner_gender": {
+        "type": "string"
+      },
+      "practitioner_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "practitioner_last_name": {
+        "type": "string",
+        "fields": {
+          "raw": {
+            "type": "string",
+            "analyzer": "raw_analyzer"
+          }
+        }
+      },
+      "practitioner_phone": {
+        "type": "string"
+      },
+      "practitioner_practice": {
+        "type": "string"
+      },
+      "practitioner_specialty": {
+        "properties": {
+          "specialty_description": {
+            "type": "string"
+          },
+          "specialty_id": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "specialty_name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "place_of_service": {
+    "dynamic": "strict",
+    "properties": {
+      "place_of_service_address": {
+        "properties": {
+          "address_line_1": {
+            "type": "string"
+          },
+          "address_line_2": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          }
+        }
+      },
+      "place_of_service_category": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "place_of_service_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "place_of_service_location": {
+        "type": "geo_point"
+      },
+      "place_of_service_name": {
+        "type": "string",
+        "fields": {
+          "raw": {
+            "type": "string",
+            "analyzer": "raw_analyzer"
+          }
+        }
+      },
+      "place_of_service_phone": {
+        "type": "string"
+      },
+      "place_of_service_provider_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "place_of_service_quality_rating": {
+        "type": "object"
+      },
+      "place_of_service_type": {
+        "type": "string",
+        "index": "not_analyzed"
+      }
+    }
+  },
+  "practitioner_metadata": {
+    "dynamic": "strict",
+    "properties": {
+      "practitioner_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "practitioner_quality_data": {
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "key": {
+            "type": "string"
+          },
+          "tooltip": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
